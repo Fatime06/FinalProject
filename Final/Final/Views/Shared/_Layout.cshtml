@@ -1,49 +1,227 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Final</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Final.styles.css" asp-append-version="true" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="~/assets/css/Index.css">
+    <link rel="stylesheet" href="~/assets/css/Shop1.css">
+    <link rel="stylesheet" href="~/assets/css/Blog.css">
+    <link rel="stylesheet" href="~/assets/css/Contact.css">
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Final</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        <nav class="navbar">
+            <div class="nav-left">
+                <div class="red-box">
+                    <img src="./assets/img/logo-white (2).svg" alt="">
+                </div>
+
+                <div class="sidebar-icon" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div id="sidebar-dropdown" class="sidebar-dropdown">
+                    <ul>
+                        <li>
+                            <a href="Wine.html">
+                                <i class="fa-solid fa-wine-glass"></i> Wine
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+                        <li>
+                            <a href="Beer.html">
+                                <i class="fa-solid fa-beer-mug-empty"></i> Beer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="Whiskey.html">
+                                <i class="fa-solid fa-whiskey-glass"></i> Whiskey
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="Cogac.html">
+                                <i class="fa-solid fa-whiskey-glass"></i> Cognac
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="Cocktail.html">
+                                <i class="fa-solid fa-martini-glass"></i> Cocktail
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="Tequila.html">
+                                <i class="fa-solid fa-bottle-droplet"></i> Tequila
+                            </a>
                         </li>
                     </ul>
                 </div>
+
+
+                <div class="nav-links">
+                    <a asp-controller="home" asp-action="index">Home</a>
+                    <a asp-controller="shop" asp-action="index">Shop</a>
+                    <a asp-controller="blog" asp-action="index">Blog</a>
+                    <a asp-controller="contact" asp-action="index">Contact</a>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="auth">
+                    <a href="#">Login / Register</a>
+                </div>
+                <div class="icons-nav">
+                    <a href="Wishlist.html">
+                        <i class="fas fa-heart"></i>
+                    </a>
+
+                    <i class="fas fa-shopping-cart" id="cartIcon"></i>
+                </div>
+
+
+                <div class="cart-sidebar" id="cartSidebar">
+                    <div class="cart-header">
+                        <h3>Shopping cart</h3>
+                        <span id="closeCart" class="close-btn">CLOSE ×</span>
+                    </div>
+
+                    <div class="cart-body">
+                        <p>No products in the cart.</p>
+                    </div>
+                </div>
+
+                <div class="cart-overlay" id="cartOverlay"></div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Final - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+    <main>
+            @RenderBody()
+    </main>
+
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="footer-info">
+                <i class="fa-solid fa-truck"></i>
+                <p>Same-day local delivery</p>
+            </div>
+            <div class="footer-info">
+                <i class="fa-solid fa-paper-plane"></i>
+                <p>Ground shipping directly to you</p>
+            </div>
+            <div class="footer-info">
+                <i class="fa-solid fa-store"></i>
+                <p>Free in-store pickup</p>
+            </div>
+            <div class="footer-info">
+                <i class="fa-solid fa-phone"></i>
+                <p>24/7 customer support</p>
+            </div>
         </div>
+
+        <div class="footer-main">
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h4>CUSTOMER SERVICE</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">My account</a></li>
+                        <li><a href="#">Track my order</a></li>
+                        <li><a href="#">Return policy</a></li>
+                        <li><a href="#">Gift cards</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>ABOUT US</h4>
+                    <ul>
+                        <li><a href="#">Company info</a></li>
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Investor relations</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="#">Search</a></li>
+                        <li><a href="#">Become a reseller</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Terms of service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>CATEGORIES</h4>
+                    <ul>
+                        <li><a href="#">Brandy</a></li>
+                        <li><a href="#">White Wine</a></li>
+                        <li><a href="#">Champagne</a></li>
+                        <li><a href="#">Vodka</a></li>
+                        <li><a href="#">Tequila</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-offer">
+                <h3>Get exclusive offers & rewards</h3>
+                <p>
+                    Sign up for our members portal to receive some exclusive offer & rewards. It’s easy and free!
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-left">
+                <div class="social">
+                    <span class="title">STAY CONNECT</span>
+                    <div class="social-icons">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+
+                <div class="payments">
+                    <span class="title">WE ACCEPT</span>
+                    <img src="./assets/img/PaymentLogo.png" alt="">
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="links">
+                    <a href="#">Careers</a> |
+                    <a href="#">About Us</a> |
+                    <a href="#">Affiliates</a> |
+                    <a href="#">Privacy Settings</a> |
+                    <a href="#">Help</a> |
+                    <a href="#">Site map</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>Copyright © 2022 <span>Liquory.</span> All rights reserved.</p>
+        </div>
+        <img src="./assets/img/Glass.png" alt="Footer Decoration" class="footer-side-image">
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+
+    <script src="./assets/js/Index.js"></script>
 </body>
+
 </html>
