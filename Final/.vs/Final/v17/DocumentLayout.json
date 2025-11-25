@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +27,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\AppUser.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\AppUser.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\AppUser.cs",
+              "RelativeToolTip": "Domain\\Entities\\AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T22:15:29.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Repository\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Repository\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T22:14:15.677Z",
+              "EditorCaption": ""
             }
           ]
         }
