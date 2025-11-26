@@ -49,7 +49,7 @@ wwwroot\assets\img\Bushmills.jpg
 wwwroot\assets\img\BushmillsOriginal.jpg
 wwwroot\assets\img\Cocktail.png
 wwwroot\assets\img\CocktailLogo.webp
-wwwroot\assets\img\CocktailLogo2.avif
+wwwroot\assets\img\CocktailLogo2.jpg
 wwwroot\assets\img\Cognac.png
 wwwroot\assets\img\Contact1.jpg
 wwwroot\assets\img\DomaineCarneros.jpg

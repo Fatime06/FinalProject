@@ -1,0 +1,90 @@
+﻿<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="red-box">
+                <img src="./assets/img/logo-white (2).svg" alt="">
+            </div>
+
+            <div class="sidebar-icon" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div id="sidebar-dropdown" class="sidebar-dropdown">
+                <ul>
+                    <li>
+                        <a href="Wine.html">
+                            <i class="fa-solid fa-wine-glass"></i> Wine
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Beer.html">
+                            <i class="fa-solid fa-beer-mug-empty"></i> Beer
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Whiskey.html">
+                            <i class="fa-solid fa-whiskey-glass"></i> Whiskey
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Cogac.html">
+                            <i class="fa-solid fa-whiskey-glass"></i> Cognac
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Cocktail.html">
+                            <i class="fa-solid fa-martini-glass"></i> Cocktail
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Tequila.html">
+                            <i class="fa-solid fa-bottle-droplet"></i> Tequila
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="nav-links">
+                <a asp-controller="home" asp-action="index">Home</a>
+                <a asp-controller="shop" asp-action="index">Shop</a>
+                <a asp-controller="blog" asp-action="index">Blog</a>
+                <a asp-controller="contact" asp-action="index">Contact</a>
+            </div>
+        </div>
+
+        <div class="nav-right">
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="auth">
+                <a href="#">Login / Register</a>
+            </div>
+            <div class="icons-nav">
+                <a href="Wishlist.html">
+                    <i class="fas fa-heart"></i>
+                </a>
+
+                <i class="fas fa-shopping-cart" id="cartIcon"></i>
+            </div>
+
+
+            <div class="cart-sidebar" id="cartSidebar">
+                <div class="cart-header">
+                    <h3>Shopping cart</h3>
+                    <span id="closeCart" class="close-btn">CLOSE ×</span>
+                </div>
+
+                <div class="cart-body">
+                    <p>No products in the cart.</p>
+                </div>
+            </div>
+
+            <div class="cart-overlay" id="cartOverlay"></div>
+        </div>
+    </nav>
+</header>
