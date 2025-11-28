@@ -6,6 +6,12 @@ namespace Repository.Data
 {
     public class AppDbContext : IdentityDbContext<AppUser>
     {
+        public DbSet<Category> Categories { get; set; }
         public AppDbContext(DbContextOptions options) : base(options) { }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+            base.OnModelCreating(builder);
+        }
     }
 }
