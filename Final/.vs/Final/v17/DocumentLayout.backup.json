@@ -3,6 +3,62 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\wwwroot\\admin\\assets\\css\\paper-dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\wwwroot\\admin\\assets\\css\\paper-dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\wwwroot\\admin\\assets\\js\\paper-dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\wwwroot\\admin\\assets\\js\\paper-dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\wwwroot\\admin\\assets\\js\\bootstrap.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\wwwroot\\admin\\assets\\js\\bootstrap.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -174,7 +230,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -186,150 +242,321 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BlogSideBarViewComponent.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogSideBarViewComponent.cs",
-              "RelativeDocumentMoniker": "Final\\ViewComponents\\BlogSideBarViewComponent.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogSideBarViewComponent.cs*",
-              "RelativeToolTip": "Final\\ViewComponents\\BlogSideBarViewComponent.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Repository\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Repository\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T22:06:39.834Z",
+              "WhenOpened": "2025-11-28T19:28:35.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogSideBar\\Default.cshtml",
-              "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BlogSideBar\\Default.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogSideBar\\Default.cshtml*",
-              "RelativeToolTip": "Final\\Views\\Shared\\Components\\BlogSideBar\\Default.cshtml*",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAuwB0AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T22:05:40.455Z",
+              "DocumentIndex": 0,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Repository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Repository.cs*",
+              "RelativeToolTip": "Repository\\Repositories\\Repository.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T19:26:17.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "BlogPostsViewComponent.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogPostsViewComponent.cs",
-              "RelativeDocumentMoniker": "Final\\ViewComponents\\BlogPostsViewComponent.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogPostsViewComponent.cs*",
-              "RelativeToolTip": "Final\\ViewComponents\\BlogPostsViewComponent.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T22:03:40.1Z",
+              "WhenOpened": "2025-11-28T19:13:56.516Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogPosts\\Default.cshtml",
-              "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BlogPosts\\Default.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogPosts\\Default.cshtml*",
-              "RelativeToolTip": "Final\\Views\\Shared\\Components\\BlogPosts\\Default.cshtml*",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAmwBABAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T22:02:59.324Z",
+              "DocumentIndex": 1,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\IRepository.cs*",
+              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IRepository.cs*",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T19:12:35.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BlogTagsViewComponent.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogTagsViewComponent.cs",
-              "RelativeDocumentMoniker": "Final\\ViewComponents\\BlogTagsViewComponent.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogTagsViewComponent.cs*",
-              "RelativeToolTip": "Final\\ViewComponents\\BlogTagsViewComponent.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T21:49:34.237Z",
+              "DocumentIndex": 5,
+              "Title": "paper-dashboard.css",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\admin\\assets\\css\\paper-dashboard.css",
+              "RelativeDocumentMoniker": "Final\\wwwroot\\admin\\assets\\css\\paper-dashboard.css",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\admin\\assets\\css\\paper-dashboard.css",
+              "RelativeToolTip": "Final\\wwwroot\\admin\\assets\\css\\paper-dashboard.css",
+              "ViewState": "AgIAAEQJAAAAAAAAAAAwwFAJAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-28T18:57:40.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogTags\\Default.cshtml",
-              "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BlogTags\\Default.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogTags\\Default.cshtml*",
-              "RelativeToolTip": "Final\\Views\\Shared\\Components\\BlogTags\\Default.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:49:15.4Z",
+              "Title": "paper-dashboard.js",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\admin\\assets\\js\\paper-dashboard.js",
+              "RelativeDocumentMoniker": "Final\\wwwroot\\admin\\assets\\js\\paper-dashboard.js",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\admin\\assets\\js\\paper-dashboard.js",
+              "RelativeToolTip": "Final\\wwwroot\\admin\\assets\\js\\paper-dashboard.js",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAACgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-28T18:53:57.554Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "BlogBestBannerViewComponent.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogBestBannerViewComponent.cs",
-              "RelativeDocumentMoniker": "Final\\ViewComponents\\BlogBestBannerViewComponent.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogBestBannerViewComponent.cs*",
-              "RelativeToolTip": "Final\\ViewComponents\\BlogBestBannerViewComponent.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T21:48:09.821Z",
+              "Title": "bootstrap.min.js",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\admin\\assets\\js\\bootstrap.min.js",
+              "RelativeDocumentMoniker": "Final\\wwwroot\\admin\\assets\\js\\bootstrap.min.js",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\admin\\assets\\js\\bootstrap.min.js",
+              "RelativeToolTip": "Final\\wwwroot\\admin\\assets\\js\\bootstrap.min.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-28T18:53:54.674Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogBestBanner\\Default.cshtml",
-              "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BlogBestBanner\\Default.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogBestBanner\\Default.cshtml*",
-              "RelativeToolTip": "Final\\Views\\Shared\\Components\\BlogBestBanner\\Default.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:47:48.911Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Program.cs",
+              "RelativeDocumentMoniker": "Final\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Program.cs",
+              "RelativeToolTip": "Final\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:42:36.587Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "LatestPostsViewComponent.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\LatestPostsViewComponent.cs",
-              "RelativeDocumentMoniker": "Final\\ViewComponents\\LatestPostsViewComponent.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\LatestPostsViewComponent.cs*",
-              "RelativeToolTip": "Final\\ViewComponents\\LatestPostsViewComponent.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T21:45:13.952Z",
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Final\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T18:38:48.858Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\LatestPosts\\Default.cshtml",
-              "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\LatestPosts\\Default.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\LatestPosts\\Default.cshtml*",
-              "RelativeToolTip": "Final\\Views\\Shared\\Components\\LatestPosts\\Default.cshtml*",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCoAAAAKAAAAAAAAAA==",
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Final\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:44:01.034Z",
+              "WhenOpened": "2025-11-28T18:35:55.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Final\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAACwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T18:34:27.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "Final\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAP4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-28T18:32:19.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Final\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:30:38.352Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shop\\Index.cshtml",
-              "RelativeDocumentMoniker": "Final\\Views\\Shop\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shop\\Index.cshtml*",
-              "RelativeToolTip": "Final\\Views\\Shop\\Index.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:36:27.572Z",
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "Final\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "Final\\ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-28T18:23:04.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BlogSideBarViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogSideBarViewComponent.cs",
+              "RelativeDocumentMoniker": "Final\\ViewComponents\\BlogSideBarViewComponent.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogSideBarViewComponent.cs",
+              "RelativeToolTip": "Final\\ViewComponents\\BlogSideBarViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T22:06:39.834Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogSideBar\\Default.cshtml",
+              "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BlogSideBar\\Default.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogSideBar\\Default.cshtml",
+              "RelativeToolTip": "Final\\Views\\Shared\\Components\\BlogSideBar\\Default.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwB0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T22:05:40.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BlogPostsViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogPostsViewComponent.cs",
+              "RelativeDocumentMoniker": "Final\\ViewComponents\\BlogPostsViewComponent.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogPostsViewComponent.cs",
+              "RelativeToolTip": "Final\\ViewComponents\\BlogPostsViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T22:03:40.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogPosts\\Default.cshtml",
+              "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BlogPosts\\Default.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogPosts\\Default.cshtml",
+              "RelativeToolTip": "Final\\Views\\Shared\\Components\\BlogPosts\\Default.cshtml",
+              "ViewState": "AgIAAPQAAAAAAAAAAAAmwBABAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T22:02:59.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BlogTagsViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogTagsViewComponent.cs",
+              "RelativeDocumentMoniker": "Final\\ViewComponents\\BlogTagsViewComponent.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogTagsViewComponent.cs",
+              "RelativeToolTip": "Final\\ViewComponents\\BlogTagsViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T21:49:34.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogTags\\Default.cshtml",
+              "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BlogTags\\Default.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogTags\\Default.cshtml",
+              "RelativeToolTip": "Final\\Views\\Shared\\Components\\BlogTags\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T21:49:15.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BlogBestBannerViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogBestBannerViewComponent.cs",
+              "RelativeDocumentMoniker": "Final\\ViewComponents\\BlogBestBannerViewComponent.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BlogBestBannerViewComponent.cs",
+              "RelativeToolTip": "Final\\ViewComponents\\BlogBestBannerViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T21:48:09.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogBestBanner\\Default.cshtml",
+              "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BlogBestBanner\\Default.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogBestBanner\\Default.cshtml",
+              "RelativeToolTip": "Final\\Views\\Shared\\Components\\BlogBestBanner\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T21:47:48.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LatestPostsViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\LatestPostsViewComponent.cs",
+              "RelativeDocumentMoniker": "Final\\ViewComponents\\LatestPostsViewComponent.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\LatestPostsViewComponent.cs",
+              "RelativeToolTip": "Final\\ViewComponents\\LatestPostsViewComponent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T21:45:13.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\LatestPosts\\Default.cshtml",
+              "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\LatestPosts\\Default.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\LatestPosts\\Default.cshtml",
+              "RelativeToolTip": "Final\\Views\\Shared\\Components\\LatestPosts\\Default.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T21:44:01.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shop\\Index.cshtml",
+              "RelativeDocumentMoniker": "Final\\Views\\Shop\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shop\\Index.cshtml",
+              "RelativeToolTip": "Final\\Views\\Shop\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-26T21:36:27.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "BestSellersViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BestSellersViewComponent.cs",
               "RelativeDocumentMoniker": "Final\\ViewComponents\\BestSellersViewComponent.cs",
@@ -337,12 +564,11 @@
               "RelativeToolTip": "Final\\ViewComponents\\BestSellersViewComponent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T21:17:08.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T21:17:08.855Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 29,
               "Title": "BestSellersSecondViewComponent.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ViewComponents\\BestSellersSecondViewComponent.cs",
               "RelativeDocumentMoniker": "Final\\ViewComponents\\BestSellersSecondViewComponent.cs",
@@ -350,12 +576,11 @@
               "RelativeToolTip": "Final\\ViewComponents\\BestSellersSecondViewComponent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T21:16:56.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T21:16:56.03Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 31,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BestSellersSecond\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BestSellersSecond\\Default.cshtml",
@@ -363,17 +588,16 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\BestSellersSecond\\Default.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAgwEEAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:16:28.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T21:16:28.401Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Blog\\Index.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Blog\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Blog\\Index.cshtml*",
-              "RelativeToolTip": "Final\\Views\\Blog\\Index.cshtml*",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Blog\\Index.cshtml",
+              "RelativeToolTip": "Final\\Views\\Blog\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-26T21:03:54.695Z",
@@ -381,7 +605,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 35,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Contact\\Index.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Contact\\Index.cshtml",
@@ -389,12 +613,11 @@
               "RelativeToolTip": "Final\\Views\\Contact\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:03:32.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T21:03:32.698Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 28,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Home\\Index.cshtml",
@@ -402,12 +625,11 @@
               "RelativeToolTip": "Final\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAGwBAAAAAAAAAAAAAAUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:02:51.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T21:02:51.818Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 34,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\Wine\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\Wine\\Default.cshtml",
@@ -415,12 +637,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\Wine\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:02:37.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T21:02:37.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 36,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\Slider\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\Slider\\Default.cshtml",
@@ -428,12 +649,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\Slider\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:02:05.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T21:02:05.54Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 37,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\ShopProducts\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\ShopProducts\\Default.cshtml",
@@ -441,12 +661,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\ShopProducts\\Default.cshtml",
               "ViewState": "AgIAAA0BAAAAAAAAAAAQwCsBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:01:34.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T21:01:34.321Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 38,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\ShopHeader\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\ShopHeader\\Default.cshtml",
@@ -454,12 +673,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\ShopHeader\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:01:02.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T21:01:02.201Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 32,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\ShopBestSellers\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\ShopBestSellers\\Default.cshtml",
@@ -467,12 +685,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\ShopBestSellers\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T21:00:29.557Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T21:00:29.557Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 39,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\ShopBestBanner\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\ShopBestBanner\\Default.cshtml",
@@ -480,12 +697,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\ShopBestBanner\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:59:36.44Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:59:36.44Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 40,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\Reviews\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\Reviews\\Default.cshtml",
@@ -493,12 +709,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\Reviews\\Default.cshtml",
               "ViewState": "AgIAAD0AAAAAAAAAAADwv1IAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:55:11.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:55:11.381Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 41,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\Offers\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\Offers\\Default.cshtml",
@@ -506,12 +721,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\Offers\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:52:16.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:52:16.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 42,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\HomeShop\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\HomeShop\\Default.cshtml",
@@ -519,12 +733,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\HomeShop\\Default.cshtml",
               "ViewState": "AgIAAHoAAAAAAAAAAADwv5MAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:51:31.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:51:31.132Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 43,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\History\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\History\\Default.cshtml",
@@ -532,12 +745,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\History\\Default.cshtml",
               "ViewState": "AgIAAA4AAAAAAAAAAADwvy0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:50:56.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:50:56.187Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 26,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\FIlterByTag\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\FIlterByTag\\Default.cshtml",
@@ -545,12 +757,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\FIlterByTag\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:49:30.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:49:30.466Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 44,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\FilterByPrice\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\FilterByPrice\\Default.cshtml",
@@ -558,12 +769,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\FilterByPrice\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:46:26.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:46:26.374Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 45,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\FilterByCategory\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\FilterByCategory\\Default.cshtml",
@@ -571,12 +781,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\FilterByCategory\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:45:18.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:45:18.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 46,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\FilterByBrand\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\FilterByBrand\\Default.cshtml",
@@ -584,12 +793,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\FilterByBrand\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:43:50.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:43:50.921Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 47,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\Deals\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\Deals\\Default.cshtml",
@@ -597,12 +805,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\Deals\\Default.cshtml",
               "ViewState": "AgIAAEUAAAAAAAAAAADwv2QAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:35:55.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:35:55.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 48,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\ContactMap\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\ContactMap\\Default.cshtml",
@@ -610,12 +817,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\ContactMap\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:34:28.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:34:28.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 49,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\Contact\u0130nfo\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\Contact\u0130nfo\\Default.cshtml",
@@ -623,12 +829,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\Contact\u0130nfo\\Default.cshtml",
               "ViewState": "AgIAABgAAAAAAAAAAAAswDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:33:38.814Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:33:38.814Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 50,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\ContactHeader\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\ContactHeader\\Default.cshtml",
@@ -636,12 +841,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\ContactHeader\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:32:56.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:32:56.098Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 51,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\ContactForm\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\ContactForm\\Default.cshtml",
@@ -649,12 +853,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\ContactForm\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:32:25.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:32:25.346Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 52,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\Collections\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\Collections\\Default.cshtml",
@@ -662,12 +865,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\Collections\\Default.cshtml",
               "ViewState": "AgIAAD4AAAAAAAAAAAAswF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:31:22.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:31:22.434Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 19,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\Categories\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\Categories\\Default.cshtml",
@@ -675,12 +877,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\Categories\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:23:36.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:23:36.549Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 53,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BrandLogos\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BrandLogos\\Default.cshtml",
@@ -688,12 +889,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\BrandLogos\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:22:57.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:22:57.298Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 54,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BlogHeader\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BlogHeader\\Default.cshtml",
@@ -701,12 +901,11 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\BlogHeader\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:22:21.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:22:21.254Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 33,
               "Title": "Default.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\Components\\BestSellers\\Default.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\Components\\BestSellers\\Default.cshtml",
@@ -714,8 +913,7 @@
               "RelativeToolTip": "Final\\Views\\Shared\\Components\\BestSellers\\Default.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-26T20:21:29.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-26T20:21:29.69Z"
             }
           ]
         }
