@@ -272,3 +272,9 @@ C:\Users\User\OneDrive\Desktop\Final\Final\Final\bin\Debug\net8.0\Service.pdb
 C:\Users\User\OneDrive\Desktop\Final\Final\Final\bin\Debug\net8.0\Domain.pdb
 C:\Users\User\OneDrive\Desktop\Final\Final\Final\bin\Debug\net8.0\Repository.pdb
 C:\Users\User\OneDrive\Desktop\Final\Final\Final\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\User\OneDrive\Desktop\Final\Final\Final\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\User\OneDrive\Desktop\Final\Final\Final\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\User\OneDrive\Desktop\Final\Final\Final\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\User\OneDrive\Desktop\Final\Final\Final\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\User\OneDrive\Desktop\Final\Final\Final\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\User\OneDrive\Desktop\Final\Final\Final\obj\Debug\net8.0\Final.MvcApplicationPartsAssemblyInfo.cs
