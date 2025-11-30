@@ -13,6 +13,11 @@ namespace Repository.Repositories
             _context = context;
         }
 
+        public async Task<Category> GetCategoryByNameAsync(string name)
+        {
+            return await _context.Categories.FirstOrDefaultAsync(c => c.Name.ToLower() == name.Trim().ToLower());
+        }
+
         public async Task<bool> IsExistAsync(string name)
         {
             return await _context.Categories.AnyAsync(c=>c.Name.ToLower() == name.ToLower());

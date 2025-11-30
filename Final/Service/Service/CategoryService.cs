@@ -39,7 +39,7 @@ namespace Service.Service
         {
             var category = await _catRepo.FindAsync(id);
             if (category is null)
-                //throw new CustomException(404, "Kateqoriya tapılmadı");
+                throw new CustomException(404, "Category not found");
             _catRepo.Delete(category);
             await _catRepo.SaveChangesAsync();
         }
@@ -54,8 +54,8 @@ namespace Service.Service
         public async Task<CategoryDto> GetAsync(int id)
         {
             var category = await _catRepo.FindAsync(id);
-            //if (category is null)
-                //throw new CustomException(404, "Kateqoriya tapılmadı");
+            if (category is null)
+                throw new CustomException(404, "Kateqoriya tapılmadı");
             var categoryDto = _mapper.Map<CategoryDto>(category);
             return categoryDto;
         }
@@ -76,7 +76,7 @@ namespace Service.Service
             if (!modelState.IsValid) return false;
             var existCategory = await _catRepo.FindAsync(dto.Id);
             if (existCategory is null) throw new CustomException(404, "Category not found");
-            if (await _catRepo.IsExistAsync(dto.Name.Trim()))
+            if (await _catRepo.IsExistAsync(dto.Name.Trim()) && _catRepo.GetCategoryByNameAsync(dto.Name).Result.Id != dto.Id)
             {
                 modelState.AddModelError("Name", "This category already exists");
                 return false;

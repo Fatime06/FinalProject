@@ -5,5 +5,6 @@ namespace Repository.Repositories.Interfaces
     public interface ICategoryRepository : IRepository<Category>
     {
         Task<bool> IsExistAsync(string name);
+        Task<Category> GetCategoryByNameAsync(string name);
     }
 }

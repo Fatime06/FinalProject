@@ -38,7 +38,7 @@ namespace Final.Areas.Admin.Controllers
             var category = await _catService.GetUpdatedDtoAsync(id);
             return View(category);
         }
-        [HttpPut]
+        [HttpPost]
         public async Task<IActionResult> Edit(CategoryUpdateDto dto)
         {
             var result = await _catService.UpdateAsync(dto, ModelState);
@@ -52,7 +52,6 @@ namespace Final.Areas.Admin.Controllers
             var category = await _catService.GetAsync(id);
             return View(category);
         }
-        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             await _catService.DeleteAsync(id);
