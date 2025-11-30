@@ -8,9 +8,9 @@ namespace Service.AutoMappers
     {
         public CategoryAutoMapper()
         {
-            CreateMap<CategoryCreateDto, Category>();
-            CreateMap<CategoryUpdateDto, Category>().ReverseMap();
-            CreateMap<Category, CategoryDto>();
+            CreateMap<CategoryCreateVM, Category>();
+            CreateMap<CategoryUpdateVM, Category>().ReverseMap();
+            CreateMap<Category, CategoryVM>();
         }
     }
 }

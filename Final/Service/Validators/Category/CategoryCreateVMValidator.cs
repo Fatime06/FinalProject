@@ -3,9 +3,9 @@ using Service.DTOs.Category;
 
 namespace Service.Validators.Category
 {
-    public class CategoryCreateDtoValidator : AbstractValidator<CategoryCreateDto>
+    public class CategoryCreateVMValidator : AbstractValidator<CategoryCreateVM>
     {
-        public CategoryCreateDtoValidator()
+        public CategoryCreateVMValidator()
         {
             RuleFor(c => c.Name)
                 .NotEmpty().WithMessage("Category name is required.")

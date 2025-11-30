@@ -17,12 +17,12 @@ namespace Final.Controllers
             {
                 string decodedJson = Uri.UnescapeDataString(json);
 
-                var dto = JsonConvert.DeserializeObject<ErrorDto>(decodedJson);
+                var dto = JsonConvert.DeserializeObject<ErrorVM>(decodedJson);
                 dto.Timestamp = DateTime.Now;
                 return View(dto);
             }
 
-            return View(new ErrorDto
+            return View(new ErrorVM
             {
                 StatusCode = 500,
                 Message = "An unexpected error occurred..",

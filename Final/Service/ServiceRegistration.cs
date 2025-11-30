@@ -21,7 +21,7 @@ namespace Service
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddFluentValidationAutoValidation();
-            services.AddValidatorsFromAssemblyContaining<CategoryCreateDtoValidator>();
+            services.AddValidatorsFromAssemblyContaining<CategoryCreateVMValidator>();
             services.AddScoped<ICategoryService, CategoryService>();
             return services;
         }

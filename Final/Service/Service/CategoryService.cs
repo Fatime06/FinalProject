@@ -19,7 +19,7 @@ namespace Service.Service
             _mapper = mapper;
         }
 
-        public async Task<bool> CreateAsync(CategoryCreateDto dto, ModelStateDictionary modelState)
+        public async Task<bool> CreateAsync(CategoryCreateVM dto, ModelStateDictionary modelState)
         {
             if (!modelState.IsValid) return false;
             if (await _catRepo.IsExistAsync(dto.Name.Trim()))
@@ -44,34 +44,34 @@ namespace Service.Service
             await _catRepo.SaveChangesAsync();
         }
 
-        public async Task<List<CategoryDto>> GetAllAsync()
+        public async Task<List<CategoryVM>> GetAllAsync()
         {
             var categories = await _catRepo.GetAll();
-            var categoryDtos = _mapper.Map<List<CategoryDto>>(categories);
+            var categoryDtos = _mapper.Map<List<CategoryVM>>(categories);
             return categoryDtos;
         }
 
-        public async Task<CategoryDto> GetAsync(int id)
+        public async Task<CategoryVM> GetAsync(int id)
         {
             var category = await _catRepo.FindAsync(id);
             if (category is null)
                 throw new CustomException(404, "Kateqoriya tapılmadı");
-            var categoryDto = _mapper.Map<CategoryDto>(category);
+            var categoryDto = _mapper.Map<CategoryVM>(category);
             return categoryDto;
         }
 
-        public async Task<CategoryUpdateDto> GetUpdatedDtoAsync(int id)
+        public async Task<CategoryUpdateVM> GetUpdatedDtoAsync(int id)
         {
             var category = await _catRepo.FindAsync(id);
             if (category is null)
                 throw new CustomException(404, "Category not found");
 
-            var dto = _mapper.Map<CategoryUpdateDto>(category);
+            var dto = _mapper.Map<CategoryUpdateVM>(category);
 
             return dto;
         }
 
-        public async Task<bool> UpdateAsync(CategoryUpdateDto dto, ModelStateDictionary modelState)
+        public async Task<bool> UpdateAsync(CategoryUpdateVM dto, ModelStateDictionary modelState)
         {
             if (!modelState.IsValid) return false;
             var existCategory = await _catRepo.FindAsync(dto.Id);

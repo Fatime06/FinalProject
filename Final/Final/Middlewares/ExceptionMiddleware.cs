@@ -49,7 +49,7 @@ namespace Final.Middlewares
 
             context.Response.ContentType = "application/json";
 
-            var errorDto = new ErrorDto
+            var errorDto = new ErrorVM
             {
                 StatusCode = (int)statusCode,
                 Message = errorMessage,

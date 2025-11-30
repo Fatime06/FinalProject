@@ -1,6 +1,6 @@
 ﻿namespace Service.DTOs.Category
 {
-    public class CategoryUpdateDto
+    public class CategoryUpdateVM
     {
         public int Id { get; set; }
         public string Name { get; set; }

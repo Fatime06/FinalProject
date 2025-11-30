@@ -24,7 +24,7 @@ namespace Final.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(CategoryCreateDto dto)
+        public async Task<IActionResult> Create(CategoryCreateVM dto)
         {
             var result = await _catService.CreateAsync(dto, ModelState);
             if (!result)
@@ -39,7 +39,7 @@ namespace Final.Areas.Admin.Controllers
             return View(category);
         }
         [HttpPost]
-        public async Task<IActionResult> Edit(CategoryUpdateDto dto)
+        public async Task<IActionResult> Edit(CategoryUpdateVM dto)
         {
             var result = await _catService.UpdateAsync(dto, ModelState);
             if (!result)

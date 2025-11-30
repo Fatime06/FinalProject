@@ -1,6 +1,6 @@
 ﻿namespace Service.DTOs.CommonDtos
 {
-    public class ErrorDto
+    public class ErrorVM
     {
         public string Name { get; set; } = "Ooops,Error";
         public string Message { get; set; } = null!;

@@ -5,11 +5,11 @@ namespace Service.Service.Interfaces
 {
     public interface ICategoryService
     {
-        Task<bool> CreateAsync(CategoryCreateDto dto, ModelStateDictionary modelState);
-        Task<bool> UpdateAsync(CategoryUpdateDto dto, ModelStateDictionary modelState);
+        Task<bool> CreateAsync(CategoryCreateVM dto, ModelStateDictionary modelState);
+        Task<bool> UpdateAsync(CategoryUpdateVM dto, ModelStateDictionary modelState);
         Task DeleteAsync(int id);
-        Task<CategoryDto> GetAsync(int id);
-        Task<List<CategoryDto>> GetAllAsync();
-        Task<CategoryUpdateDto> GetUpdatedDtoAsync(int id);
+        Task<CategoryVM> GetAsync(int id);
+        Task<List<CategoryVM>> GetAllAsync();
+        Task<CategoryUpdateVM> GetUpdatedDtoAsync(int id);
     }
 }

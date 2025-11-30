@@ -90,6 +90,7 @@ header {
 
 .icons-nav {
     display: flex;
+    align-items : center;
     gap: 15px;
 }
 
@@ -1794,7 +1795,7 @@ section {
 
 .footer-top .footer-info {
     display: flex;
-    align-items: center;
+    align-items: baseline!important;
     gap: 8px;
 }
 
