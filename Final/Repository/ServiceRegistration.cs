@@ -9,6 +9,8 @@ namespace Repository
         public static IServiceCollection RegisterServiceForRepository(this IServiceCollection services)
         {
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductRatingRepository, ProductRatingRepository>();
             return services;
         }
     }

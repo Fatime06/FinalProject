@@ -3,28 +3,144 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Migrations\\20251130141013_createdProductsAndProductRatingsTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\Migrations\\20251130141013_createdProductsAndProductRatingsTables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\automappers\\productautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\automappers\\productautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\configurations\\productratingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\configurations\\productratingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\automappers\\productratingmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\automappers\\productratingmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\domain\\entities\\productrating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\productrating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\product\\productvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\product\\productvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\interfaces\\iproductratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\interfaces\\iproductratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\validators\\productrating\\productratingupdatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\validators\\productrating\\productratingupdatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\validators\\productrating\\productratingcreatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\validators\\productrating\\productratingcreatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\validators\\product\\productupdatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\validators\\product\\productupdatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\validators\\product\\productcreatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\validators\\product\\productcreatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\configurations\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\configurations\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\productratingvm\\appuserinproductratingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\productratingvm\\appuserinproductratingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\productratingvm\\productratingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\productratingvm\\productratingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\productratingvm\\productinproductratingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\productratingvm\\productinproductratingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\productratingvm\\productratingupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\productratingvm\\productratingupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\product\\productupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\product\\productupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\productratingvm\\productratingcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\productratingvm\\productratingcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\domain\\entities\\productrating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\productrating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\product\\categoryinproductvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\product\\categoryinproductvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\product\\productcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\product\\productcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\automappers\\categoryautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\automappers\\categoryautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\productratingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\productratingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\interfaces\\iproductratingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\iproductratingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\interfaces\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\interfaces\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\migrations\\20251130141013_createdproductsandproductratingstables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\migrations\\20251130141013_createdproductsandproductratingstables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\configurations\\productratingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\configurations\\productratingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -77,14 +193,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -143,20 +251,12 @@
       "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\commonviewmodels\\errorvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\automappers\\categoryautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\automappers\\categoryautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -178,7 +278,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -190,20 +290,345 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductRatingMapper.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\ProductRatingMapper.cs",
+              "RelativeDocumentMoniker": "Service\\AutoMappers\\ProductRatingMapper.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\ProductRatingMapper.cs*",
+              "RelativeToolTip": "Service\\AutoMappers\\ProductRatingMapper.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:45:55.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProductAutoMapper.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\ProductAutoMapper.cs",
+              "RelativeDocumentMoniker": "Service\\AutoMappers\\ProductAutoMapper.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\ProductAutoMapper.cs*",
+              "RelativeToolTip": "Service\\AutoMappers\\ProductAutoMapper.cs*",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAA8AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:42:03.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\ProductService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\ProductService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\ProductService.cs*",
+              "RelativeToolTip": "Service\\Service\\ProductService.cs*",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:40:58.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\Interfaces\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\ICategoryService.cs*",
+              "RelativeToolTip": "Service\\Service\\Interfaces\\ICategoryService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:39:48.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IProductRatingService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\IProductRatingService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\Interfaces\\IProductRatingService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\IProductRatingService.cs*",
+              "RelativeToolTip": "Service\\Service\\Interfaces\\IProductRatingService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:39:37.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductRatingUpdateVMValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\ProductRating\\ProductRatingUpdateVMValidator.cs",
+              "RelativeDocumentMoniker": "Service\\Validators\\ProductRating\\ProductRatingUpdateVMValidator.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\ProductRating\\ProductRatingUpdateVMValidator.cs*",
+              "RelativeToolTip": "Service\\Validators\\ProductRating\\ProductRatingUpdateVMValidator.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:37:28.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductRatingCreateVMValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\ProductRating\\ProductRatingCreateVMValidator.cs",
+              "RelativeDocumentMoniker": "Service\\Validators\\ProductRating\\ProductRatingCreateVMValidator.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\ProductRating\\ProductRatingCreateVMValidator.cs*",
+              "RelativeToolTip": "Service\\Validators\\ProductRating\\ProductRatingCreateVMValidator.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:36:07.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductUpdateVMValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Product\\ProductUpdateVMValidator.cs",
+              "RelativeDocumentMoniker": "Service\\Validators\\Product\\ProductUpdateVMValidator.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Product\\ProductUpdateVMValidator.cs*",
+              "RelativeToolTip": "Service\\Validators\\Product\\ProductUpdateVMValidator.cs*",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABEAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:32:36.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductCreateVMValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Product\\ProductCreateVMValidator.cs",
+              "RelativeDocumentMoniker": "Service\\Validators\\Product\\ProductCreateVMValidator.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Product\\ProductCreateVMValidator.cs*",
+              "RelativeToolTip": "Service\\Validators\\Product\\ProductCreateVMValidator.cs*",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:28:41.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppUserInProductRatingVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\ProductRatingVM\\AppUserInProductRatingVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\ProductRatingVM\\AppUserInProductRatingVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\ProductRatingVM\\AppUserInProductRatingVM.cs*",
+              "RelativeToolTip": "Service\\ViewModels\\ProductRatingVM\\AppUserInProductRatingVM.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:27:20.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductInProductRatingVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\ProductRatingVM\\ProductInProductRatingVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\ProductRatingVM\\ProductInProductRatingVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\ProductRatingVM\\ProductInProductRatingVM.cs*",
+              "RelativeToolTip": "Service\\ViewModels\\ProductRatingVM\\ProductInProductRatingVM.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:26:47.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductRatingVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\ProductRatingVM\\ProductRatingVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\ProductRatingVM\\ProductRatingVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\ProductRatingVM\\ProductRatingVM.cs*",
+              "RelativeToolTip": "Service\\ViewModels\\ProductRatingVM\\ProductRatingVM.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:22:43.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductRatingUpdateVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\ProductRatingVM\\ProductRatingUpdateVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\ProductRatingVM\\ProductRatingUpdateVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\ProductRatingVM\\ProductRatingUpdateVM.cs*",
+              "RelativeToolTip": "Service\\ViewModels\\ProductRatingVM\\ProductRatingUpdateVM.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:21:30.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProductRatingCreateVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\ProductRatingVM\\ProductRatingCreateVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\ProductRatingVM\\ProductRatingCreateVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\ProductRatingVM\\ProductRatingCreateVM.cs*",
+              "RelativeToolTip": "Service\\ViewModels\\ProductRatingVM\\ProductRatingCreateVM.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:20:15.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ProductUpdateVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Product\\ProductUpdateVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Product\\ProductUpdateVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Product\\ProductUpdateVM.cs*",
+              "RelativeToolTip": "Service\\ViewModels\\Product\\ProductUpdateVM.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:18:34.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CategoryInProductVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Product\\CategoryInProductVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Product\\CategoryInProductVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Product\\CategoryInProductVM.cs*",
+              "RelativeToolTip": "Service\\ViewModels\\Product\\CategoryInProductVM.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:11:56.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Product\\ProductVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Product\\ProductVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Product\\ProductVM.cs*",
+              "RelativeToolTip": "Service\\ViewModels\\Product\\ProductVM.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:10:58.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductCreateVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Product\\ProductCreateVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Product\\ProductCreateVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Product\\ProductCreateVM.cs*",
+              "RelativeToolTip": "Service\\ViewModels\\Product\\ProductCreateVM.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:09:00.546Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\Interfaces\\IProductService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\IProductService.cs*",
+              "RelativeToolTip": "Service\\Service\\Interfaces\\IProductService.cs*",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:00:31.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProductRatingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\ProductRatingRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\ProductRatingRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\ProductRatingRepository.cs*",
+              "RelativeToolTip": "Repository\\Repositories\\ProductRatingRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T16:58:48.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IProductRatingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\IProductRatingRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IProductRatingRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\IProductRatingRepository.cs*",
+              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IProductRatingRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T16:58:10.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\ProductRepository.cs*",
+              "RelativeToolTip": "Repository\\Repositories\\ProductRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T16:56:22.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\IProductRepository.cs*",
+              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IProductRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T16:55:32.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\FileService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\FileService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\FileService.cs*",
+              "RelativeToolTip": "Service\\Service\\FileService.cs*",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T16:52:23.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IFileService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\IFileService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\Interfaces\\IFileService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\IFileService.cs*",
+              "RelativeToolTip": "Service\\Service\\Interfaces\\IFileService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T16:36:42.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
               "Title": "20251130141013_createdProductsAndProductRatingsTables.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Migrations\\20251130141013_createdProductsAndProductRatingsTables.cs",
               "RelativeDocumentMoniker": "Repository\\Migrations\\20251130141013_createdProductsAndProductRatingsTables.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Migrations\\20251130141013_createdProductsAndProductRatingsTables.cs",
               "RelativeToolTip": "Repository\\Migrations\\20251130141013_createdProductsAndProductRatingsTables.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-30T14:10:13.716Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 33,
               "Title": "ProductRatingConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Configurations\\ProductRatingConfiguration.cs",
               "RelativeDocumentMoniker": "Repository\\Configurations\\ProductRatingConfiguration.cs",
@@ -211,12 +636,11 @@
               "RelativeToolTip": "Repository\\Configurations\\ProductRatingConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T14:07:22.582Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-30T14:07:22.582Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 34,
               "Title": "CategoryConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Configurations\\CategoryConfiguration.cs",
               "RelativeDocumentMoniker": "Repository\\Configurations\\CategoryConfiguration.cs",
@@ -228,19 +652,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "ProductConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Configurations\\ProductConfiguration.cs",
               "RelativeDocumentMoniker": "Repository\\Configurations\\ProductConfiguration.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Configurations\\ProductConfiguration.cs",
               "RelativeToolTip": "Repository\\Configurations\\ProductConfiguration.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA8wBYAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAmwBYAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T13:56:47.706Z"
+              "WhenOpened": "2025-11-30T13:56:47.706Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 35,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Repository\\Data\\AppDbContext.cs",
@@ -252,7 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 36,
               "Title": "AppUser.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\AppUser.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\AppUser.cs",
@@ -264,19 +689,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 20,
               "Title": "ProductRating.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\ProductRating.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\ProductRating.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\ProductRating.cs",
               "RelativeToolTip": "Domain\\Entities\\ProductRating.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T13:51:09.51Z"
+              "WhenOpened": "2025-11-30T13:51:09.51Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 38,
               "Title": "Shop2.css",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\assets\\css\\Shop2.css",
               "RelativeDocumentMoniker": "Final\\wwwroot\\assets\\css\\Shop2.css",
@@ -288,7 +714,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 37,
               "Title": "Shop1.css",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\assets\\css\\Shop1.css",
               "RelativeDocumentMoniker": "Final\\wwwroot\\assets\\css\\Shop1.css",
@@ -300,7 +726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 40,
               "Title": "Index.css",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\assets\\css\\Index.css",
               "RelativeDocumentMoniker": "Final\\wwwroot\\assets\\css\\Index.css",
@@ -312,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 41,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\Category.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Category.cs",
@@ -324,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 45,
               "Title": "Audit.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\Audit.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Audit.cs",
@@ -336,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 44,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\BaseEntity.cs",
@@ -348,19 +774,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Product.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\Product.cs",
               "RelativeToolTip": "Domain\\Entities\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T12:52:51.011Z"
+              "WhenOpened": "2025-11-30T12:52:51.011Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 28,
               "Title": "ICategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\ICategoryRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\ICategoryRepository.cs",
@@ -368,11 +795,12 @@
               "RelativeToolTip": "Repository\\Repositories\\Interfaces\\ICategoryRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T00:57:41.337Z"
+              "WhenOpened": "2025-11-30T00:57:41.337Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 47,
               "Title": "CategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\CategoryRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\CategoryRepository.cs",
@@ -384,7 +812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 48,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Repository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Repository.cs",
@@ -396,7 +824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 55,
               "Title": "paper-dashboard.css",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\admin\\assets\\css\\paper-dashboard.css",
               "RelativeDocumentMoniker": "Final\\wwwroot\\admin\\assets\\css\\paper-dashboard.css",
@@ -408,7 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 54,
               "Title": "bootstrap.min.css",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\admin\\assets\\css\\bootstrap.min.css",
               "RelativeDocumentMoniker": "Final\\wwwroot\\admin\\assets\\css\\bootstrap.min.css",
@@ -420,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 53,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Category\\Detail.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Category\\Detail.cshtml",
@@ -432,7 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 57,
               "Title": "CategoryCreateVMValidator.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Category\\CategoryCreateVMValidator.cs",
               "RelativeDocumentMoniker": "Service\\Validators\\Category\\CategoryCreateVMValidator.cs",
@@ -444,7 +872,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 43,
               "Title": "CustomException.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Exceptions\\CustomException.cs",
               "RelativeDocumentMoniker": "Service\\Exceptions\\CustomException.cs",
@@ -456,7 +884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 58,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Home\\Error.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Home\\Error.cshtml",
@@ -468,7 +896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 61,
               "Title": "ErrorVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\CommonViewModels\\ErrorVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\CommonViewModels\\ErrorVM.cs",
@@ -480,7 +908,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 60,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Final\\Controllers\\HomeController.cs",
@@ -492,7 +920,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 42,
               "Title": "ExceptionMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Middlewares\\ExceptionMiddleware.cs",
               "RelativeDocumentMoniker": "Final\\Middlewares\\ExceptionMiddleware.cs",
@@ -504,19 +932,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 23,
               "Title": "CategoryAutoMapper.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\CategoryAutoMapper.cs",
               "RelativeDocumentMoniker": "Service\\AutoMappers\\CategoryAutoMapper.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\CategoryAutoMapper.cs",
               "RelativeToolTip": "Service\\AutoMappers\\CategoryAutoMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T23:18:40.255Z"
+              "WhenOpened": "2025-11-29T23:18:40.255Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 62,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Final\\appsettings.Development.json",
@@ -528,7 +957,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 51,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
@@ -540,7 +969,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 39,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\_Layout.cshtml",
@@ -552,19 +981,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 24,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "Repository\\ServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\ServiceRegistration.cs",
-              "RelativeToolTip": "Repository\\ServiceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\ServiceRegistration.cs*",
+              "RelativeToolTip": "Repository\\ServiceRegistration.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T22:48:51.071Z"
+              "WhenOpened": "2025-11-29T22:48:51.071Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 63,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "Final\\ServiceRegistration.cs",
@@ -576,7 +1006,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 56,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Program.cs",
               "RelativeDocumentMoniker": "Final\\Program.cs",
@@ -588,7 +1018,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 64,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "Service\\ServiceRegistration.cs",
@@ -600,7 +1030,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 49,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
@@ -612,7 +1042,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 52,
               "Title": "_ValidationPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Shared\\_ValidationPartial.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Shared\\_ValidationPartial.cshtml",
@@ -624,7 +1054,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 65,
               "Title": "_ValidationPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\_ValidationPartial.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\_ValidationPartial.cshtml",
@@ -636,7 +1066,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 59,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Category\\Create.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Category\\Create.cshtml",
@@ -648,7 +1078,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 50,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Category\\Index.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Category\\Index.cshtml",
@@ -660,7 +1090,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 66,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Controllers\\DashboardController.cs",
@@ -672,7 +1102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 46,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Controllers\\CategoryController.cs",
@@ -684,15 +1114,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 5,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\CategoryService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\CategoryService.cs",
-              "RelativeToolTip": "Service\\Service\\CategoryService.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAADwv04AAAB1AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\CategoryService.cs*",
+              "RelativeToolTip": "Service\\Service\\CategoryService.cs*",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAACwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T22:15:27.392Z"
+              "WhenOpened": "2025-11-29T22:15:27.392Z",
+              "EditorCaption": ""
             }
           ]
         }

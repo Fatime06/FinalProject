@@ -9,7 +9,7 @@ namespace Service.Service.Interfaces
         Task<bool> UpdateAsync(CategoryUpdateVM dto, ModelStateDictionary modelState);
         Task DeleteAsync(int id);
         Task<CategoryVM> GetAsync(int id);
-        Task<List<CategoryVM>> GetAllAsync();
+        Task<IEnumerable<CategoryVM>> GetAllAsync();
         Task<CategoryUpdateVM> GetUpdatedDtoAsync(int id);
     }
 }

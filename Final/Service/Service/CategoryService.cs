@@ -44,7 +44,7 @@ namespace Service.Service
             await _catRepo.SaveChangesAsync();
         }
 
-        public async Task<List<CategoryVM>> GetAllAsync()
+        public async Task<IEnumerable<CategoryVM>> GetAllAsync()
         {
             var categories = await _catRepo.GetAll();
             var categoryDtos = _mapper.Map<List<CategoryVM>>(categories);
