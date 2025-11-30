@@ -1,4 +1,4 @@
-﻿namespace Service.ViewModels.ProductRatingVM
+﻿namespace Service.ViewModels.ProductRating
 {
     public class AppUserInProductRatingVM
     {

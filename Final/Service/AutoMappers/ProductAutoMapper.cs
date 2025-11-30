@@ -12,7 +12,11 @@ namespace Service.AutoMappers
                  .ForMember(dest => dest.Image, opt => opt.Ignore());
             CreateMap<ProductUpdateVM, Product>().ReverseMap()
                     .ForMember(dest => dest.Image, opt => opt.Ignore());
-            CreateMap<Product, ProductVM>();
+            CreateMap<Product, ProductVM>()
+                 .ForMember(dest => dest.AverageRating,
+               opt => opt.MapFrom(src => src.Ratings.Any()
+                                  ? src.Ratings.Average(r => r.Value)
+                                  : 0));
             CreateMap<Category, CategoryInProductVM>();
         }
     }

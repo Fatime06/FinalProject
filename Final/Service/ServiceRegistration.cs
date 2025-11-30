@@ -23,6 +23,9 @@ namespace Service
             services.AddFluentValidationAutoValidation();
             services.AddValidatorsFromAssemblyContaining<CategoryCreateVMValidator>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProductRatingService, ProductRatingService>();
+            services.AddScoped<IFileService, FileService>();
             return services;
         }
     }

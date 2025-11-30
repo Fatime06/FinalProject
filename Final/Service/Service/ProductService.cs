@@ -3,7 +3,6 @@ using Domain.Entities;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 using Repository.Repositories.Interfaces;
-using Service.DTOs.Category;
 using Service.Exceptions;
 using Service.Service.Interfaces;
 using Service.ViewModels.Product;
@@ -27,7 +26,15 @@ namespace Service.Service
         {
             if (!modelState.IsValid) return false;
             var product = _mapper.Map<Product>(vm);
-            string fileName = await _fileService.UploadAsync(vm.Image, "uploads/products");
+            if(product.Quantity > 0)
+            {
+                product.InStock = true;
+            }
+            else
+            {
+                product.InStock = false;
+            }
+            string fileName = await _fileService.UploadAsync(vm.Image, "admin/uploads/products");
             product.Image = fileName;
             await _proRepo.AddAsync(product);
             await _proRepo.SaveChangesAsync();
@@ -39,7 +46,7 @@ namespace Service.Service
             var product = await _proRepo.Find(id).FirstOrDefaultAsync();
             if (product is null)
                 throw new CustomException(404, "Product not found");
-            _fileService.Delete(product.Image, "uploads/products");
+            _fileService.Delete(product.Image, "admin/uploads/products");
             _proRepo.Delete(product);
             await _proRepo.SaveChangesAsync();
         }
@@ -75,16 +82,30 @@ namespace Service.Service
         {
             if(!modelState.IsValid) return false;
             var product = await _proRepo.Find(vm.Id).Include(p => p.Ratings).Include(p=>p.Category).FirstOrDefaultAsync();
-
+            var image = product.Image;
             if (product == null) throw new CustomException(404, "Product not found");
+
 
             _mapper.Map(vm, product);
 
+            if (product.Quantity > 0)
+            {
+                product.InStock = true;
+            }
+            else
+            {
+                product.InStock = false;
+            }
+
             if (vm.Image != null) 
             {
-                _fileService.Delete(product.Image, "uploads/products");
+                _fileService.Delete(product.Image, "admin/uploads/products");
 
-                product.Image = await _fileService.UploadAsync(vm.Image, "uploads/products");
+                product.Image = await _fileService.UploadAsync(vm.Image, "admin/uploads/products");
+            }
+            else
+            {
+                product.Image = image;
             }
 
             await _proRepo.SaveChangesAsync();

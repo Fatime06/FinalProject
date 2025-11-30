@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Repository.Repositories.Interfaces;
 using Service.Exceptions;
 using Service.Service.Interfaces;
-using Service.ViewModels.ProductRatingVM;
+using Service.ViewModels.ProductRating;
 
 namespace Service.Service
 {

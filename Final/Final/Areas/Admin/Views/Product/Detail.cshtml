@@ -1,0 +1,83 @@
+﻿@using Service.ViewModels.Product
+@model ProductVM
+
+
+<div class="container" style="padding-top:30px;">
+    <div class="row">
+
+        <div class="col-md-4">
+            <img src="~/admin/uploads/products/@Model.Image" class="img-responsive img-thumbnail" />
+        </div>
+
+        <div class="col-md-8">
+            <h2>@Model.Name</h2>
+
+            <h4>
+                <span class="label label-info">@Model.Category.Name</span>
+            </h4>
+
+            <h3 style="margin-top:15px;">
+                @if (Model.DiscountPrice != null)
+                {
+                    <span style="color:red;">@Model.DiscountPrice ₼</span>
+                    <small style="text-decoration:line-through; color:gray;">@Model.Price ₼</small>
+                }
+                else
+                {
+                    <span>@Model.Price $</span>
+                }
+            </h3>
+
+            <p>
+                <strong>Quantity:</strong> @Model.Quantity <br />
+                <strong>In Stock:</strong>
+                @if (Model.InStock)
+                {
+                    <span class="text-success">Yes</span>
+                }
+                else
+                {
+                    <span class="text-danger">No</span>
+                }
+            </p>
+
+            <p>
+                <strong>Average Rating:</strong>
+                @Model.AverageRating ⭐
+            </p>
+
+            <a asp-action="index" asp-controller="product" class="btn btn-default">Back to products</a>
+        </div>
+
+    </div>
+
+    <hr />
+
+    <!-- Ratings Section -->
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Ratings & Comments</h3>
+
+            @if (Model.Ratings != null && Model.Ratings.Any())
+            {
+                foreach (var rating in Model.Ratings)
+                {
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>@rating.AppUser.UserName</strong> – ⭐ @rating.Value
+                        </div>
+                        <div class="panel-body">
+                            @rating.Comment
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-muted">No ratings yet.</p>
+            }
+        </div>
+    </div>
+
+</div>
+

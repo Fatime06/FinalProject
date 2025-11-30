@@ -1,4 +1,6 @@
-﻿namespace Service.ViewModels.Product
+﻿using Service.ViewModels.ProductRating;
+
+namespace Service.ViewModels.Product
 {
     public class ProductVM
     {
@@ -10,5 +12,7 @@
         public double? DiscountPrice { get; set; }
         public bool InStock { get; set; }
         public CategoryInProductVM Category { get; set; }
+        public double AverageRating { get; set; }
+        public IEnumerable<ProductRatingVM> Ratings { get; set; }
     }
 }

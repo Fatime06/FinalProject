@@ -1,7 +1,8 @@
-﻿namespace Service.ViewModels.ProductRatingVM
+﻿namespace Service.ViewModels.ProductRating
 {
-    public class ProductRatingCreateVM
+    public class ProductRatingUpdateVM
     {
+        public int Id { get; set; }
         public int ProductId { get; set; }
         public int Value { get; set; }
         public string? Comment { get; set; }

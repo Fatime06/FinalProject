@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using Service.ViewModels.ProductRatingVM;
+using Service.ViewModels.ProductRating;
 
 namespace Service.Validators.ProductRating
 {

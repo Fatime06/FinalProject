@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Entities;
-using Microsoft.EntityFrameworkCore.Query.Internal;
-using Service.ViewModels.ProductRatingVM;
+using Service.ViewModels.ProductRating;
 
 namespace Service.AutoMappers
 {
