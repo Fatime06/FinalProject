@@ -11,6 +11,7 @@ namespace Repository
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductRatingRepository, ProductRatingRepository>();
+            services.AddScoped<ISliderRepository, SliderRepository>();
             return services;
         }
     }

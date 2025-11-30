@@ -54,7 +54,6 @@ wwwroot\admin\assets\sass\paper-dashboard.scss
 wwwroot\admin\uploads\products\6b236d16-34fa-4bc2-9103-fe9dae1b63b0.webp
 wwwroot\admin\uploads\products\cd620c03-6ffa-4dfc-a960-441958e05185.jpg
 wwwroot\admin\uploads\products\d117fe55-80d9-45bc-b763-a45a3f58b7dc.jpg
-wwwroot\admin\uploads\products\dbed12b8-ce75-499f-8eff-4c52940d9d3a.webp
 wwwroot\assets\css\Beer.css
 wwwroot\assets\css\Blog.css
 wwwroot\assets\css\Cocktail.css
