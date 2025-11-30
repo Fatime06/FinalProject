@@ -1,4 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+﻿using AutoMapper;
+using Domain.Entities;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore;
+using Repository.Repositories.Interfaces;
+using Service.DTOs.Category;
+using Service.Exceptions;
 using Service.Service.Interfaces;
 using Service.ViewModels.Product;
 
@@ -6,44 +12,83 @@ namespace Service.Service
 {
     public class ProductService : IProductService
     {
-        public Task<bool> CreateAsync(ProductCreateVM dto, ModelStateDictionary modelState)
+        private readonly IProductRepository _proRepo;
+        private readonly IMapper _mapper;
+        private readonly IFileService _fileService;
+
+        public ProductService(IProductRepository proRepo, IMapper mapper, IFileService fileService)
         {
-            throw new NotImplementedException();
+            _proRepo = proRepo;
+            _mapper = mapper;
+            _fileService = fileService;
         }
 
-        public Task DeleteAsync(int id)
+        public async Task<bool> CreateAsync(ProductCreateVM vm, ModelStateDictionary modelState)
         {
-            throw new NotImplementedException();
+            if (!modelState.IsValid) return false;
+            var product = _mapper.Map<Product>(vm);
+            string fileName = await _fileService.UploadAsync(vm.Image, "uploads/products");
+            product.Image = fileName;
+            await _proRepo.AddAsync(product);
+            await _proRepo.SaveChangesAsync();
+            return true;
         }
 
-        public Task<IEnumerable<ProductVM>> GetAllAsync()
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var product = await _proRepo.Find(id).FirstOrDefaultAsync();
+            if (product is null)
+                throw new CustomException(404, "Product not found");
+            _fileService.Delete(product.Image, "uploads/products");
+            _proRepo.Delete(product);
+            await _proRepo.SaveChangesAsync();
         }
 
-        public Task<ProductVM> GetAsync(int id)
+        public async Task<IEnumerable<ProductVM>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var products = await _proRepo.GetAll().Include(p=>p.Ratings).Include(p=>p.Category).ToListAsync();
+            var productsVMs = _mapper.Map<IEnumerable<ProductVM>>(products);
+            return productsVMs;
         }
 
-        public Task<ProductUpdateVM> GetUpdatedDtoAsync(int id)
+        public async Task<ProductVM> GetAsync(int id)
         {
-            throw new NotImplementedException();
+            var product = await _proRepo.Find(id).Include(p => p.Ratings).Include(c => c.Category).FirstOrDefaultAsync();
+            if (product is null)
+                throw new CustomException(404, "Product not found");
+            var productVm = _mapper.Map<ProductVM>(product);
+            return productVm;
         }
 
-        public Task<bool> IsExistAsync(int id)
+        public async Task<ProductUpdateVM> GetUpdatedDtoAsync(int id)
         {
-            throw new NotImplementedException();
+            var product = await _proRepo.Find(id).Include(p => p.Ratings).Include(c => c.Category).FirstOrDefaultAsync();
+            if (product is null)
+                throw new CustomException(404, "Product not found");
+
+            var vm = _mapper.Map<ProductUpdateVM>(product);
+
+            return vm;
         }
 
-        public Task<bool> IsExistForNameAsync(string name)
+        public async Task<bool> UpdateAsync(ProductUpdateVM vm, ModelStateDictionary modelState)
         {
-            throw new NotImplementedException();
-        }
+            if(!modelState.IsValid) return false;
+            var product = await _proRepo.Find(vm.Id).Include(p => p.Ratings).Include(p=>p.Category).FirstOrDefaultAsync();
 
-        public Task<bool> UpdateAsync(ProductUpdateVM dto, ModelStateDictionary modelState)
-        {
-            throw new NotImplementedException();
+            if (product == null) throw new CustomException(404, "Product not found");
+
+            _mapper.Map(vm, product);
+
+            if (vm.Image != null) 
+            {
+                _fileService.Delete(product.Image, "uploads/products");
+
+                product.Image = await _fileService.UploadAsync(vm.Image, "uploads/products");
+            }
+
+            await _proRepo.SaveChangesAsync();
+            return true;
         }
     }
 }

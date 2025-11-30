@@ -10,6 +10,6 @@
         public bool InStock { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
-        public List<ProductRating> Ratings { get; set; } = new();
+        public IEnumerable<ProductRating> Ratings { get; set; }
     }
 }

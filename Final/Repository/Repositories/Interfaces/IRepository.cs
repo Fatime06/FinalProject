@@ -9,8 +9,9 @@ namespace Repository.Repositories.Interfaces
         Task AddAsync(T entity);
         void Update(T entity);
         void Delete(T entity);
-        Task<T> FindAsync(int id);
+        IQueryable<T> Find(int id);
         Task<int> SaveChangesAsync();
-        Task<IEnumerable<T>> GetAll();
+
+        IQueryable<T> GetAll();
     }
 }

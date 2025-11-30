@@ -11,8 +11,6 @@ namespace Service.Service.Interfaces
         Task DeleteAsync(int id);
         Task<ProductRatingVM> GetAsync(int id);
         Task<IEnumerable<ProductRatingVM>> GetAllAsync();
-        Task<bool> IsExistAsync(int id);
-        Task<bool> IsExistForNameAsync(string name);
         Task<ProductRatingUpdateVM> GetUpdatedDtoAsync(int id);
     }
 }

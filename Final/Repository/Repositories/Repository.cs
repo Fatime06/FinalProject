@@ -26,14 +26,14 @@ namespace Repository.Repositories
             _table.Remove(entity);
         }
 
-        public async Task<T> FindAsync(int id)
+        public IQueryable<T> Find(int id)
         {
-            return await _table.FirstOrDefaultAsync(x=>x.Id == id);
+            return _table.Where(e => e.Id == id);
         }
 
-        public async Task<IEnumerable<T>> GetAll()
+        public IQueryable<T> GetAll()
         {
-            return await _table.ToListAsync();
+            return _table.AsQueryable();
         }
 
         public async Task<int> SaveChangesAsync()
