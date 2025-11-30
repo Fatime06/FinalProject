@@ -9,7 +9,7 @@ namespace Service.AutoMappers
         public CategoryAutoMapper()
         {
             CreateMap<CategoryCreateDto, Category>();
-            CreateMap<CategoryUpdateDto, Category>();
+            CreateMap<CategoryUpdateDto, Category>().ReverseMap();
             CreateMap<Category, CategoryDto>();
         }
     }

@@ -3,6 +3,7 @@ using Domain.Entities;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Repository.Repositories.Interfaces;
 using Service.DTOs.Category;
+using Service.Exceptions;
 using Service.Service.Interfaces;
 
 namespace Service.Service
@@ -62,8 +63,8 @@ namespace Service.Service
         public async Task<CategoryUpdateDto> GetUpdatedDtoAsync(int id)
         {
             var category = await _catRepo.FindAsync(id);
-            //if (category is null)
-            //throw new CustomException(404, "Kateqoriya tapılmadı");
+            if (category is null)
+                throw new CustomException(404, "Category not found");
 
             var dto = _mapper.Map<CategoryUpdateDto>(category);
 
@@ -74,7 +75,7 @@ namespace Service.Service
         {
             if (!modelState.IsValid) return false;
             var existCategory = await _catRepo.FindAsync(dto.Id);
-            //if (existCategory is null) throw new CustomException(404, "Category not found");
+            if (existCategory is null) throw new CustomException(404, "Category not found");
             if (await _catRepo.IsExistAsync(dto.Name.Trim()))
             {
                 modelState.AddModelError("Name", "This category already exists");
