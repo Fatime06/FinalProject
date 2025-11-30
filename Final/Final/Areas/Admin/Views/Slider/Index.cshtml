@@ -1,5 +1,5 @@
-﻿@using Service.ViewModels.Product
-@model IEnumerable<ProductVM>
+﻿@using Service.ViewModels.Slider
+@model IEnumerable<SliderVM>
 
 @{
     int count = 0;
@@ -13,26 +13,26 @@
             <thead>
                 <tr>
                     <th scope="col">No</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Price</th>
                     <th scope="col">Image</th>
+                    <th scope="col">Small Text</th>
+                    <th scope="col">Big Text</th>
                     <th scope="col">Settings</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var product in Model)
+                @foreach (var slider in Model)
                 {
                     <tr>
                         <td>@(++count)</td>
-                        <td>@product.Name</td>
-                        <td>@product.Price$</td>
                         <td>
-                            <img width="80" height="60" src="~/admin/uploads/products/@product.Image">
+                            <img width="80" height="60" src="~/admin/uploads/sliders/@slider.Image">
                         </td>
+                        <td>@slider.SmallText</td>
+                        <td>@slider.BigText</td>
                         <td>
-                            <a class="btn btn-warning" asp-action="edit" asp-route-id="@product.Id">Edit</a>
-                            <a class="btn btn-info" asp-action="detail" asp-route-id="@product.Id">Detail</a>
-                            <a class="btn btn-danger deletecategoryButton" asp-action="delete" asp-route-id="@product.Id">Delete</a>
+                            <a class="btn btn-warning" asp-action="edit" asp-route-id="@slider.Id">Edit</a>
+                            <a class="btn btn-info" asp-action="detail" asp-route-id="@slider.Id">Detail</a>
+                            <a class="btn btn-danger deletecategoryButton" asp-action="delete" asp-route-id="@slider.Id">Delete</a>
                         </td>
                     </tr>
                 }
@@ -72,4 +72,5 @@
         });
     </script>
 }
+
 

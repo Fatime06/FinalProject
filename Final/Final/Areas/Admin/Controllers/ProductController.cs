@@ -41,7 +41,7 @@ namespace Final.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Edit(int id)
         {
-            var productDto = await _productService.GetUpdatedDtoAsync(id);
+            var productDto = await _productService.GetUpdatedVmAsync(id);
 
             ViewBag.Categories = await _categoryService.GetAllAsync();
             return View(productDto);

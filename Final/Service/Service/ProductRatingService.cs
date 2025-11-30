@@ -73,7 +73,7 @@ namespace Service.Service
             return _mapper.Map<ProductRatingVM>(rating);
         }
 
-        public async Task<ProductRatingUpdateVM> GetUpdatedDtoAsync(int id)
+        public async Task<ProductRatingUpdateVM> GetUpdatedVmAsync(int id)
         {
             var rating = await _ratingRepo.Find(id).Include(pr=>pr.Product).Include(pr=>pr.AppUser).FirstOrDefaultAsync();
             return _mapper.Map<ProductRatingUpdateVM>(rating);

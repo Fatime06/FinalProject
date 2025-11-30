@@ -35,7 +35,7 @@ namespace Final.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Edit(int id)
         {
-            var category = await _catService.GetUpdatedDtoAsync(id);
+            var category = await _catService.GetUpdatedVmAsync(id);
             return View(category);
         }
         [HttpPost]

@@ -11,5 +11,6 @@ namespace Service.ViewModels.Slider
         public string MediumText { get; set; }
         public string ButtonText { get; set; }
         public string? SmallNote { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

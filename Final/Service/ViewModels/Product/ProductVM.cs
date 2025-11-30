@@ -14,5 +14,6 @@ namespace Service.ViewModels.Product
         public CategoryInProductVM Category { get; set; }
         public double AverageRating { get; set; }
         public IEnumerable<ProductRatingVM> Ratings { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

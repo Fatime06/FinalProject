@@ -67,7 +67,7 @@ namespace Service.Service
             return productVm;
         }
 
-        public async Task<ProductUpdateVM> GetUpdatedDtoAsync(int id)
+        public async Task<ProductUpdateVM> GetUpdatedVmAsync(int id)
         {
             var product = await _proRepo.Find(id).Include(p => p.Ratings).Include(c => c.Category).FirstOrDefaultAsync();
             if (product is null)

@@ -61,7 +61,7 @@ namespace Service.Service
             return categoryVm;
         }
 
-        public async Task<CategoryUpdateVM> GetUpdatedDtoAsync(int id)
+        public async Task<CategoryUpdateVM> GetUpdatedVmAsync(int id)
         {
             var category = await _catRepo.Find(id).Include(c=>c.Products).ThenInclude(p=>p.Ratings).FirstOrDefaultAsync();
             if (category is null)

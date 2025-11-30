@@ -1,0 +1,60 @@
+﻿@using Service.ViewModels.Slider
+@model SliderCreateVM
+
+
+<div class="container">
+    <div class="row">
+        <div>
+            <form method="post" class="form-horizontal" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class="control-label" asp-for="SmallText"></label>
+                    <input asp-for="SmallText" type="text" class="form-control" placeholder="Enter slider small text">
+                    <span class="text-danger" asp-validation-for="SmallText"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for="BigText"></label>
+                    <input asp-for="BigText" type="text" class="form-control" placeholder="Enter slider big text">
+                    <span class="text-danger" asp-validation-for="BigText"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for="MediumText"></label>
+                    <input asp-for="MediumText" type="text" class="form-control" placeholder="Enter slider medium text">
+                    <span class="text-danger" asp-validation-for="MediumText"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for="ButtonText"></label>
+                    <input asp-for="ButtonText" type="text" class="form-control" placeholder="Enter slider button text">
+                    <span class="text-danger" asp-validation-for="ButtonText"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for="SmallNote"></label>
+                    <input asp-for="SmallNote" type="text" class="form-control" placeholder="Enter slider small note (optional)">
+                    <span class="text-danger" asp-validation-for="SmallNote"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for="Image"></label>
+                    <input asp-for="Image" type="file" class="form-control" placeholder="Enter product image">
+                    <span class="text-danger" asp-validation-for="Image"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        padding-top: 30px;
+    }
+</style>
+
+@section scripts {
+    @await Html.PartialAsync("_ValidationPartial")
+}
+
+
+
+

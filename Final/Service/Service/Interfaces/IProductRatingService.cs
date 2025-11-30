@@ -10,6 +10,6 @@ namespace Service.Service.Interfaces
         Task DeleteAsync(int id);
         Task<ProductRatingVM> GetAsync(int id);
         Task<IEnumerable<ProductRatingVM>> GetAllAsync();
-        Task<ProductRatingUpdateVM> GetUpdatedDtoAsync(int id);
+        Task<ProductRatingUpdateVM> GetUpdatedVmAsync(int id);
     }
 }
