@@ -22,11 +22,11 @@
     </main>
 
     @await Component.InvokeAsync("Footer")
-
-    <script src="~/assets/js/Shop1.js"></script>
+    @RenderSection("scripts", required: false)
+    @* <script src="~/assets/js/Shop1.js"></script> *@
     <script src="~/assets/js/Index.js"></script> 
-    <script src="~/assets/js/Blog.js"></script>
-    <script src="~/assets/js/Contact.js"></script>
+    @* <script src="~/assets/js/Blog.js"></script> *@
+    @* <script src="~/assets/js/Contact.js"></script> *@
 </body>
 
 </html>
