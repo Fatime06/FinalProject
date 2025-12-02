@@ -59,6 +59,7 @@ namespace Final.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             await _sliderService.DeleteAsync(id);
+            TempData["SuccessMessage"] = "Slider successfully deleted!";
             return RedirectToAction(nameof(Index));
         }
     }

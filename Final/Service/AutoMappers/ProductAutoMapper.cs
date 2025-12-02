@@ -16,7 +16,9 @@ namespace Service.AutoMappers
                  .ForMember(dest => dest.AverageRating,
                opt => opt.MapFrom(src => src.Ratings.Any()
                                   ? src.Ratings.Average(r => r.Value)
-                                  : 0));
+                                  : 0))
+                 .ForMember(dest => dest.Ratings,opt=> opt.MapFrom(src => src.Ratings))
+                 .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category));
             CreateMap<Category, CategoryInProductVM>();
         }
     }

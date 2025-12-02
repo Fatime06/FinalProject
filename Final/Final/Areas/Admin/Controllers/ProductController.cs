@@ -56,7 +56,7 @@ namespace Final.Areas.Admin.Controllers
                 return View(vm);
             }
 
-            TempData["SuccessMessage"] = "Category successfully updated!";
+            TempData["SuccessMessage"] = "Product successfully updated!";
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -69,6 +69,7 @@ namespace Final.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             await _productService.DeleteAsync(id);
+            TempData["SuccessMessage"] = "Product successfully deleted!";
             return RedirectToAction(nameof(Index));
         }
     }

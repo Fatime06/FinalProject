@@ -36,6 +36,7 @@ namespace Service.Service
                 return false;
             }
             var rating = _mapper.Map<ProductRating>(vm);
+            rating.CreatedDate = DateTime.Now;
             await _ratingRepo.AddAsync(rating);
             await _ratingRepo.SaveChangesAsync();
             return true;

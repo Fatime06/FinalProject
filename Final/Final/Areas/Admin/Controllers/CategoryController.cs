@@ -24,11 +24,11 @@ namespace Final.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(CategoryCreateVM dto)
+        public async Task<IActionResult> Create(CategoryCreateVM vm)
         {
-            var result = await _catService.CreateAsync(dto, ModelState);
+            var result = await _catService.CreateAsync(vm, ModelState);
             if (!result)
-                return View(dto);
+                return View(vm);
             TempData["SuccessMessage"] = "Category successfully added!";
 
             return RedirectToAction(nameof(Index));
@@ -39,11 +39,12 @@ namespace Final.Areas.Admin.Controllers
             return View(category);
         }
         [HttpPost]
-        public async Task<IActionResult> Edit(CategoryUpdateVM dto)
+        public async Task<IActionResult> Edit(CategoryUpdateVM vm)
         {
-            var result = await _catService.UpdateAsync(dto, ModelState);
+            var result = await _catService.UpdateAsync(vm, ModelState);
             if (!result)
-                return View(dto);
+                return View(vm);
+            TempData["SuccessMessage"] = "Category successfully deleted!";
             return RedirectToAction(nameof(Index));
         }
         [HttpGet]
@@ -55,6 +56,7 @@ namespace Final.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             await _catService.DeleteAsync(id);
+            TempData["SuccessMessage"] = "Category successfully deleted!";
             return RedirectToAction(nameof(Index));
         }
     }

@@ -26,7 +26,8 @@ namespace Service.Service
         {
             if (!modelState.IsValid) return false;
             var product = _mapper.Map<Product>(vm);
-            if(product.Quantity > 0)
+            product.CreatedDate = DateTime.Now;
+            if (product.Quantity > 0)
             {
                 product.InStock = true;
             }

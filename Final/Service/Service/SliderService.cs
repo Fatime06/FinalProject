@@ -26,6 +26,7 @@ namespace Service.Service
         {
             if (!modelState.IsValid) return false;
             var slider = _mapper.Map<Slider>(vm);
+            slider.CreatedDate = DateTime.Now;
             string fileName = await _fileService.UploadAsync(vm.Image, "admin/uploads/sliders");
             slider.Image = fileName;
             await _sliderRepo.AddAsync(slider);
