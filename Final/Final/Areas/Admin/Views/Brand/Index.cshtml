@@ -1,0 +1,73 @@
+﻿@using Service.ViewModels.Brand
+@model IEnumerable<BrandVM>
+
+@{
+    int count = 0;
+}
+<div class="container">
+    <div class="row mb-3">
+        <a asp-action="create" class="btn btn-outline-success">Add</a>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Settings</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var brand in Model)
+                {
+                    <tr>
+                        <td>@(++count)</td>
+                        <td>
+                            <img width="80" height="60" src="~/admin/uploads/brands/@brand.Image">
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" asp-action="edit" asp-route-id="@brand.Id">Edit</a>
+                            <a class="btn btn-info" asp-action="detail" asp-route-id="@brand.Id">Detail</a>
+                            <a class="btn btn-danger" asp-action="delete" asp-route-id="@brand.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .toast-success {
+        background-color: #28a745 !important;
+        color: white !important;
+        font-weight: bold;
+    }
+
+    .container {
+        padding-top: 30px;
+    }
+</style>
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            var successMessage = '@TempData["SuccessMessage"]';
+            if (successMessage && successMessage !== "") {
+                toastr.options = {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "positionClass": "toast-top-right",
+                    "timeOut": "3000",
+                    "extendedTimeOut": "1000",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
+
+                toastr.success(successMessage);
+            }
+        });
+    </script>
+}
+
+
+

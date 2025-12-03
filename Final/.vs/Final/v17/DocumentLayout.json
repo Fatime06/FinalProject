@@ -3,8 +3,132 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Migrations\\20251203225903_createdBrandsTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repository\\Migrations\\20251203225903_createdBrandsTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\repositories\\interfaces\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\repositories\\interfaces\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\automappers\\serviceautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\automappers\\serviceautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\validators\\service\\serviceupdatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\validators\\service\\serviceupdatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\validators\\service\\servicecreatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\validators\\service\\servicecreatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\configurations\\serviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\configurations\\serviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\service\\servicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\service\\servicevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\service\\serviceupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\service\\serviceupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\service\\servicecreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\service\\servicecreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\domain\\entities\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\controllers\\brandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\brand\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\brand\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\brandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\validators\\brand\\brandcreatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\validators\\brand\\brandcreatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\brand\\brandvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\brand\\brandvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\slider\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\slider\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\brand\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\brand\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\brand\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\brand\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\slider\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\slider\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\slider\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\slider\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\brand\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\brand\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\slider\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\slider\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\controllers\\slidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\controllers\\slidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\sliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\sliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\interfaces\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\interfaces\\ibrandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\interfaces\\isliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\interfaces\\isliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\migrations\\20251203225903_createdbrandstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\migrations\\20251203225903_createdbrandstable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\automappers\\brandautomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,24 +155,12 @@
       "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\validators\\brand\\brandupdatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\validators\\brand\\brandcreatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\validators\\brand\\brandcreatevmvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\brand\\brandvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\brand\\brandvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\brand\\brandupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\brand\\brandupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\viewmodels\\brand\\brandcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\viewmodels\\brand\\brandcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\configurations\\brandconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -81,10 +193,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\repository\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A3CFF83-5B88-4961-B377-89B6841780EB}|Repository\\Repository.csproj|solutionrelative:repository\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B07C1BF5-EC61-42B7-B39D-27D02D51F0EE}|Domain\\Domain.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -135,20 +243,12 @@
       "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\history\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\slider\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\slider\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\controllers\\historycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\controllers\\slidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\controllers\\slidercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -167,32 +267,12 @@
       "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\history\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\slider\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\slider\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\slider\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\slider\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\history\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\history\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\views\\slider\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|solutionrelative:final\\areas\\admin\\views\\slider\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79C026EC-CA2A-4F69-801C-7C870668F7C6}|Final\\Final.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\final\\areas\\admin\\controllers\\productratingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -209,14 +289,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\productratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\productratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\sliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\sliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|solutionrelative:service\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0A07F33-7DEA-4703-AA54-07EF49346011}|Service\\Service.csproj|c:\\users\\user\\onedrive\\desktop\\final\\final\\service\\service\\interfaces\\ihistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -334,7 +406,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 82,
           "Children": [
             {
               "$type": "Bookmark",
@@ -346,7 +418,254 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ServiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\ServiceRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\ServiceRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\ServiceRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\ServiceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:53:47.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IServiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\IServiceRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IServiceRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\IServiceRepository.cs",
+              "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IServiceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:52:53.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceAutoMapper.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\ServiceAutoMapper.cs",
+              "RelativeDocumentMoniker": "Service\\AutoMappers\\ServiceAutoMapper.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\ServiceAutoMapper.cs",
+              "RelativeToolTip": "Service\\AutoMappers\\ServiceAutoMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:50:01.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceUpdateVMValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Service\\ServiceUpdateVMValidator.cs",
+              "RelativeDocumentMoniker": "Service\\Validators\\Service\\ServiceUpdateVMValidator.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Service\\ServiceUpdateVMValidator.cs",
+              "RelativeToolTip": "Service\\Validators\\Service\\ServiceUpdateVMValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:49:23.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServiceCreateVMValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Service\\ServiceCreateVMValidator.cs",
+              "RelativeDocumentMoniker": "Service\\Validators\\Service\\ServiceCreateVMValidator.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Service\\ServiceCreateVMValidator.cs",
+              "RelativeToolTip": "Service\\Validators\\Service\\ServiceCreateVMValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:48:21.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ServiceVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Service\\ServiceVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Service\\ServiceVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Service\\ServiceVM.cs",
+              "RelativeToolTip": "Service\\ViewModels\\Service\\ServiceVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:47:18.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ServiceUpdateVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Service\\ServiceUpdateVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Service\\ServiceUpdateVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Service\\ServiceUpdateVM.cs",
+              "RelativeToolTip": "Service\\ViewModels\\Service\\ServiceUpdateVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:42:31.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ServiceCreateVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Service\\ServiceCreateVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Service\\ServiceCreateVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Service\\ServiceCreateVM.cs",
+              "RelativeToolTip": "Service\\ViewModels\\Service\\ServiceCreateVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:42:07.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Configurations\\ServiceConfiguration.cs",
+              "RelativeDocumentMoniker": "Repository\\Configurations\\ServiceConfiguration.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Configurations\\ServiceConfiguration.cs",
+              "RelativeToolTip": "Repository\\Configurations\\ServiceConfiguration.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:40:36.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\Service.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Service.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\Service.cs",
+              "RelativeToolTip": "Domain\\Entities\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:39:35.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BrandVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Brand\\BrandVM.cs",
+              "RelativeDocumentMoniker": "Service\\ViewModels\\Brand\\BrandVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Brand\\BrandVM.cs",
+              "RelativeToolTip": "Service\\ViewModels\\Brand\\BrandVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T22:48:59.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Brand\\Detail.cshtml",
+              "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Brand\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Brand\\Detail.cshtml",
+              "RelativeToolTip": "Final\\Areas\\Admin\\Views\\Brand\\Detail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T23:22:45.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Brand\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Brand\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Brand\\Edit.cshtml",
+              "RelativeToolTip": "Final\\Areas\\Admin\\Views\\Brand\\Edit.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T23:22:08.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Brand\\Create.cshtml",
+              "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Brand\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Brand\\Create.cshtml",
+              "RelativeToolTip": "Final\\Areas\\Admin\\Views\\Brand\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T23:20:20.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Brand\\Index.cshtml",
+              "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Brand\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Brand\\Index.cshtml",
+              "RelativeToolTip": "Final\\Areas\\Admin\\Views\\Brand\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T23:18:15.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BrandController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "RelativeToolTip": "Final\\Areas\\Admin\\Controllers\\BrandController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:14:30.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BrandService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\BrandService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\BrandService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\BrandService.cs",
+              "RelativeToolTip": "Service\\Service\\BrandService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:04:13.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ISliderService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\ISliderService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\Interfaces\\ISliderService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\ISliderService.cs",
+              "RelativeToolTip": "Service\\Service\\Interfaces\\ISliderService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:03:07.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IBrandService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\IBrandService.cs",
+              "RelativeDocumentMoniker": "Service\\Service\\Interfaces\\IBrandService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\IBrandService.cs",
+              "RelativeToolTip": "Service\\Service\\Interfaces\\IBrandService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T23:02:56.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "20251203225903_createdBrandsTable.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Migrations\\20251203225903_createdBrandsTable.cs",
               "RelativeDocumentMoniker": "Repository\\Migrations\\20251203225903_createdBrandsTable.cs",
@@ -359,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 33,
               "Title": "SliderAutoMapper.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\SliderAutoMapper.cs",
               "RelativeDocumentMoniker": "Service\\AutoMappers\\SliderAutoMapper.cs",
@@ -367,12 +686,11 @@
               "RelativeToolTip": "Service\\AutoMappers\\SliderAutoMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:55:41.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T22:55:41.377Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 32,
               "Title": "BrandAutoMapper.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\BrandAutoMapper.cs",
               "RelativeDocumentMoniker": "Service\\AutoMappers\\BrandAutoMapper.cs",
@@ -380,12 +698,11 @@
               "RelativeToolTip": "Service\\AutoMappers\\BrandAutoMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:54:50.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T22:54:50.017Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 35,
               "Title": "BrandRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\BrandRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\BrandRepository.cs",
@@ -393,12 +710,11 @@
               "RelativeToolTip": "Repository\\Repositories\\BrandRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:53:39.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T22:53:39.541Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 36,
               "Title": "IBrandRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\IBrandRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IBrandRepository.cs",
@@ -406,12 +722,11 @@
               "RelativeToolTip": "Repository\\Repositories\\Interfaces\\IBrandRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:53:00.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T22:53:00.256Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 37,
               "Title": "BrandUpdateVMValidator.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Brand\\BrandUpdateVMValidator.cs",
               "RelativeDocumentMoniker": "Service\\Validators\\Brand\\BrandUpdateVMValidator.cs",
@@ -419,38 +734,24 @@
               "RelativeToolTip": "Service\\Validators\\Brand\\BrandUpdateVMValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:52:02.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T22:52:02.54Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "BrandCreateVMValidator.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Brand\\BrandCreateVMValidator.cs",
               "RelativeDocumentMoniker": "Service\\Validators\\Brand\\BrandCreateVMValidator.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Brand\\BrandCreateVMValidator.cs",
               "RelativeToolTip": "Service\\Validators\\Brand\\BrandCreateVMValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T22:50:12.951Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BrandVM.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Brand\\BrandVM.cs",
-              "RelativeDocumentMoniker": "Service\\ViewModels\\Brand\\BrandVM.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Brand\\BrandVM.cs",
-              "RelativeToolTip": "Service\\ViewModels\\Brand\\BrandVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:48:59.121Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 38,
               "Title": "BrandUpdateVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Brand\\BrandUpdateVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\Brand\\BrandUpdateVM.cs",
@@ -458,12 +759,11 @@
               "RelativeToolTip": "Service\\ViewModels\\Brand\\BrandUpdateVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:48:22.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T22:48:22.89Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 39,
               "Title": "BrandCreateVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Brand\\BrandCreateVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\Brand\\BrandCreateVM.cs",
@@ -471,12 +771,11 @@
               "RelativeToolTip": "Service\\ViewModels\\Brand\\BrandCreateVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:47:48.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T22:47:48.977Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 40,
               "Title": "BrandConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Configurations\\BrandConfiguration.cs",
               "RelativeDocumentMoniker": "Repository\\Configurations\\BrandConfiguration.cs",
@@ -484,12 +783,11 @@
               "RelativeToolTip": "Repository\\Configurations\\BrandConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:42:57.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T22:42:57.61Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 41,
               "Title": "Brand.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\Brand.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Brand.cs",
@@ -497,12 +795,11 @@
               "RelativeToolTip": "Domain\\Entities\\Brand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:41:09.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T22:41:09.854Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 42,
               "Title": "ReviewService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\ReviewService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\ReviewService.cs",
@@ -510,12 +807,11 @@
               "RelativeToolTip": "Service\\Service\\ReviewService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T00:16:24.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T00:16:24.148Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 46,
               "Title": "IReviewService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\IReviewService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\Interfaces\\IReviewService.cs",
@@ -527,7 +823,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 43,
               "Title": "ReviewAutoMapper.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\ReviewAutoMapper.cs",
               "RelativeDocumentMoniker": "Service\\AutoMappers\\ReviewAutoMapper.cs",
@@ -539,7 +835,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 49,
               "Title": "ReviewUpdateVMValidator.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Review\\ReviewUpdateVMValidator.cs",
               "RelativeDocumentMoniker": "Service\\Validators\\Review\\ReviewUpdateVMValidator.cs",
@@ -551,7 +847,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 50,
               "Title": "ReviewCreateVMValidator.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\Review\\ReviewCreateVMValidator.cs",
               "RelativeDocumentMoniker": "Service\\Validators\\Review\\ReviewCreateVMValidator.cs",
@@ -563,7 +859,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 53,
               "Title": "UserInReview.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Review\\UserInReview.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\Review\\UserInReview.cs",
@@ -575,7 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 52,
               "Title": "ReviewVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Review\\ReviewVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\Review\\ReviewVM.cs",
@@ -587,7 +883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 45,
               "Title": "ReviewUpdateVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Review\\ReviewUpdateVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\Review\\ReviewUpdateVM.cs",
@@ -599,7 +895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 44,
               "Title": "ReviewCreateVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Review\\ReviewCreateVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\Review\\ReviewCreateVM.cs",
@@ -611,7 +907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 55,
               "Title": "ReviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\ReviewRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\ReviewRepository.cs",
@@ -623,7 +919,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 56,
               "Title": "IReviewRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\IReviewRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IReviewRepository.cs",
@@ -635,7 +931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 98,
               "Title": "20251203000155_CreatedReviewsTable.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Migrations\\20251203000155_CreatedReviewsTable.cs",
               "RelativeDocumentMoniker": "Repository\\Migrations\\20251203000155_CreatedReviewsTable.cs",
@@ -647,7 +943,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 51,
               "Title": "ReviewConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Configurations\\ReviewConfiguration.cs",
               "RelativeDocumentMoniker": "Repository\\Configurations\\ReviewConfiguration.cs",
@@ -659,7 +955,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 54,
               "Title": "AppUser.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\AppUser.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\AppUser.cs",
@@ -671,7 +967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 48,
               "Title": "Review.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\Review.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Review.cs",
@@ -683,7 +979,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 19,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Slider\\Detail.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Slider\\Detail.cshtml",
@@ -691,11 +987,12 @@
               "RelativeToolTip": "Final\\Areas\\Admin\\Views\\Slider\\Detail.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-02T22:56:49.807Z"
+              "WhenOpened": "2025-12-02T22:56:49.807Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 59,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\History\\Detail.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\History\\Detail.cshtml",
@@ -707,7 +1004,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 64,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\History\\Edit.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\History\\Edit.cshtml",
@@ -719,7 +1016,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 66,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Controllers\\DashboardController.cs",
@@ -731,43 +1028,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 16,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "Service\\ServiceRegistration.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ServiceRegistration.cs",
               "RelativeToolTip": "Service\\ServiceRegistration.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAABgAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T22:44:49.884Z"
+              "WhenOpened": "2025-12-02T22:44:49.884Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 17,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Final\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAYwFMAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFMAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-02T22:41:17.664Z"
+              "WhenOpened": "2025-12-02T22:41:17.664Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 22,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
               "RelativeToolTip": "Final\\Areas\\Admin\\Views\\Slider\\Create.cshtml",
-              "ViewState": "AgIAACYAAAAAAAAAAAAowDwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAwwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-02T22:34:14.686Z"
+              "WhenOpened": "2025-12-02T22:34:14.686Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 65,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\History\\Create.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\History\\Create.cshtml",
@@ -779,31 +1079,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 25,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
               "RelativeToolTip": "Final\\Areas\\Admin\\Views\\Slider\\Index.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAwwEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-02T22:32:37.572Z"
+              "WhenOpened": "2025-12-02T22:32:37.572Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 23,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Slider\\Edit.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\Slider\\Edit.cshtml",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\Slider\\Edit.cshtml",
               "RelativeToolTip": "Final\\Areas\\Admin\\Views\\Slider\\Edit.cshtml",
-              "ViewState": "AgIAACAAAAAAAAAAAAAgwEAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAwwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-02T22:32:36.274Z"
+              "WhenOpened": "2025-12-02T22:32:36.274Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 67,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Views\\History\\Index.cshtml",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Views\\History\\Index.cshtml",
@@ -815,19 +1117,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 26,
               "Title": "SliderController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\SliderController.cs",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Controllers\\SliderController.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\SliderController.cs",
               "RelativeToolTip": "Final\\Areas\\Admin\\Controllers\\SliderController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAD0AAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T22:31:18.926Z"
+              "WhenOpened": "2025-12-02T22:31:18.926Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 62,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Controllers\\ProductController.cs",
@@ -839,7 +1142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 68,
               "Title": "ProductRatingController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\ProductRatingController.cs",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Controllers\\ProductRatingController.cs",
@@ -851,7 +1154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 61,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Controllers\\CategoryController.cs",
@@ -863,7 +1166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 60,
               "Title": "HistoryController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Areas\\Admin\\Controllers\\HistoryController.cs",
               "RelativeDocumentMoniker": "Final\\Areas\\Admin\\Controllers\\HistoryController.cs",
@@ -875,7 +1178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 71,
               "Title": "ProductRatingService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\ProductRatingService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\ProductRatingService.cs",
@@ -887,31 +1190,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 28,
               "Title": "SliderService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\SliderService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\SliderService.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\SliderService.cs",
               "RelativeToolTip": "Service\\Service\\SliderService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAABwAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAE0AAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T22:20:49.812Z"
+              "WhenOpened": "2025-12-02T22:20:49.812Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 27,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\ProductService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\ProductService.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\ProductService.cs",
               "RelativeToolTip": "Service\\Service\\ProductService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAABwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAAFYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T22:19:51.741Z"
+              "WhenOpened": "2025-12-02T22:19:51.741Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 70,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\CategoryService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\CategoryService.cs",
@@ -923,7 +1228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 69,
               "Title": "HistoryService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\HistoryService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\HistoryService.cs",
@@ -935,7 +1240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 47,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\ICategoryService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\Interfaces\\ICategoryService.cs",
@@ -947,7 +1252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 72,
               "Title": "IHistoryService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\Interfaces\\IHistoryService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\Interfaces\\IHistoryService.cs",
@@ -959,7 +1264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 74,
               "Title": "HistoryUpdateVMValidator.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\History\\HistoryUpdateVMValidator.cs",
               "RelativeDocumentMoniker": "Service\\Validators\\History\\HistoryUpdateVMValidator.cs",
@@ -971,7 +1276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 73,
               "Title": "HistoryCreateVMValidator.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Validators\\History\\HistoryCreateVMValidator.cs",
               "RelativeDocumentMoniker": "Service\\Validators\\History\\HistoryCreateVMValidator.cs",
@@ -983,7 +1288,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 63,
               "Title": "HistoryAutoMapper.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\HistoryAutoMapper.cs",
               "RelativeDocumentMoniker": "Service\\AutoMappers\\HistoryAutoMapper.cs",
@@ -995,7 +1300,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 76,
               "Title": "ProductVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Product\\ProductVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\Product\\ProductVM.cs",
@@ -1007,7 +1312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 34,
               "Title": "ProductAutoMapper.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\ProductAutoMapper.cs",
               "RelativeDocumentMoniker": "Service\\AutoMappers\\ProductAutoMapper.cs",
@@ -1015,12 +1320,11 @@
               "RelativeToolTip": "Service\\AutoMappers\\ProductAutoMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T22:06:30.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-02T22:06:30.17Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 77,
               "Title": "CategoryAutoMapper.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\AutoMappers\\CategoryAutoMapper.cs",
               "RelativeDocumentMoniker": "Service\\AutoMappers\\CategoryAutoMapper.cs",
@@ -1032,7 +1336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 79,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Product.cs",
@@ -1044,7 +1348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 82,
               "Title": "ProductInCategoryVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Category\\ProductInCategoryVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\Category\\ProductInCategoryVM.cs",
@@ -1056,7 +1360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 78,
               "Title": "CategoryVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\Category\\CategoryVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\Category\\CategoryVM.cs",
@@ -1068,7 +1372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 80,
               "Title": "HistoryVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\History\\HistoryVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\History\\HistoryVM.cs",
@@ -1080,7 +1384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 81,
               "Title": "HistoryUpdateVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\History\\HistoryUpdateVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\History\\HistoryUpdateVM.cs",
@@ -1092,7 +1396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 75,
               "Title": "HistoryCreateVM.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\ViewModels\\History\\HistoryCreateVM.cs",
               "RelativeDocumentMoniker": "Service\\ViewModels\\History\\HistoryCreateVM.cs",
@@ -1104,19 +1408,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 0,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "Repository\\ServiceRegistration.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\ServiceRegistration.cs",
               "RelativeToolTip": "Repository\\ServiceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABIAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-02T21:55:52.544Z"
+              "WhenOpened": "2025-12-02T21:55:52.544Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 88,
               "Title": "20251202215249_CreatedHistoriesTable.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Migrations\\20251202215249_CreatedHistoriesTable.cs",
               "RelativeDocumentMoniker": "Repository\\Migrations\\20251202215249_CreatedHistoriesTable.cs",
@@ -1128,7 +1433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 87,
               "Title": "CategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\CategoryRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\CategoryRepository.cs",
@@ -1140,7 +1445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 90,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Repository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Repository.cs",
@@ -1152,7 +1457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 89,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\ProductRepository.cs",
@@ -1164,7 +1469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 86,
               "Title": "ICategoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\ICategoryRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\ICategoryRepository.cs",
@@ -1176,7 +1481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 91,
               "Title": "SliderRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\SliderRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\SliderRepository.cs",
@@ -1188,7 +1493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 84,
               "Title": "HistoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\HistoryRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\HistoryRepository.cs",
@@ -1200,7 +1505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 85,
               "Title": "IHistoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Repositories\\Interfaces\\IHistoryRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Repositories\\Interfaces\\IHistoryRepository.cs",
@@ -1212,20 +1517,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Repository\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Data\\AppDbContext.cs",
               "RelativeToolTip": "Repository\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwA8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-02T21:47:01.193Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 92,
               "Title": "SliderConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Configurations\\SliderConfiguration.cs",
               "RelativeDocumentMoniker": "Repository\\Configurations\\SliderConfiguration.cs",
@@ -1237,7 +1542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 58,
               "Title": "CategoryConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Configurations\\CategoryConfiguration.cs",
               "RelativeDocumentMoniker": "Repository\\Configurations\\CategoryConfiguration.cs",
@@ -1249,7 +1554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 57,
               "Title": "HistoryConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Repository\\Configurations\\HistoryConfiguration.cs",
               "RelativeDocumentMoniker": "Repository\\Configurations\\HistoryConfiguration.cs",
@@ -1261,7 +1566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 83,
               "Title": "History.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Domain\\Entities\\History.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\History.cs",
@@ -1273,7 +1578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 93,
               "Title": "FileService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Service\\Service\\FileService.cs",
               "RelativeDocumentMoniker": "Service\\Service\\FileService.cs",
@@ -1285,7 +1590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 95,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shop\\Index.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shop\\Index.cshtml",
@@ -1297,7 +1602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 97,
               "Title": "ShopController.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Controllers\\ShopController.cs",
               "RelativeDocumentMoniker": "Final\\Controllers\\ShopController.cs",
@@ -1309,7 +1614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 96,
               "Title": "Shop1.js",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\wwwroot\\assets\\js\\Shop1.js",
               "RelativeDocumentMoniker": "Final\\wwwroot\\assets\\js\\Shop1.js",
@@ -1321,7 +1626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 94,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final\\Final\\Final\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Final\\Views\\Shared\\_Layout.cshtml",

@@ -75,8 +75,8 @@ namespace Service.Service
         {
             if (!modelState.IsValid) return false;
             var slider = await _sliderRepo.Find(vm.Id).FirstOrDefaultAsync();
-            var image = slider.Image;
             if (slider == null) throw new CustomException(404, "Slider not found");
+            var image = slider.Image;
 
             _mapper.Map(vm, slider);
 

@@ -14,6 +14,8 @@ namespace Repository
             services.AddScoped<ISliderRepository, SliderRepository>();
             services.AddScoped<IHistoryRepository, HistoryRepository>();
             services.AddScoped<IReviewRepository, ReviewRepository>();
+            services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IServiceRepository, ServiceRepository>();
             return services;
         }
     }

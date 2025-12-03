@@ -83,8 +83,8 @@ namespace Service.Service
         {
             if(!modelState.IsValid) return false;
             var product = await _proRepo.Find(vm.Id).Include(p => p.Ratings).Include(p=>p.Category).FirstOrDefaultAsync();
-            var image = product.Image;
             if (product == null) throw new CustomException(404, "Product not found");
+            var image = product.Image;
 
 
             _mapper.Map(vm, product);
