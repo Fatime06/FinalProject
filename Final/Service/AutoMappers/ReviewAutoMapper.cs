@@ -8,7 +8,8 @@ namespace Service.AutoMappers
     {
         public ReviewAutoMapper()
         {
-            CreateMap<ReviewCreateVM, Review>();
+            CreateMap<ReviewCreateVM, Review>()
+                .ForMember(dest => dest.AppUserId, opt => opt.Ignore());
             CreateMap<ReviewUpdateVM, Review>().ReverseMap();
             CreateMap<Review, ReviewVM>()
                 .ForMember(src => src.AppUser, opt => opt.MapFrom(dest => dest.AppUser));
