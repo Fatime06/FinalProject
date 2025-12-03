@@ -11,6 +11,7 @@ namespace Repository.Data
         public DbSet<ProductRating> ProductRatings { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<History> Histories { get; set; }
+        public DbSet<Review> Reviews { get; set; }
         public AppDbContext(DbContextOptions options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder builder)
         {
