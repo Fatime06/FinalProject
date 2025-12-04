@@ -8,7 +8,7 @@ namespace Service.AutoMappers
         public ServiceAutoMapper()
         {
             CreateMap<ServiceCreateVM, Domain.Entities.Service>();
-            CreateMap<ServiceUpdateVM, Domain.Entities.Service>();
+            CreateMap<ServiceUpdateVM, Domain.Entities.Service>().ReverseMap();
             CreateMap<Domain.Entities.Service, ServiceVM>();
         }
     }

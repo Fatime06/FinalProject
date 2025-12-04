@@ -1,0 +1,28 @@
+﻿@using Service.ViewModels.Service
+@model ServiceCreateVM
+<div class="container">
+    <div class="row">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Icon"></label>
+                <input asp-for="Icon" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter service icon">
+                <span class="text-danger" asp-validation-for="Icon"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Text"></label>
+                <input asp-for="Text" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter service text">
+                <span class="text-danger" asp-validation-for="Text"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+<style>
+    .container {
+        padding-top: 30px;
+    }
+</style>
+@section scripts {
+    @await Html.PartialAsync("_ValidationPartial")
+}
+

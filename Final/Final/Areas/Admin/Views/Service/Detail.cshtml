@@ -1,0 +1,16 @@
+﻿@using Service.ViewModels.Service
+@model ServiceVM
+
+<div class="container" style="margin-top:40px;">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p><strong>Icon:</strong> @Model.Icon</p>
+            <p><strong>Text:</strong> @Model.Text</p>
+            <p><strong>Created at:</strong> @Model.CreatedDate.ToString("dd.MM.yyyy HH:mm")</p>
+
+            <a asp-controller="Service" asp-action="Index" class="btn btn-secondary">Return to services</a>
+            <a asp-controller="Service" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+        </div>
+    </div>
+</div>
+
