@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Entities;
+using Service.ViewModels.Category;
 using Service.ViewModels.Product;
 
 namespace Service.AutoMappers
@@ -20,6 +21,7 @@ namespace Service.AutoMappers
                  .ForMember(dest => dest.Ratings,opt=> opt.MapFrom(src => src.Ratings))
                  .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category));
             CreateMap<Category, CategoryInProductVM>();
+            CreateMap<Product, ProductInCategoryVM>();
         }
     }
 }

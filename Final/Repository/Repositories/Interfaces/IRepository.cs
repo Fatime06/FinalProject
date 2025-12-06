@@ -11,7 +11,6 @@ namespace Repository.Repositories.Interfaces
         void Delete(T entity);
         IQueryable<T> Find(int id);
         Task<int> SaveChangesAsync();
-
         IQueryable<T> GetAll();
     }
 }

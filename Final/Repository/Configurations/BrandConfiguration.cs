@@ -8,7 +8,9 @@ namespace Repository.Configurations
     {
         public void Configure(EntityTypeBuilder<Brand> builder)
         {
-            builder.Property(b=>b.Image).IsRequired().HasMaxLength(100);    
+            builder.Property(b=>b.Image).IsRequired().HasMaxLength(100);
+            builder.Property(c => c.CreatedDate).IsRequired().HasColumnType("datetime2");
+            builder.Property(c => c.UpdatedDate).HasColumnType("datetime2");
         }
     }
 }

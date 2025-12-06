@@ -25,6 +25,11 @@ namespace Service.Service
         public async Task<bool> CreateAsync(ProductCreateVM vm, ModelStateDictionary modelState)
         {
             if (!modelState.IsValid) return false;
+            if (await _proRepo.IsExistAsync(vm.Name.Trim()))
+            {
+                modelState.AddModelError("Name", "This product already exists");
+                return false;
+            }
             var product = _mapper.Map<Product>(vm);
             product.CreatedDate = DateTime.Now;
             if (product.Quantity > 0)
@@ -84,6 +89,11 @@ namespace Service.Service
             if(!modelState.IsValid) return false;
             var product = await _proRepo.Find(vm.Id).Include(p => p.Ratings).Include(p=>p.Category).FirstOrDefaultAsync();
             if (product == null) throw new CustomException(404, "Product not found");
+            if (await _proRepo.IsExistAsync(vm.Name.Trim()) && _proRepo.GetProductByNameAsync(vm.Name).Result.Id != vm.Id)
+            {
+                modelState.AddModelError("Name", "This product already exists");
+                return false;
+            }
             var image = product.Image;
 
 
