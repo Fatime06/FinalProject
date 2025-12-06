@@ -41,10 +41,10 @@ namespace Final.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Edit(int id)
         {
-            var productDto = await _productService.GetUpdatedVmAsync(id);
+            var productVm = await _productService.GetUpdatedVmAsync(id);
 
             ViewBag.Categories = await _categoryService.GetAllAsync();
-            return View(productDto);
+            return View(productVm);
         }
         [HttpPost]
         public async Task<IActionResult> Edit(ProductUpdateVM vm)

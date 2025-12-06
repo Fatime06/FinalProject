@@ -6,7 +6,6 @@ using Repository.Repositories.Interfaces;
 using Service.Exceptions;
 using Service.Service.Interfaces;
 using Service.ViewModels.Blog;
-using Service.ViewModels.blog;
 
 namespace Service.Service
 {
@@ -27,6 +26,8 @@ namespace Service.Service
         {
             if (!modelState.IsValid) return false;
             var blog = _mapper.Map<Blog>(vm);
+            blog.CreatedDate = DateTime.Now;
+
 
             blog.MainImage = await _fileService.UploadAsync(vm.Image, "admin/uploads/blogs");
 
@@ -55,7 +56,7 @@ namespace Service.Service
             var blogs = await _blogRepo.GetAll()
             .Include(b => b.BlogTags).ThenInclude(bt => bt.Tag)
             .Include(b => b.BlogCategories).ThenInclude(bc => bc.Category)
-            .FirstOrDefaultAsync();
+            .ToListAsync();
 
             return _mapper.Map<IEnumerable<BlogVM>>(blogs);
         }

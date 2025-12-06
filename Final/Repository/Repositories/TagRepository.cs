@@ -13,7 +13,7 @@ namespace Repository.Repositories
             _context = context;
         }
 
-        public async Task<Tag> GetCategoryByNameAsync(string name)
+        public async Task<Tag> GetTagByNameAsync(string name)
         {
             return await _context.Tags.FirstOrDefaultAsync(c => c.Name.ToLower() == name.Trim().ToLower());
         }

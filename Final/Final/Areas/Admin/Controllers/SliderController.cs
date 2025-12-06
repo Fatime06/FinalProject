@@ -37,8 +37,8 @@ namespace Final.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Edit(int id)
         {
-            var productDto = await _sliderService.GetUpdatedVmAsync(id);
-            return View(productDto);
+            var productVm = await _sliderService.GetUpdatedVmAsync(id);
+            return View(productVm);
         }
         [HttpPost]
         public async Task<IActionResult> Edit(SliderUpdateVM vm)

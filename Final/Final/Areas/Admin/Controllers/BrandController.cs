@@ -34,8 +34,8 @@ namespace Final.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Edit(int id)
         {
-            var brandDto = await _brandService.GetUpdatedVmAsync(id);
-            return View(brandDto);
+            var brandVm = await _brandService.GetUpdatedVmAsync(id);
+            return View(brandVm);
         }
         [HttpPost]
         public async Task<IActionResult> Edit(BrandUpdateVM vm)
