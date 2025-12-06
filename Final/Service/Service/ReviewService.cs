@@ -84,6 +84,10 @@ namespace Service.Service
         {
             if (!modelState.IsValid) return false;
 
+            var userId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null)
+                throw new CustomException(401, "User is not authenticated");
+
             var review = await _reviewRepo.Find(vm.Id).FirstOrDefaultAsync();
 
             if (review == null)

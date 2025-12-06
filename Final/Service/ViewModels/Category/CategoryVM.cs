@@ -1,5 +1,4 @@
-﻿using Domain.Entities;
-using Service.ViewModels.Category;
+﻿using Service.ViewModels.Category;
 
 namespace Service.DTOs.Category
 {

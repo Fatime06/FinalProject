@@ -16,10 +16,6 @@ namespace Repository.Configurations
             builder.Property(b => b.MainImage)
                      .IsRequired()
                      .HasMaxLength(200);
-            builder.HasOne(b => b.AppUser)
-               .WithMany()
-               .HasForeignKey(b => b.AppUserId)
-               .OnDelete(DeleteBehavior.Restrict);
             builder.Property(c => c.CreatedDate).IsRequired().HasColumnType("datetime2");
             builder.Property(c => c.UpdatedDate).HasColumnType("datetime2");
         }

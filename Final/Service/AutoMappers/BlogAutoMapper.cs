@@ -9,8 +9,6 @@ namespace Service.AutoMappers
         public BlogAutoMapper()
         {
             CreateMap<Blog, BlogVM>()
-           .ForMember(dest => dest.AppUser,
-               opt => opt.MapFrom(src => src.AppUser))
            .ForMember(dest => dest.CommentCount,
                opt => opt.MapFrom(src => src.Comments.Count()));
 
@@ -25,8 +23,6 @@ namespace Service.AutoMappers
                 .ForMember(dest => dest.BlogTags, opt => opt.Ignore());
 
             CreateMap<Blog, BlogDetailVM>()
-                .ForMember(dest => dest.AppUser,
-                    opt => opt.MapFrom(src => src.AppUser))
                 .ForMember(dest => dest.Categories,
                     opt => opt.MapFrom(src => src.BlogCategories))
                 .ForMember(dest => dest.Tags,
