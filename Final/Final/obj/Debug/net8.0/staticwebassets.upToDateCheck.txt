@@ -179,3 +179,5 @@ wwwroot\assets\js\Tequila.js
 wwwroot\assets\js\Whiskey.js
 wwwroot\assets\js\Wine.js
 wwwroot\assets\js\Wishlist.js
+wwwroot\templates\emailConfirm.html
+wwwroot\templates\resetPassword.html
