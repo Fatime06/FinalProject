@@ -1,0 +1,18 @@
+﻿@using Service.ViewModels.Blog
+@model BlogDetailVM
+
+<div class="container" style="margin-top:40px;">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p><strong>Image:</strong> <img src="~/admin/uploads/blogs/@Model.MainImage" class="img-responsive img-thumbnail" /></p>
+            <p><strong>Title:</strong> @Model.Title</p>
+            <p><strong>Description:</strong> @Model.Description</p>
+            <p><strong>Categories:</strong> @string.Join(", ", Model.Categories.Select(c=>c.Name))</p>
+            <p><strong>Tags:</strong> @string.Join(", ", Model.Tags.Select(t=>t.Name))</p>
+            <p><strong>Created at:</strong> @Model.CreatedDate.ToString("dd.MM.yyyy HH:mm")</p>
+
+            <a asp-controller="Blog" asp-action="Index" class="btn btn-secondary">Return to blogs</a>
+            <a asp-controller="Blog" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+        </div>
+    </div>
+</div>

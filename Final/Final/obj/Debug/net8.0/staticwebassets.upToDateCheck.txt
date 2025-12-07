@@ -51,6 +51,9 @@ wwwroot\admin\assets\sass\paper\mixins\_tabs.scss
 wwwroot\admin\assets\sass\paper\mixins\_transparency.scss
 wwwroot\admin\assets\sass\paper\mixins\_vendor-prefixes.scss
 wwwroot\admin\assets\sass\paper-dashboard.scss
+wwwroot\admin\uploads\blogs\c1e43038-bd28-49d9-a0b1-a73ff33bf32d.jpg
+wwwroot\admin\uploads\blogs\e2193b7d-657e-492b-b8e6-2a75fff4182f.jpg
+wwwroot\admin\uploads\blogs\fc1d3022-f872-43fb-8d65-8bfe3c4c39e5.jpg
 wwwroot\admin\uploads\brands\87533c76-3fe7-46af-8cc1-c75b68476224.webp
 wwwroot\admin\uploads\products\6b236d16-34fa-4bc2-9103-fe9dae1b63b0.webp
 wwwroot\admin\uploads\products\8c951f55-b34f-4b06-b38b-c523d147b90e.jpeg

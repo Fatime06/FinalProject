@@ -30,6 +30,8 @@ namespace Service
             services.AddScoped<IHistoryService, HistoryService>();
             services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IServiceService, ServiceService>();
+            services.AddScoped<IBlogService, BlogService>();
+            services.AddScoped<ITagService, TagService>();
             return services;
         }
     }

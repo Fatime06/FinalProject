@@ -91,6 +91,7 @@ namespace Service.Service
 
         public async Task<bool> UpdateAsync(BlogUpdateVM vm, ModelStateDictionary modelstate)
         {
+            if(!modelstate.IsValid) return false;
             var blog = await _blogRepo.Find(vm.Id)
            .Include(b => b.BlogCategories)
            .Include(b => b.BlogTags).FirstOrDefaultAsync();

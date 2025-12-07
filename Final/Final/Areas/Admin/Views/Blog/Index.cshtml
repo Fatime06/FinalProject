@@ -1,0 +1,75 @@
+﻿@using Service.ViewModels.Blog
+@model IEnumerable<BlogVM>
+
+@{
+    int count = 0;
+}
+<div class="container">
+    <div class="row mb-3">
+        <a asp-action="create" class="btn btn-outline-success">Add</a>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Comment count</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Settings</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var blog in Model)
+                {
+                    <tr>
+                        <td>@(++count)</td>
+                        <td>@blog.Title</td>
+                        <td>@blog.CommentCount</td>
+                        <td>
+                            <img width="80" height="60" src="~/admin/uploads/blogs/@blog.Image">
+                        </td>
+                        <td>
+                            <a class="btn btn-warning" asp-action="edit" asp-route-id="@blog.Id">Edit</a>
+                            <a class="btn btn-info" asp-action="detail" asp-route-id="@blog.Id">Detail</a>
+                            <a class="btn btn-danger" asp-action="delete" asp-route-id="@blog.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .toast-success {
+        background-color: #28a745 !important;
+        color: white !important;
+        font-weight: bold;
+    }
+
+    .container {
+        padding-top: 30px;
+    }
+</style>
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            var successMessage = '@TempData["SuccessMessage"]';
+            if (successMessage && successMessage !== "") {
+                toastr.options = {
+                    "closeButton": true,
+                    "progressBar": true,
+                    "positionClass": "toast-top-right",
+                    "timeOut": "3000",
+                    "extendedTimeOut": "1000",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
+
+                toastr.success(successMessage);
+            }
+        });
+    </script>
+}
+

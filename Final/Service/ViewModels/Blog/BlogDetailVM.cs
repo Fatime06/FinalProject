@@ -12,5 +12,6 @@ namespace Service.ViewModels.Blog
         public IEnumerable<CategoryInBlogVM> Categories { get; set; }
         public IEnumerable<TagInBlogVM> Tags { get; set; }
         public IEnumerable<CommentVM> Comments { get; set; }
+        public DateTime CreatedDate { get; set; }
     }
 }

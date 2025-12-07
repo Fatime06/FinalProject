@@ -1,0 +1,63 @@
+﻿@using Service.ViewModels.Blog
+@model BlogUpdateVM
+
+
+<div class="container">
+    <div class="row">
+        <div>
+            <form method="post" class="form-horizontal" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class="control-label" asp-for="Title"></label>
+                    <input asp-for="Title" type="text" class="form-control" placeholder="Enter blog title">
+                    <span class="text-danger" asp-validation-for="Title"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for="Description"></label>
+                    <input asp-for="Description" type="text" class="form-control" placeholder="Enter blog description">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" asp-for="Image"></label>
+                    <input asp-for="Image" type="file" class="form-control" placeholder="Enter blog image">
+                    <span class="text-danger" asp-validation-for="Image"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CategoryIds">Categories</label>
+                    <select asp-for="CategoryIds" class="form-control" multiple>
+                        @foreach (var file in ViewBag.Categories)
+                        {
+                            <option value="@file.Id">@file.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TagIds">Categories</label>
+                    <select asp-for="TagIds" class="form-control" multiple>
+                        @foreach (var file in ViewBag.Tags)
+                        {
+                            <option value="@file.Id">@file.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        padding-top: 30px;
+    }
+</style>
+
+@section scripts {
+    @await Html.PartialAsync("_ValidationPartial")
+}
+
+
+
+
