@@ -17,7 +17,7 @@ namespace Final
             });
             services.AddSession(opt =>
             {
-                opt.IdleTimeout = TimeSpan.FromSeconds(5);
+                opt.IdleTimeout = TimeSpan.FromMinutes(30);
             });
             services.AddIdentity<AppUser, IdentityRole>()
      .AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();

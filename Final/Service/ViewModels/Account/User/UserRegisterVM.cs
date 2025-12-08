@@ -1,4 +1,5 @@
 ﻿using Domain.Enums;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
 
@@ -11,6 +12,7 @@ namespace Service.ViewModels.Account.User
         public string Surname { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public IFormFile Image { get; set; }
         public string ConfirmPassword { get; set; }
         [DataType(DataType.Date)]
         public DateTime Birthday { get; set; }

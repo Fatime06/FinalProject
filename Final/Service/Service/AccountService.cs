@@ -22,20 +22,22 @@ namespace Service.Service
         private readonly IUrlHelper _urlHelper;
         private readonly HttpContext _httpContext;
         private readonly IEmailService _emailService;
+        private readonly IFileService _fileService;
 
         public AccountService(IAccountRepository accountRepo, IMapper mapper, IUrlHelperFactory urlHelperFactory,
-            IActionContextAccessor actionContextAccessor, IHttpContextAccessor httpContextAccessor, IEmailService emailService)
+            IActionContextAccessor actionContextAccessor, IHttpContextAccessor httpContextAccessor, IEmailService emailService, IFileService fileService)
         {
             _accountRepo = accountRepo;
             _mapper = mapper;
             _urlHelper = urlHelperFactory.GetUrlHelper(actionContextAccessor.ActionContext ?? new());
             _httpContext = httpContextAccessor.HttpContext;
             _emailService = emailService;
+            _fileService = fileService;
         }
 
-        public Task LogoutAsync()
+        public async Task LogoutAsync()
         {
-            throw new NotImplementedException();
+            await _accountRepo.SignOutAsync();
         }
         public async Task<bool> ForgotPassword(ForgotPasswordVM vm, ModelStateDictionary modelState)
         {
@@ -89,6 +91,7 @@ namespace Service.Service
             }
             user = _mapper.Map<AppUser>(vm);
             user.CustomerNumber = UserHelper.GenerateCustomerNumber();
+            user.Image = await _fileService.UploadAsync(vm.Image, "client/uploads/users");
             var result = await _accountRepo.RegisterAsync(user, vm.Password);
 
             if (!result.Succeeded)
@@ -99,7 +102,6 @@ namespace Service.Service
                 }
                 return false;
             }
-
             await _accountRepo.AddRoleToUserAsync(user, "Member");
 
             var token = await _accountRepo.GenerateEmailConfirmationTokenAsync(user);
@@ -173,6 +175,10 @@ namespace Service.Service
                 return false;
             }
             return true;
+        }
+        public async Task<AppUser> GetUserAsync(string username)
+        {
+            return await _accountRepo.GetUserAsync(username);
         }
     }
 }

@@ -1,15 +1,6 @@
-using Domain.Entities;
 using Final;
-using Final.Middlewares;
-using FluentValidation;
-using FluentValidation.AspNetCore;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Repository;
-using Repository.Data;
 using Service;
-using Service.Validators.Category;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,6 +28,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

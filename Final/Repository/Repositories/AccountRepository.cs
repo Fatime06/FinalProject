@@ -83,5 +83,10 @@ namespace Repository.Repositories
         {
             return await _signInManager.PasswordSignInAsync(user, password, isPersistent, lockoutOnFailure);
         }
+
+        public async Task<AppUser> GetUserAsync(string userName)
+        {
+            return await _userManager.FindByNameAsync(userName);
+        }
     }
 }

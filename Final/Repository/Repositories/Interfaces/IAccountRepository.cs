@@ -19,5 +19,6 @@ namespace Repository.Repositories.Interfaces
         Task<bool> VerifyUserTokenAsync(AppUser user, string purpose, string token);
         Task<IdentityResult> ResetPasswordAsync(AppUser user, string token, string password);
         Task<SignInResult> PasswordSignInAsync(AppUser user, string password, bool isPersistent, bool lockoutOnFailure);
+        Task<AppUser> GetUserAsync(string userName);
     }
 }

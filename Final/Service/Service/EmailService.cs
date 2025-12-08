@@ -20,7 +20,7 @@ namespace Service.Service
 
             using var smtp = new SmtpClient();
             smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("fatimafa@code.edu.az", "zkhg yfph idix mphr");
+            smtp.Authenticate("fatimafa@code.edu.az", "kfnv lzlz ogqu gyhk");
             smtp.Send(email);
             smtp.Disconnect(true);
         }

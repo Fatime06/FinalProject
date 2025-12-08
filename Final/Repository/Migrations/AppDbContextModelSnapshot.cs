@@ -30,8 +30,19 @@ namespace Repository.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<DateTime>("Birthday")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerNumber")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -41,12 +52,10 @@ namespace Repository.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Gender")
+                        .HasColumnType("int");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsVerifiedPurchase")
@@ -57,6 +66,11 @@ namespace Repository.Migrations
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
@@ -78,10 +92,16 @@ namespace Repository.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
@@ -96,6 +116,30 @@ namespace Repository.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "A23A7A9F-11DD-48F0-B999-3D5AA6E5AB0E",
+                            AccessFailedCount = 0,
+                            Address = "Bakı",
+                            Birthday = new DateTime(2006, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "cd647881-ea2c-4227-b81a-a80fc5e5ca5b",
+                            Email = "esedovaf4@gmail.com",
+                            EmailConfirmed = true,
+                            Gender = 2,
+                            IsVerifiedPurchase = false,
+                            LockoutEnabled = false,
+                            Name = "Fatima",
+                            NormalizedEmail = "ESEDOVAF4@GMAIL.COM",
+                            NormalizedUserName = "_FATIMA",
+                            PasswordHash = "AQAAAAIAAYagAAAAEKOS2m34vwvgSItPLA9roVZf3kuhY2VQgxXllqaKqlvcUm9oLydNigqxat0DJIc8Zg==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "3690718c-bf0e-476b-a162-19cd34ccacd0",
+                            Surname = "Asadova",
+                            TwoFactorEnabled = false,
+                            UserName = "_fatima"
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Blog", b =>
@@ -523,6 +567,26 @@ namespace Repository.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "F8A43D91-1E74-4F8A-BC55-5D27A3F9989A",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "9A17F51D-AED3-4C8C-BE55-EE3D6E8A0C01",
+                            Name = "Member",
+                            NormalizedName = "MEMBER"
+                        },
+                        new
+                        {
+                            Id = "25D6D5B2-DC97-4042-B56E-EB3F8123BB99",
+                            Name = "SuperAdmin",
+                            NormalizedName = "SUPERADMIN"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -610,6 +674,13 @@ namespace Repository.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "A23A7A9F-11DD-48F0-B999-3D5AA6E5AB0E",
+                            RoleId = "25D6D5B2-DC97-4042-B56E-EB3F8123BB99"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>

@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Service.Service;
@@ -20,7 +21,10 @@ namespace Service
             IConfiguration configuration)
         {
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
-            services.AddFluentValidationAutoValidation();
+            services.AddFluentValidationAutoValidation(opt =>
+            {
+                opt.DisableDataAnnotationsValidation = true;
+            });
             services.AddValidatorsFromAssemblyContaining<CategoryCreateVMValidator>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
@@ -32,6 +36,9 @@ namespace Service
             services.AddScoped<IServiceService, ServiceService>();
             services.AddScoped<IBlogService, BlogService>();
             services.AddScoped<ITagService, TagService>();
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+            services.AddScoped<IEmailService, EmailService>();
             return services;
         }
     }

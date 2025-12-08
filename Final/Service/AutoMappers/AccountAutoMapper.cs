@@ -8,7 +8,8 @@ namespace Service.AutoMappers
     {
         public AccountAutoMapper()
         {
-            CreateMap<UserRegisterVM, AppUser>();
+            CreateMap<UserRegisterVM, AppUser>()
+                .ForMember(dest => dest.Image, opt => opt.Ignore());
         }
     }
 }

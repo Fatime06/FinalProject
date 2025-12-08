@@ -1,11 +1,14 @@
-﻿<header>
+﻿@using Service.Service.Interfaces
+@inject IAccountService _accountService
+
+<header>
     <nav class="navbar">
         <div class="nav-left">
             <div class="red-box">
-                <img src="./assets/img/logo-white (2).svg" alt="">
+                <img src="~/assets/img/logo-white (2).svg" alt="">
             </div>
 
-            <div class="sidebar-icon" onclick="toggleSidebar()">
+            <div class="sidebar-icon">
                 <i class="fas fa-bars"></i>
             </div>
             <div id="sidebar-dropdown" class="sidebar-dropdown">
@@ -61,9 +64,55 @@
             <div class="search-icon">
                 <i class="fas fa-search"></i>
             </div>
-            <div class="auth">
-                <a href="#">Login / Register</a>
-            </div>
+            @if (User.Identity.IsAuthenticated)
+            {
+                var user = await _accountService.GetUserAsync(@User.Identity.Name);
+                if (user == null)
+                {
+                    <div class="auth">
+                        <a asp-controller="account" asp-action="login">Login</a> / <a asp-controller="account" asp-action="register">Register</a>
+                    </div>
+                }
+                else
+                {
+                    <div class="user-panel-account">
+                        <div class="container-user-panel">
+                            <div class="dropdown b-dropdown lang btn-group">
+                                <button type="button" class="btn dropdown-toggle btn-primary user-panel-btn">
+                                    <span style="font-weight: 600;" id="userPanelBtn">@user.Name @user.Surname</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" id="userPanelList">
+                                    <li class="lang-dropdown">
+                                        <a asp-action="profile" asp-controller="account"
+                                           class="dropdown-item">
+                                            <span>
+                                                Profile
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="lang-dropdown">
+                                        <a href="up-setting.html"
+                                           class="dropdown-item"><span>Settings</span></a>
+                                    </li>
+                                    <li class="lang-dropdown">
+                                        <a asp-action="logout" asp-controller="account" class="dropdown-item">
+                                            <span>
+                                                Logout
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="auth">
+                    <a asp-controller="account" asp-action="login">Login</a> / <a asp-controller="account" asp-action="register">Register</a>
+                </div>
+            }
             <div class="icons-nav">
                 <a href="Wishlist.html">
                     <i class="fas fa-heart"></i>

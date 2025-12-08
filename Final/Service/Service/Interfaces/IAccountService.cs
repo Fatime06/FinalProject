@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Service.ViewModels.Account.User;
 
@@ -11,5 +12,6 @@ namespace Service.Service.Interfaces
         Task LogoutAsync();
         Task EmailConfirm(string email, string token);
         Task<bool> ResetPassword(PasswordResetVM vm, ModelStateDictionary modelState);
+        Task<AppUser> GetUserAsync(string userName); 
     }
 }

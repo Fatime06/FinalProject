@@ -1,0 +1,129 @@
+﻿@using Service.ViewModels.Account.User
+@{
+    ViewData["Title"] = "Login";
+}
+@model UserLoginVM
+
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Swal.fire({
+                title: "Successful!",
+                text: "@Html.Raw(TempData["SuccessMessage"])",
+                icon: "success",
+                confirmButtonText: "Ok",
+                customClass: {
+                    popup: 'swal-custom-popup',
+                    title: 'swal-custom-title',
+                    content: 'swal-custom-text'
+                }
+            });
+        });
+    </script>
+}
+
+<section class="auth-page">
+    <div class="auth-box">
+        <h2>Login</h2>
+
+        <form method="post">
+            <div class="form-group">
+                <label class="control-label" asp-for="Email"></label>
+                <input asp-for="Email" type="email" class="form-control" placeholder="Enter email">
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for="Password"></label>
+                <input asp-for="Password" type="password" class="form-control" placeholder="Enter password">
+                <span class="text-danger" asp-validation-for="Password"></span>
+            </div>
+
+            <button type="submit" class="auth-btn">Login</button>
+
+            <p class="auth-link">
+                Don't have an account?
+                <a asp-action="register" asp-controller="account">Register</a>
+                <div class="text-danger fs-4 mt-3" asp-validation-summary="ModelOnly"></div>
+            </p>
+        </form>
+    </div>
+</section>
+
+
+<style>
+    .auth-page {
+        width: 100%;
+        min-height: 100vh;
+        background: #f9f6ef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 0 50px 0;
+    }
+
+    .auth-box {
+        width: 400px;
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    }
+
+        .auth-box.large {
+            width: 520px;
+        }
+
+        .auth-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+    .double-input {
+        display: flex;
+        gap: 12px;
+    }
+
+    .auth-btn {
+        width: 100%;
+        padding: 12px;
+        background: #c00;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+        .auth-btn:hover {
+            background: darkred;
+        }
+
+    .auth-link {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+</style>

@@ -8,9 +8,10 @@ namespace Service.Validators.Account
         public UserRegisterVMValidator()
         {
             RuleFor(u => u.Name)
-                .NotEmpty().WithMessage("Full name is required.")
-                .MaximumLength(100).WithMessage("Full name must not exceed 200 characters.")
-                .MinimumLength(3).WithMessage("Full name must be at least 3 characters long.");
+                .Cascade(CascadeMode.Stop)
+                .NotEmpty().WithMessage("Name is required.")
+                .MaximumLength(100).WithMessage("Name must not exceed 200 characters.")
+                .MinimumLength(3).WithMessage("Name must be at least 3 characters long.");
             RuleFor(u=>u.Surname)
                 .NotEmpty().WithMessage("Surname is required.")
                 .MaximumLength(100).WithMessage("Surname must not exceed 100 characters.")

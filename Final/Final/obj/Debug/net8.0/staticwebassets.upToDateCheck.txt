@@ -179,5 +179,11 @@ wwwroot\assets\js\Tequila.js
 wwwroot\assets\js\Whiskey.js
 wwwroot\assets\js\Wine.js
 wwwroot\assets\js\Wishlist.js
+wwwroot\client\uploads\users\09f39fce-43ce-4193-9ebe-6b1237345afa.jpg
+wwwroot\client\uploads\users\563ece91-a85d-4b69-babf-64f472eb6ca5.jpg
+wwwroot\client\uploads\users\6fb59525-ad12-483b-90e4-8a94a607af49.jpg
+wwwroot\client\uploads\users\923ef758-eacd-4e46-9279-18639bb60282.jpg
+wwwroot\client\uploads\users\93bb3875-bd74-48c8-ad45-8b410cd508ba.jpg
+wwwroot\client\uploads\users\c1a91ccf-eddb-44ae-9088-2c2c774c9544.jpg
 wwwroot\templates\emailConfirm.html
 wwwroot\templates\resetPassword.html

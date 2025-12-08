@@ -176,3 +176,21 @@ cartOverlay.addEventListener("click", () => {
     cartSidebar.classList.remove("active");
     cartOverlay.classList.remove("active");
 });
+
+//document.addEventListener("DOMContentLoaded", function () {
+//    const userBtn = document.querySelector(".user-panel-btn");
+//    const dropDownContent = document.querySelector(".dropdown-menu");
+
+//    if (!userBtn || !dropDownContent) return;
+
+//    userBtn.addEventListener("click", (e) => {
+//        e.stopPropagation();
+//        dropDownContent.classList.toggle("active");
+//    });
+
+//    document.addEventListener("click", (e) => {
+//        if (!e.target.closest(".btn-group")) {
+//            dropDownContent.classList.remove("active");
+//        }
+//    });
+//});
