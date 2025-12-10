@@ -124,7 +124,7 @@ namespace Repository.Migrations
                             AccessFailedCount = 0,
                             Address = "Bakı",
                             Birthday = new DateTime(2006, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "cd647881-ea2c-4227-b81a-a80fc5e5ca5b",
+                            ConcurrencyStamp = "48899af0-8f04-4ec2-98b9-220f3529f8a0",
                             Email = "esedovaf4@gmail.com",
                             EmailConfirmed = true,
                             Gender = 2,
@@ -133,9 +133,9 @@ namespace Repository.Migrations
                             Name = "Fatima",
                             NormalizedEmail = "ESEDOVAF4@GMAIL.COM",
                             NormalizedUserName = "_FATIMA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKOS2m34vwvgSItPLA9roVZf3kuhY2VQgxXllqaKqlvcUm9oLydNigqxat0DJIc8Zg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMbyPUAL7oOCrsyT7jDpthhKQ6Xj1bnucOyFdoZ9ZGiPswZSE9riqpZHPD3WfcWpAw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3690718c-bf0e-476b-a162-19cd34ccacd0",
+                            SecurityStamp = "2499c365-baaf-405a-9d2f-77c70ff0e9ac",
                             Surname = "Asadova",
                             TwoFactorEnabled = false,
                             UserName = "_fatima"
@@ -292,6 +292,40 @@ namespace Repository.Migrations
                     b.HasIndex("BlogId");
 
                     b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("Domain.Entities.ContactMessage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ContactMessages");
                 });
 
             modelBuilder.Entity("Domain.Entities.History", b =>

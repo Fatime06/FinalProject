@@ -19,6 +19,7 @@ namespace Repository
             services.AddScoped<IBlogRepository, BlogRepository>();
             services.AddScoped<ITagRepository, TagRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IContactMessageRepository, ContactMessageRepository>();
             return services;
         }
     }

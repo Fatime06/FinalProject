@@ -39,6 +39,7 @@ namespace Service
             services.AddScoped<IAccountService, AccountService>();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IContactMessageService, ContactMessageService>();
             return services;
         }
     }

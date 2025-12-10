@@ -21,6 +21,7 @@ namespace Repository.Data
         public DbSet<BlogTag> BlogTags { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<ContactMessage> ContactMessages { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder builder)
         {

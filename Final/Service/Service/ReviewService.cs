@@ -16,19 +16,18 @@ namespace Service.Service
         private readonly IReviewRepository _reviewRepo;
         private readonly IMapper _mapper;
         private readonly IHttpContextAccessor _httpContextAccessor;
-        private readonly HttpContext _httpContext;
 
         public ReviewService(IReviewRepository reviewRepo, IMapper mapper, IHttpContextAccessor httpContextAccessor)
         {
             _reviewRepo = reviewRepo;
             _mapper = mapper;
-            _httpContext = httpContextAccessor.HttpContext;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<bool> CreateAsync(ReviewCreateVM vm, ModelStateDictionary modelState)
         {
             if (!modelState.IsValid) return false;
-            var userId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var userId = _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
             if (userId == null)
             {

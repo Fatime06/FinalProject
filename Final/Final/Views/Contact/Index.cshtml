@@ -14,4 +14,23 @@
     <script src="~/assets/js/Contact.js"></script>
 }
 
+@if (TempData["SuccessMessage"] != null)
+{
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Swal.fire({
+                title: "Successful!",
+                text: "@Html.Raw(TempData["SuccessMessage"])",
+                icon: "success",
+                confirmButtonText: "Ok",
+                customClass: {
+                    popup: 'swal-custom-popup',
+                    title: 'swal-custom-title',
+                    content: 'swal-custom-text'
+                }
+            });
+        });
+    </script>
+}
+
 
