@@ -122,5 +122,34 @@ namespace Service.Service
             await _proRepo.SaveChangesAsync();
             return true;
         }
+        public async Task<IEnumerable<ProductVM>> GetByTabAsync(string tab)
+        {
+            var query = _proRepo
+                .GetAll()
+                .Include(p => p.Category)
+                .Include(p => p.Ratings).AsQueryable();
+
+            switch (tab)
+            {
+                case "bestseller":
+                    query = query.OrderByDescending(p => p.Quantity);
+                    break;
+
+                case "sales":
+                    query = query.Where(p => p.DiscountPrice != null);
+                    break;
+
+                case "featured":
+                    query = query.Where(p => p.IsFeatured);
+                    break;
+
+                case "new":
+                    query = query.OrderByDescending(p => p.CreatedDate);
+                    break;
+            }
+
+            var products = await query.Take(6).ToListAsync();
+            return _mapper.Map<IEnumerable<ProductVM>>(products);
+        }
     }
 }

@@ -4,9 +4,9 @@ namespace Final.ViewComponents
 {
     public class HomeShopViewComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
-            return await Task.FromResult(View());
+            return View();
         }
     }
 }

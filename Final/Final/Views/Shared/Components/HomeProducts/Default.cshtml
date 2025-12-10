@@ -1,0 +1,35 @@
+﻿@using Service.ViewModels.Product
+@model IEnumerable<ProductVM>
+
+@foreach (var product in Model)
+{
+    <div class="shop-card">
+
+        @if (product.DiscountPrice != null)
+        {
+            var percent = (int)((product.Price - product.DiscountPrice.Value) / product.Price * 100);
+            <div class="discount">-@percent%</div>
+        }
+
+        <div class="shop-img">
+            <img src="~/admin/uploads/products/@product.Image" alt="">
+        </div>
+
+        <div class="shop-info">
+            <h3>@product.Name</h3>
+
+            <div class="price">
+                @if (product.DiscountPrice != null)
+                {
+                    <span class="new">$@product.DiscountPrice</span>
+                    <span class="old">$@product.Price</span>
+                }
+                else
+                {
+                    <span class="new">$@product.Price</span>
+                }
+            </div>
+        </div>
+
+    </div>
+}

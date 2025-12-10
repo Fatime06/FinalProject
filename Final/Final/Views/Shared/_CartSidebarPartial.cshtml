@@ -1,0 +1,29 @@
+﻿@using Service.ViewModels.Basket
+@model BasketVM
+
+@if (!Model.Items.Any())
+{
+    <p>No products in the cart.</p>
+}
+else
+{
+    foreach (var item in Model.Items)
+    {
+        <div class="cart-item">
+            <img src="~/uploads/@item.Image" width="60">
+
+            <div class="cart-info">
+                <h5>@item.ProductName</h5>
+                <span>@item.Count x @item.Price ₼</span>
+            </div>
+
+            <a asp-action="Remove"
+               asp-controller="Basket"
+               asp-route-id="@item.Id">✕</a>
+        </div>
+    }
+
+    <div class="cart-footer">
+        <strong>Total: @Model.TotalPrice ₼</strong>
+    </div>
+}

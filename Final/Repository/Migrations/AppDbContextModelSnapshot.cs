@@ -124,7 +124,7 @@ namespace Repository.Migrations
                             AccessFailedCount = 0,
                             Address = "Bakı",
                             Birthday = new DateTime(2006, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "48899af0-8f04-4ec2-98b9-220f3529f8a0",
+                            ConcurrencyStamp = "7d3cddef-2124-45f1-8f52-be71be4acc33",
                             Email = "esedovaf4@gmail.com",
                             EmailConfirmed = true,
                             Gender = 2,
@@ -133,13 +133,74 @@ namespace Repository.Migrations
                             Name = "Fatima",
                             NormalizedEmail = "ESEDOVAF4@GMAIL.COM",
                             NormalizedUserName = "_FATIMA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEMbyPUAL7oOCrsyT7jDpthhKQ6Xj1bnucOyFdoZ9ZGiPswZSE9riqpZHPD3WfcWpAw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJOWKVfg4GaqGPbvFBhGfyKy0+nqGnz8l/bZm+Gi0u86KO9FbGiGxGgp/i5hhPyhDA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2499c365-baaf-405a-9d2f-77c70ff0e9ac",
+                            SecurityStamp = "160e19e4-9a64-4722-9248-1767e9eef0e5",
                             Surname = "Asadova",
                             TwoFactorEnabled = false,
                             UserName = "_fatima"
                         });
+                });
+
+            modelBuilder.Entity("Domain.Entities.Basket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId")
+                        .IsUnique();
+
+                    b.ToTable("Baskets");
+                });
+
+            modelBuilder.Entity("Domain.Entities.BasketItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BasketId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BasketId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("BasketItems");
                 });
 
             modelBuilder.Entity("Domain.Entities.Blog", b =>
@@ -383,6 +444,9 @@ namespace Repository.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.Property<bool>("InStock")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsFeatured")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
@@ -736,6 +800,36 @@ namespace Repository.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.Entities.Basket", b =>
+                {
+                    b.HasOne("Domain.Entities.AppUser", "AppUser")
+                        .WithOne("Basket")
+                        .HasForeignKey("Domain.Entities.Basket", "AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Domain.Entities.BasketItem", b =>
+                {
+                    b.HasOne("Domain.Entities.Basket", "Basket")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Domain.Entities.BlogCategory", b =>
                 {
                     b.HasOne("Domain.Entities.Blog", "Blog")
@@ -887,9 +981,17 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Domain.Entities.AppUser", b =>
                 {
+                    b.Navigation("Basket")
+                        .IsRequired();
+
                     b.Navigation("ProductRatings");
 
                     b.Navigation("Reviews");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Basket", b =>
+                {
+                    b.Navigation("BasketItems");
                 });
 
             modelBuilder.Entity("Domain.Entities.Blog", b =>

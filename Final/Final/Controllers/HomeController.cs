@@ -17,9 +17,9 @@ namespace Final.Controllers
             {
                 string decodedJson = Uri.UnescapeDataString(json);
 
-                var dto = JsonConvert.DeserializeObject<ErrorVM>(decodedJson);
-                dto.Timestamp = DateTime.Now;
-                return View(dto);
+                var vm = JsonConvert.DeserializeObject<ErrorVM>(decodedJson);
+                vm.Timestamp = DateTime.Now;
+                return View(vm);
             }
 
             return View(new ErrorVM
@@ -28,6 +28,11 @@ namespace Final.Controllers
                 Message = "An unexpected error occurred..",
                 Timestamp = DateTime.Now
             });
+        }
+        [HttpGet]
+        public IActionResult GetShopProducts(string tab)
+        {
+            return ViewComponent("HomeProducts", new { tab = tab });
         }
     }
 }

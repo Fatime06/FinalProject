@@ -20,6 +20,7 @@ namespace Repository
             services.AddScoped<ITagRepository, TagRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IContactMessageRepository, ContactMessageRepository>();
+            services.AddScoped<IBasketRepository, BasketRepository>();
             return services;
         }
     }

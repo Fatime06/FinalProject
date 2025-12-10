@@ -40,6 +40,7 @@ namespace Service
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IContactMessageService, ContactMessageService>();
+            services.AddScoped<IBasketService, BasketService>();
             return services;
         }
     }

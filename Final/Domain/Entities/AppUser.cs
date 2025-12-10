@@ -17,5 +17,6 @@ namespace Domain.Entities
         public string? CustomerNumber { get; set; }
         public IEnumerable<ProductRating> ProductRatings { get; set; }
         public IEnumerable<Review> Reviews { get; set; }
+        public Basket Basket { get; set; }
     }
 }

@@ -22,6 +22,8 @@ namespace Repository.Data
         public DbSet<BlogCategory> BlogCategories { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<ContactMessage> ContactMessages { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder builder)
         {

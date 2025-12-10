@@ -8,6 +8,7 @@
         public int Quantity { get; set; }
         public double? DiscountPrice { get; set; }
         public bool InStock { get; set; }
+        public bool IsFeatured { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
         public IEnumerable<ProductRating> Ratings { get; set; }
