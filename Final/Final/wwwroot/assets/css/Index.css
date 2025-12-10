@@ -9,6 +9,10 @@ body {
     font-family: Arial, sans-serif;
 }
 
+ul {
+    list-style: none;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -2212,135 +2216,53 @@ section {
     }
 }
 
-
-.user-panel-account {
-    width: 30%;
-    height: 34px;
-    display: flex;
-    justify-content: center;
-    background-color: #fef0ed;
-    border-radius: 2rem;
-    margin-left: 2rem;
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: inherit;
 }
 
-    .user-panel-account .container-user-panel {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        width: 100%;
-        max-width: 111rem;
+.user-btn {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+    .user-btn i {
+        font-size: 12px;
     }
 
-        .user-panel-account .container-user-panel .btn-group {
-            position: relative;
-            display: inline-flex;
-            vertical-align: middle;
+.user-menu {
+    position: absolute;
+    right: 0;
+    top: 110%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-width: 160px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 6px 0;
+    display: none;
+    z-index: 1000;
+}
+
+    .user-menu a {
+        display: block;
+        padding: 8px 14px;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+    }
+
+        .user-menu a:hover {
+            background-color: #f5f5f5;
         }
 
-            .user-panel-account .container-user-panel .btn-group .btn-primary {
-                background-color: transparent !important;
-                border: none !important;
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 17px;
-                color: #373736 !important;
-                padding: 0;
-                padding-right: 20px;
-                margin-right: 6px;
-                display: flex;
-                align-items: center;
-                font-weight: 500;
-                font-size: 13px;
-                line-height: 16px;
-                color: #818181 !important;
-                padding-right: 40px;
-                margin-right: 0;
-                box-shadow: none !important;
-            }
-
-            .user-panel-account .container-user-panel .btn-group .dropdown-toggle::after {
-                display: inline-block;
-                margin-left: 0.255em;
-                vertical-align: 0.255em;
-                content: "";
-                position: absolute;
-                right: 15px;
-                top: 50%;
-                transform: translateY(-50%);
-                border: none;
-                background-repeat: no-repeat;
-                margin-left: 0;
-                width: 12px;
-                height: 8px;
-                background-image: url(../../assets/images/caret-down-gray-mini.svg);
-            }
-
-            .user-panel-account .container-user-panel .btn-group ul {
-                position: absolute;
-                transform: translate3d(-77px, 16px, 0px);
-                top: 0px;
-                left: 0px;
-                will-change: transform;
-            }
-
-            .user-panel-account .container-user-panel .btn-group .dropdown-menu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                z-index: 1000;
-                display: none;
-                float: left;
-                min-width: 10rem;
-                padding: 0.5rem 0;
-                margin: 0.125rem 0 0;
-                font-size: 1rem;
-                color: #212529;
-                text-align: left;
-                list-style: none;
-                background-color: #fff;
-                background-clip: padding-box;
-                border: 1px solid rgba(0, 0, 0, 0.15);
-                border-radius: 0.25rem;
-                border: none;
-                left: 0 !important;
-                top: 10px !important;
-                min-width: unset;
-                padding: 4px 0;
-                border-radius: 8px;
-                width: 19rem;
-            }
-
-                .user-panel-account .container-user-panel .btn-group .dropdown-menu .lang-dropdown .dropdown-item {
-                    display: block;
-                    width: 100%;
-                    padding: 0.4rem 2.4rem;
-                    clear: both;
-                    font-weight: 400;
-                    color: #212529;
-                    text-align: inherit;
-                    white-space: nowrap;
-                    background-color: transparent;
-                    border: 0;
-                    padding: 8px 14px;
-                    display: flex;
-                    align-items: center;
-                }
-
-                    .user-panel-account .container-user-panel .btn-group .dropdown-menu .lang-dropdown .dropdown-item span {
-                        font-weight: 500;
-                        font-size: 15px;
-                        line-height: 13px;
-                        color: #918f8f;
-                        margin-left: 12px;
-                        margin-left: 0;
-                    }
-
-                    .user-panel-account .container-user-panel .btn-group .dropdown-menu .lang-dropdown .dropdown-item:hover {
-                        color: #16181b;
-                        text-decoration: none;
-                        background-color: #e9ecef;
-                    }
-
-                .user-panel-account .container-user-panel .btn-group .dropdown-menu.active {
-                    display: block;
-                }
+    .user-menu.show {
+        display: block;
+    }

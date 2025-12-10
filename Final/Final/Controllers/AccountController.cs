@@ -1,4 +1,5 @@
 ﻿using Domain.Enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Service.Interfaces;
 using Service.ViewModels.Account.User;
@@ -47,6 +48,47 @@ namespace Final.Controllers
             if (!await _accountService.UserLoginAsync(vm, ModelState))
                 return View(vm);
             return returnUrl != null ? Redirect(returnUrl) : RedirectToAction("Index", "Home");
+        }
+        [Authorize(Roles = "Member")]
+        public async Task<IActionResult> Logout()
+        {
+            await _accountService.LogoutAsync();
+            return RedirectToAction("Login");
+        }
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Forgotpassword(ForgotPasswordVM vm)
+        {
+            if (!await _accountService.ForgotPasswordAsync(vm, ModelState)) return View(vm);
+
+            TempData["SuccessMessage"] = "The link to update your password has been sent to your email address.";
+            return View();
+        }
+        public async Task<IActionResult> VerifyPasswordAsync(string token, string email)
+        {
+            TempData["token"] = token;
+            TempData["email"] = email;
+            await _accountService.VerifyPasswordAsync(token, email);
+            return RedirectToAction("resetpassword");
+        }
+        public IActionResult ResetPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(PasswordResetVM vm)
+        {
+            TempData["token"] = vm.Token;
+            TempData["email"] = vm.Email;
+            if (!await _accountService.ResetPasswordAsync(vm, ModelState)) return View(vm);
+            TempData["SuccessMessage"] = "Your password has been successfully updated! You can now log in.";
+            return RedirectToAction("Login");
         }
     }
 }

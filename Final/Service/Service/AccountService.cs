@@ -39,36 +39,6 @@ namespace Service.Service
         {
             await _accountRepo.SignOutAsync();
         }
-        public async Task<bool> ForgotPassword(ForgotPasswordVM vm, ModelStateDictionary modelState)
-        {
-            if (!modelState.IsValid) return false;
-            var user = await _accountRepo.FindByEmailAsync(vm.Email);
-            if (user == null || !await _accountRepo.IsInRoleAsync(user, "Member"))
-            {
-                modelState.AddModelError("Email", "Email not found");
-                return false;
-            }
-            var token = await _accountRepo.GeneratePasswordResetTokenAsync(user);
-            var url = _urlHelper.Action("VerifyPassword", "Account", new { email = user.Email, token = token }, _httpContext.Request.Scheme);
-
-
-            using StreamReader reader = new StreamReader("wwwroot/templates/resetpassword.html");
-            var body = reader.ReadToEnd();
-            body = body.Replace("{{url}}", url);
-            body = body.Replace("{{name}}", user.Name);
-            body = body.Replace("{{surname}}", user.Surname);
-
-            EmailSendVM emailSendVm = new()
-            {
-                Body = body,
-                Subject = "Reset Password",
-                To = vm.Email
-            };
-
-            _emailService.SendEmailAsync(emailSendVm);
-            return true;
-        }
-
         public async Task EmailConfirm(string email, string token)
         {
             var user = await _accountRepo.FindByEmailAsync(email);
@@ -121,7 +91,7 @@ namespace Service.Service
             return true;
         }
 
-        public async Task<bool> ResetPassword(PasswordResetVM vm, ModelStateDictionary modelState)
+        public async Task<bool> ResetPasswordAsync(PasswordResetVM vm, ModelStateDictionary modelState)
         {
             if (!modelState.IsValid) return false;
             var user = await _accountRepo.FindByEmailAsync(vm.Email);
@@ -179,6 +149,42 @@ namespace Service.Service
         public async Task<AppUser> GetUserAsync(string username)
         {
             return await _accountRepo.GetUserAsync(username);
+        }
+        public async Task<bool> ForgotPasswordAsync(ForgotPasswordVM vm, ModelStateDictionary modelState)
+        {
+            if (!modelState.IsValid) return false;
+            var user = await _accountRepo.FindByEmailAsync(vm.Email);
+            if (user == null || !await _accountRepo.IsInRoleAsync(user, "Member"))
+            {
+                modelState.AddModelError("Email", "Email not found");
+                return false;
+            }
+            var token = await _accountRepo.GeneratePasswordResetTokenAsync(user);
+            var url = _urlHelper.Action("VerifyPassword", "Account", new { email = user.Email, token = token }, _httpContext.Request.Scheme);
+
+
+            using StreamReader reader = new StreamReader("wwwroot/templates/resetpassword.html");
+            var body = reader.ReadToEnd();
+            body = body.Replace("{{url}}", url);
+            body = body.Replace("{{name}}", user.Name);
+            body = body.Replace("{{surname}}", user.Surname);
+
+            EmailSendVM emailSendVm = new()
+            {
+                Body = body,
+                Subject = "Reset Password",
+                To = vm.Email
+            };
+
+            _emailService.SendEmailAsync(emailSendVm);
+            return true;
+        }
+        public async Task VerifyPasswordAsync(string token, string email)
+        {
+            var user = await _accountRepo.FindByEmailAsync(email);
+            if (user == null || !await _accountRepo.IsInRoleAsync(user, "Member")) throw new CustomException(404, "User not found");
+            if (!await _accountRepo.VerifyUserTokenAsync(user,"ResetPassword", token))
+                throw new CustomException(404, "An unexpected error occurred!");
         }
     }
 }

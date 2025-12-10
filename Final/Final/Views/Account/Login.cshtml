@@ -41,6 +41,12 @@
                 <span class="text-danger" asp-validation-for="Password"></span>
             </div>
 
+            <div class="forgot-password">
+                <a asp-action="ForgotPassword" asp-controller="Account">
+                    Forgot your password?
+                </a>
+            </div>
+
             <button type="submit" class="auth-btn">Login</button>
 
             <p class="auth-link">
@@ -51,6 +57,7 @@
         </form>
     </div>
 </section>
+
 
 
 <style>
@@ -126,4 +133,27 @@
         margin-top: 15px;
     }
 
+        .auth-link a {
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+    .forgot-password {
+        text-align: right;
+        margin-bottom: 15px;
+    }
+
+        .forgot-password a {
+            font-size: 15px;
+            color: #d00;
+            text-decoration: none;
+        }
+
+            .forgot-password a:hover {
+                text-decoration: underline;
+            }
+
+    .text-danger {
+        font-size: 16px !important;
+    }
 </style>
