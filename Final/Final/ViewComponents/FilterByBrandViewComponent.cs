@@ -6,7 +6,7 @@ namespace Final.ViewComponents
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            return await Task.FromResult(View());
+            return View();
         }
     }
 }

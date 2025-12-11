@@ -1,4 +1,7 @@
-﻿<section id="deals">
+﻿@using Service.ViewModels.Product
+@model IEnumerable<ProductVM>
+
+<section id="deals">
     <h2>Deals of the Week</h2>
     <p class="subtitle">
         View the latest deals and save | <a href="#">View All <i class="fa-solid fa-arrow-right"></i></a>
@@ -6,95 +9,59 @@
 
     <div class="deal-container">
 
-        <div class="deal-card">
-            <div class="discount">-6%</div>
-            <div class="deal-img">
-                <img src="~/assets/img/WeeklyDeal.jpg" alt="">
-                <div class="icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <div class="timer">
-                    <div>
-                        <span>354</span>
-                        <p>Days</p>
-                    </div>
-                    <div>
-                        <span>12</span>
-                        <p>Hrs</p>
-                    </div>
-                    <div>
-                        <span>11</span>
-                        <p>Mins</p>
-                    </div>
-                    <div>
-                        <span>13</span>
-                        <p>Secs</p>
+        @foreach(var product in Model)
+        {
+            <div class="deal-card">
+                <div class="discount">-6%</div>
+                <div class="deal-img">
+                    <img src="~/admin/uploads/products/@product.Image" alt="">
+                    <div class="icons">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
                     </div>
                 </div>
-            </div>
-            <div class="deal-info">
-                <h3>Villenoir Chardonnay</h3>
-                <div class="stars">★★★★☆</div>
-                <div class="price">
-                    <span class="new">$89.92</span>
-                    <span class="old">$95.99</span>
-                </div>
-                <p class="stock"><i class="fa-solid fa-circle"></i> In Stock</p>
-                <div class="cart">
-                    <input type="number" value="1" min="1">
-                    <button>ADD TO CART</button>
-                </div>
-            </div>
-        </div>
+                <div class="deal-info">
+                    <h3>@product.Name</h3>
 
-        <div class="deal-card">
-            <div class="discount">-9%</div>
-            <div class="deal-img">
-                <img src="~/assets/img/PRVA.jpg" alt="">
-                <div class="icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-            </div>
-            <div class="deal-info">
-                <h3>Small Cotton Watch</h3>
-                <div class="stars">★★★★☆</div>
-                <div class="price">
-                    <span class="new">$899.50</span>
-                    <span class="old">$991.80</span>
-                </div>
-                <p class="stock"><i class="fa-solid fa-circle"></i> In Stock</p>
-                <div class="cart">
-                    <input type="number" value="1" min="1">
-                    <button>ADD TO CART</button>
-                </div>
-            </div>
-        </div>
+                    <div class="stars">
+                        @{
+                            int fullStars = (int)product.AverageRating;
+                            bool halfStar = product.AverageRating - fullStars >= 0.5;
+                        }
 
-        <div class="deal-card">
-            <div class="discount">-8%</div>
-            <div class="deal-img">
-                <img src="~/assets/img/JackDaniels.jpg" alt="">
-                <div class="icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-            </div>
-            <div class="deal-info">
-                <h3>Incredible Leather Keyboard</h3>
-                <div class="stars">★★★★☆</div>
-                <div class="price">
-                    <span class="new">$450.66</span>
-                    <span class="old">$492.34</span>
-                </div>
-                <p class="stock"><i class="fa-solid fa-circle"></i> In Stock</p>
-                <div class="cart">
-                    <input type="number" value="1" min="1">
-                    <button>ADD TO CART</button>
-                </div>
-            </div>
-        </div>
+                        @for (int i = 0; i < fullStars; i++)
+                        {
+                            <span>★</span>
+                        }
 
+                        @if (halfStar)
+                        {
+                            <span>★</span>
+                        }
+
+                        @for (int i = fullStars + (halfStar ? 1 : 0); i < 5; i++)
+                        {
+                            <span>☆</span>
+                        }
+                    </div>
+
+                    <div class="price">
+                        <span class="new">$@product.DiscountPrice</span>
+                        <span class="old">$@product.Price</span>
+                    </div>
+
+                    <p class="stock @(product.InStock ? "" : "out")">
+                        <i class="fa-solid fa-circle"></i>
+                        @(product.InStock ? "In Stock" : "Out of Stock")
+                    </p>
+
+                    <div class="cart">
+                        <input type="number" min="1" max="@product.Quantity" value="1">
+                        <button @(product.InStock ? "" : "disabled")>ADD TO CART</button>
+                    </div>
+                </div>
+
+            </div>
+        }
     </div>
 </section>

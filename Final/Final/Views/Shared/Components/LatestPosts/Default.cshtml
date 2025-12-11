@@ -1,43 +1,27 @@
-﻿<section class="latest-posts">
+﻿@using Service.ViewModels.Blog
+@model IEnumerable<BlogVM>
+
+<section class="latest-posts">
     <h3 class="sidebar-title">Latest Post</h3>
     <hr class="sidebar-line">
 
-    <div class="latest-post-item">
-        <img src="./assets/img/Post1.jpg" alt="">
-        <div>
-            <a class="latest-title" href="#">Summer Is Twice As Nice With Peachy Sangria Wine</a>
-            <p class="latest-date">July 2, 2022</p>
-        </div>
-    </div>
+    @foreach (var post in Model)
+    {
+        <div class="latest-post-item">
+            <img src="~/admin/uploads/blogs/@post.Image" alt="@post.Title">
 
-    <div class="latest-post-item">
-        <img src="./assets/img/Post2.jpg" alt="">
-        <div>
-            <a class="latest-title" href="#">Cranberry Wine – A Tradion Worth Sharing</a>
-            <p class="latest-date">July 2, 2022</p>
-        </div>
-    </div>
+            <div>
+                <a class="latest-title"
+                   asp-controller="Blog"
+                   asp-action="Detail"
+                   asp-route-id="@post.Id">
+                    @post.Title
+                </a>
 
-    <div class="latest-post-item">
-        <img src="./assets/img/Post3.jpg" alt="">
-        <div>
-            <a class="latest-title" href="#">Discussion about the latest trends</a>
-            <p class="latest-date">July 2, 2022</p>
+                <p class="latest-date">
+                    @post.CreatedAt.ToString("MMMM dd, yyyy")
+                </p>
+            </div>
         </div>
-    </div>
-
-    <div class="latest-post-item">
-        <img src="./assets/img/Post4.jpg" alt="">
-        <div>
-            <a class="latest-title" href="#">Common Problems You Might Encounter When...</a>
-            <p class="latest-date">July 2, 2022</p>
-        </div>
-    </div>
-    <div class="latest-post-item">
-        <img src="./assets/img/Post5.jpg" alt="">
-        <div>
-            <a class="latest-title" href="#">Common Problems You Might Encounter When...</a>
-            <p class="latest-date">July 2, 2022</p>
-        </div>
-    </div>
+    }
 </section>

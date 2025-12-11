@@ -1,113 +1,65 @@
-﻿<section id="wine-row">
+﻿@using Service.ViewModels.Product
+@model IEnumerable<ProductVM>
+
+<section id="wine-row">
     <div class="wine-row-container">
-        <!-- Product 1 -->
-        <div class="wine-card">
-            <div class="wine-img">
-                <img src="~/assets/img/TheFamousOne.jpg" alt="">
-                <div class="wine-icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-            </div>
-            <h4>Fantastic Steel Shirt</h4>
-            <div class="stars">★★★★☆</div>
-            <p class="price">$219.74</p>
-            <p class="stock out"><i class="fa-solid fa-circle"></i> Out of Stock</p>
-            <div class="cart">
-                <input type="number" value="1" min="1">
-                <button>ADD TO CART</button>
-            </div>
-        </div>
 
-        <div class="wine-card">
-            <div class="wine-img">
-                <img src="~/assets/img/Glenmorangie.jpg" alt="">
-                <div class="wine-icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
+        @foreach (var product in Model)
+        {
+            <div class="wine-card">
+                <div class="wine-img">
+                    <img src="~/admin/uploads/products/@product.Image" alt="@product.Name">
+                    <div class="wine-icons">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
                 </div>
-            </div>
-            <h4>Durable Steel Pants</h4>
-            <div class="stars">★★★★☆</div>
-            <p class="price">$63.14</p>
-            <p class="stock"><i class="fa-solid fa-circle"></i> In Stock</p>
-            <div class="cart">
-                <input type="number" value="1" min="1">
-                <button>ADD TO CART</button>
-            </div>
-        </div>
 
-        <div class="wine-card">
-            <div class="wine-img">
-                <img src="~/assets/img/DomaineCarneros.jpg" alt="">
-                <div class="wine-icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-            </div>
-            <h4>Enormous Silk Bottle</h4>
-            <div class="stars">★★★★☆</div>
-            <p class="price">$78.90 – $102.65</p>
-            <p class="stock"><i class="fa-solid fa-circle"></i> In Stock</p>
-            <div class="cart">
-                <input type="number" value="1" min="1">
-                <button>ADD TO CART</button>
-            </div>
-        </div>
+                <h4>@product.Name</h4>
 
-        <div class="wine-card">
-            <div class="wine-img">
-                <img src="~/assets/img/FeverTree.jpg" alt="">
-                <div class="wine-icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-            </div>
-            <h4>Aerodynamic Linen Bench</h4>
-            <div class="stars">★★★★☆</div>
-            <p class="price">$446.29</p>
-            <p class="stock"><i class="fa-solid fa-circle"></i> In Stock</p>
-            <div class="cart">
-                <input type="number" value="1" min="1">
-                <button>ADD TO CART</button>
-            </div>
-        </div>
+                <div class="stars">
+                    @{
+                        int fullStars = (int)product.AverageRating;
+                        bool halfStar = product.AverageRating - fullStars >= 0.5;
+                    }
 
-        <div class="wine-card">
-            <div class="wine-img">
-                <img src="~/assets/img/redwine.jpg" alt="">
-                <div class="wine-icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    @for (int i = 0; i < fullStars; i++)
+                    {
+                        <span>★</span>
+                    }
+                    @if (halfStar)
+                    {
+                        <span>★</span>
+                    }
+                    @for (int i = fullStars + (halfStar ? 1 : 0); i < 5; i++)
+                    {
+                        <span>☆</span>
+                    }
                 </div>
-            </div>
-            <h4>Mediocre Granite Watch</h4>
-            <div class="stars">★★★★☆</div>
-            <p class="price">$500.63</p>
-            <p class="stock"><i class="fa-solid fa-circle"></i> In Stock</p>
-            <div class="cart">
-                <input type="number" value="1" min="1">
-                <button>ADD TO CART</button>
-            </div>
-        </div>
 
-        <div class="wine-card">
-            <div class="wine-img">
-                <img src="~/assets/img/bushmills.jpg" alt="">
-                <div class="wine-icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                <p class="price">
+                    @if (product.DiscountPrice != null)
+                    {
+                        <span class="new">$@product.DiscountPrice</span>
+                        <span class="old">$@product.Price</span>
+                    }
+                    else
+                    {
+                        <span class="new">$@product.Price</span>
+                    }
+                </p>
+
+                <p class="stock @(product.InStock ? "" : "out")">
+                    <i class="fa-solid fa-circle"></i>
+                    @(product.InStock ? "In Stock" : "Out of Stock")
+                </p>
+
+                <div class="cart">
+                    <input type="number" value="1" min="1" max="@product.Quantity">
+                    <button @(product.InStock ? "" : "disabled")>ADD TO CART</button>
                 </div>
             </div>
-            <h4>Rustic Steel Computer</h4>
-            <div class="stars">★★★★☆</div>
-            <p class="price">$75.95</p>
-            <p class="stock"><i class="fa-solid fa-circle"></i> In Stock</p>
-            <div class="cart">
-                <input type="number" value="1" min="1">
-                <button>ADD TO CART</button>
-            </div>
-        </div>
+        }
+
     </div>
 </section>
-

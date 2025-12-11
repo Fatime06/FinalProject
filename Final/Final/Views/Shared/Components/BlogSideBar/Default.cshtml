@@ -1,4 +1,8 @@
-﻿<div class="sidebar-box about-box">
+﻿@using Service.ViewModels.Blog
+@model IEnumerable<BlogCategoryVM>
+
+
+<div class="sidebar-box about-box">
     <img src="./assets/img/Blog2.jpg" alt="">
     <h3>About Our Company</h3>
     <p>
@@ -13,18 +17,17 @@
     <button><i class="fa-solid fa-magnifying-glass"></i></button>
 </div>
 
+
 <div class="sidebar-box categories-box">
     <h3>Blogs Categories</h3>
 
     <ul class="category-list">
-        <li>Cocktail <span>(2)</span></li>
-        <li>Lifestyle <span>(2)</span></li>
-        <li>Social Media <span>(3)</span></li>
-        <li>Spirits <span>(3)</span></li>
-        <li>Tequila <span>(1)</span></li>
-        <li>Tips & Trick <span>(4)</span></li>
-        <li>Uncategorized <span>(2)</span></li>
-        <li>Vineyards <span>(4)</span></li>
-
+        @foreach (var cat in Model)
+        {
+            <li>
+                @cat.Name <span>(@cat.Count)</span>
+            </li>
+        }
     </ul>
 </div>
+

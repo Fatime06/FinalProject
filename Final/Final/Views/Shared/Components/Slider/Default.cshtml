@@ -1,29 +1,41 @@
-﻿<section id="slider" class="slider">
-    <div class="slide active">
-        <img src="~/assets/img/Background4.jpg" alt="">
-        <div class="text-box">
-            <div class="line small">SPECIAL OFFER END SUMMER</div>
-            <div class="line big">BUY 6 BOTTLES</div>
-            <div class="line medium">Get a bottle opener!</div>
-            <div class="line button"><button>SHOP NOW</button></div>
-            <div class="line small note">*offer valid until 23/8</div>
-        </div>
-    </div>
+﻿@using Service.ViewModels.Slider
+@model IEnumerable<SliderVM>
 
-    <div class="slide">
-        <img src="~/assets/img/Background5.jpg" alt="">
-        <div class="text-box">
-            <div class="line small">TOP SUMMER WINES</div>
-            <div class="line big">ANY 3 BOTTLES FOR ONLY $45.95</div>
-            <div class="line medium">Taste them all and save with the collection.</div>
-            <div class="line button"><button>SHOP NOW</button></div>
+<section id="slider" class="slider">
+
+    @{
+        int index = 0;
+    }
+
+    @foreach (var item in Model)
+    {
+        <div class="slide @(index == 0 ? "active" : "")">
+            <img src="~/admin/uploads/sliders/@item.Image" alt="">
+
+            <div class="text-box">
+                <div class="line small">@item.SmallText</div>
+                <div class="line big">@item.BigText</div>
+                <div class="line medium">@item.MediumText</div>
+                <div class="line button">
+                    <button>@item.ButtonText</button>
+                </div>
+
+                @if (!string.IsNullOrWhiteSpace(item.SmallNote))
+                {
+                    <div class="line small note">@item.SmallNote</div>
+                }
+            </div>
         </div>
-    </div>
+
+        index++;
+    }
 
     <div class="arrow left" id="prev">
         <i class="fa-solid fa-chevron-left"></i>
     </div>
+
     <div class="arrow right" id="next">
         <i class="fa-solid fa-chevron-right"></i>
     </div>
+
 </section>

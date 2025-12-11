@@ -1,4 +1,6 @@
-﻿<section id="reviews">
+﻿@model IEnumerable<Service.ViewModels.Review.ReviewVM>
+
+<section id="reviews">
     <div class="reviews-top">
         <div class="reviews-header">
             <h2>Real customers review</h2>
@@ -16,77 +18,38 @@
 
     <div class="reviews-container">
         <div class="reviews-wrapper">
-            <div class="review">
-                <div class="stars">★★★★★</div>
-                <p>
-                    “Liquory's products are of very good quality. I am very satisfied with the service style of
-                    the staff and the boss here. I will definitely recommend to family and friends.”
-                </p>
-                <div class="user">
-                    <img src="~/assets/img/Person1.jpg" alt="">
-                    <div class="info">
-                        <h4>Mark Edwards</h4>
-                        <span><i class="fa-solid fa-check"></i> VERIFIED PURCHASE</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="review">
-                <div class="stars">★★★★★</div>
-                <p>
-                    “Have ordered from Liquory twice and had good service on each order. Good communication
-                    regarding delivery. Will be returning soon!”
-                </p>
-                <div class="user">
-                    <img src="~/assets/img/Person2.jpg" alt="">
-                    <div class="info">
-                        <h4>James Evans</h4>
-                        <span><i class="fa-solid fa-check"></i> VERIFIED PURCHASE</span>
-                    </div>
-                </div>
-            </div>
+            @foreach (var item in Model)
+            {
+                <div class="review">
 
-            <div class="review">
-                <div class="stars">★★★★★</div>
-                <p>“Great price and quick delivery. Got a fine discount and free gifts too. Thanks Liquory!”</p>
-                <div class="user">
-                    <img src="~/assets/img/Person4.jpg" alt="">
-                    <div class="info">
-                        <h4>Richard Brown</h4>
-                        <span><i class="fa-solid fa-check"></i> VERIFIED PURCHASE</span>
+                    <div class="stars">
+                        @{
+                            for (int i = 0; i < item.Rating; i++)
+                            {
+                                <span>★</span>
+                            }
+                            for (int i = item.Rating; i < 5; i++)
+                            {
+                                <span>☆</span>
+                            }
+                        }
                     </div>
-                </div>
-            </div>
 
-            <div class="review">
-                <div class="stars">★★★★★</div>
-                <p>
-                    “The first time I bought a drink from the supermarket. Very pleased with the service. All
-                    items carefully wrapped.”
-                </p>
-                <div class="user">
-                    <img src="~/assets/img/Person5.jpg" alt="">
-                    <div class="info">
-                        <h4>Emily Johnson</h4>
-                        <span><i class="fa-solid fa-check"></i> VERIFIED PURCHASE</span>
-                    </div>
-                </div>
-            </div>
+                    <p>“@item.Text”</p>
 
-            <div class="review">
-                <div class="stars">★★★★★</div>
-                <p>
-                    “Amazing experience every time! Fast delivery and perfect packaging. Highly recommend
-                    Liquory.”
-                </p>
-                <div class="user">
-                    <img src="~/assets/img/Person2.jpg" alt="">
-                    <div class="info">
-                        <h4>David Miller</h4>
-                        <span><i class="fa-solid fa-check"></i> VERIFIED PURCHASE</span>
+                    <div class="user">
+                        <img src="~/admin/uploads/users/@item.AppUser.Image" alt="@item.AppUser.FullName">
+
+                        <div class="info">
+                            <h4>@item.AppUser.FullName</h4>
+                            <span><i class="fa-solid fa-check"></i> VERIFIED PURCHASE</span>
+                        </div>
                     </div>
+
                 </div>
-            </div>
+            }
+
         </div>
     </div>
 </section>

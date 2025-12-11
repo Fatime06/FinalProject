@@ -118,5 +118,48 @@ namespace Service.Service
             await _blogRepo.SaveChangesAsync();
             return true;
         }
+        public async Task<PaginatedList<BlogVM>> GetPaginatedAsync(int page, int pageSize)
+        {
+            var query = _blogRepo
+                .GetAll()
+                .Include(b => b.Comments)
+                .OrderByDescending(b => b.CreatedDate);
+
+            var blogs = await query
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var mapped = _mapper.Map<List<BlogVM>>(blogs);
+            return new PaginatedList<BlogVM>(mapped, await query.CountAsync(), page, pageSize);
+        }
+        public async Task<IEnumerable<BlogCategoryVM>> GetBlogCategoriesAsync()
+        {
+            var categories = await _blogRepo
+                .GetAll()
+                .Include(b => b.BlogCategories)
+                    .ThenInclude(bc => bc.Category)
+                .SelectMany(b => b.BlogCategories)  
+                .GroupBy(bc => bc.Category.Name)
+                .Select(g => new BlogCategoryVM
+                {
+                    Name = g.Key,
+                    Count = g.Count()
+                })
+                .OrderByDescending(x => x.Count)
+                .ToListAsync();
+
+            return categories;
+        }
+        public async Task<IEnumerable<BlogVM>> GetLatestPostsAsync()
+        {
+            var blogs = await _blogRepo
+                .GetAll()
+                .OrderByDescending(b => b.CreatedDate)
+                .Take(5)
+                .ToListAsync();
+
+            return _mapper.Map<IEnumerable<BlogVM>>(blogs);
+        }
     }
 }

@@ -1,8 +1,11 @@
-﻿namespace Service.DTOs.Category
+﻿using Microsoft.AspNetCore.Http;
+
+namespace Service.DTOs.Category
 {
     public class CategoryUpdateVM
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public IFormFile? Image { get; set; }
     }
 }

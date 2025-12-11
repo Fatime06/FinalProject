@@ -1,58 +1,64 @@
-﻿<section id="best-sellers">
+﻿@using Service.ViewModels.Product
+@model IEnumerable<ProductVM>
+
+<section id="best-sellers">
     <div class="best-container">
-        <div class="best-card">
-            <div class="best-img">
-                <img src="~/assets/img/TheWhiskyBarrel.jpg" alt="">
-                <div class="product-icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-            </div>
-            <h4>Incredible Cotton Computer</h4>
-            <div class="stars">★★★★☆</div>
-            <p class="price">$478.71</p>
-            <p class="stock"><i class="fa-solid fa-circle"></i> In Stock</p>
-            <div class="cart">
-                <input type="number" value="1" min="1">
-                <button>ADD TO CART</button>
-            </div>
-        </div>
 
-        <div class="best-card">
-            <div class="best-img">
-                <img src="~/assets/img/Whiskey2.jpg" alt="">
-                <div class="product-icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
+        @foreach (var product in Model)
+        {
+            <div class="best-card">
+                <div class="best-img">
+                    <img src="~/admin/uploads/products/@product.Image" alt="@product.Name">
+                    <div class="product-icons">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
                 </div>
-            </div>
-            <h4>Incredible Granite Chair</h4>
-            <div class="stars">★★★★★</div>
-            <p class="price">$877.97</p>
-            <p class="stock"><i class="fa-solid fa-circle"></i> In Stock</p>
-            <div class="cart">
-                <input type="number" value="1" min="1">
-                <button>ADD TO CART</button>
-            </div>
-        </div>
 
-        <div class="best-card">
-            <div class="best-img">
-                <img src="~/assets/img/Prosecco.jpg" alt="">
-                <div class="product-icons">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                <h4>@product.Name</h4>
+
+                <div class="stars">
+                    @{
+                        int fullStars = (int)product.AverageRating;
+                        bool halfStar = product.AverageRating - fullStars >= 0.5;
+                    }
+                    @for (int i = 0; i < fullStars; i++)
+                    {
+                        <span>★</span>
+                    }
+                    @if (halfStar)
+                    {
+                        <span>★</span>
+                    }
+                    @for (int i = fullStars + (halfStar ? 1 : 0); i < 5; i++)
+                    {
+                        <span>☆</span>
+                    }
+                </div>
+
+                <p class="price">
+                    @if (product.DiscountPrice != null)
+                    {
+                        <span class="new">$@product.DiscountPrice</span>
+                        <span class="old">$@product.Price</span>
+                    }
+                    else
+                    {
+                        <span class="new">$@product.Price</span>
+                    }
+                </p>
+
+                <p class="stock @(product.InStock ? "" : "out")">
+                    <i class="fa-solid fa-circle"></i>
+                    @(product.InStock ? "In Stock" : "Out of Stock")
+                </p>
+
+                <div class="cart">
+                    <input type="number" value="1" min="1" max="@product.Quantity">
+                    <button @(product.InStock ? "" : "disabled")>ADD TO CART</button>
                 </div>
             </div>
-            <h4>Incredible Wool Bench</h4>
-            <div class="stars">★★★★☆</div>
-            <p class="price">$729.04</p>
-            <p class="stock"><i class="fa-solid fa-circle"></i> In Stock</p>
-            <div class="cart">
-                <input type="number" value="1" min="1">
-                <button>ADD TO CART</button>
-            </div>
-        </div>
+        }
 
         <div class="best-banner-1">
             <img src="~/assets/img/Banner2.jpeg" alt="">
@@ -62,5 +68,6 @@
                 <button>SHOP NOW</button>
             </div>
         </div>
+
     </div>
 </section>

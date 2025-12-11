@@ -45,7 +45,7 @@ namespace Service.Service
         {
             var review = await _reviewRepo.Find(id).FirstOrDefaultAsync();
             if (review == null) return;
-            var userId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var userId = _httpContextAccessor.HttpContext?.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (userId == null)
                 throw new CustomException(401, "User is not authenticated");
             if (review.AppUserId != userId) throw new CustomException(401, "You don't have permission");
@@ -54,10 +54,10 @@ namespace Service.Service
             await _reviewRepo.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<ReviewVM>> GetAllAsync()
+        public async Task<IEnumerable<ReviewVM>> GetAllAsync(int take = 5)
         {
             var reviews = await _reviewRepo.GetAll().Include(r => r.AppUser)
-                 .OrderByDescending(r => r.CreatedDate)
+                 .OrderByDescending(r => r.CreatedDate).Take(take)
                  .ToListAsync();
 
             return _mapper.Map<IEnumerable<ReviewVM>>(reviews);

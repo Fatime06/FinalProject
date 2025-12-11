@@ -13,5 +13,9 @@ namespace Service.Service.Interfaces
         Task<IEnumerable<ProductVM>> GetAllAsync();
         Task<ProductUpdateVM> GetUpdatedVmAsync(int id);
         Task<IEnumerable<ProductVM>> GetByTabAsync(string tab);
+        Task<IEnumerable<ProductVM>> GetWeeklyDealsAsync();
+        Task<IEnumerable<ProductVM>> GetBestSellersAsync();
+        Task<IEnumerable<ProductVM>> GetWineRowProductsAsync();
+        Task<IEnumerable<ProductVM>> GetCollectionProductsAsync();
     }
 }

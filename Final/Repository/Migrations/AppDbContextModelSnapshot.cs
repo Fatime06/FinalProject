@@ -124,7 +124,7 @@ namespace Repository.Migrations
                             AccessFailedCount = 0,
                             Address = "Bakı",
                             Birthday = new DateTime(2006, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "7d3cddef-2124-45f1-8f52-be71be4acc33",
+                            ConcurrencyStamp = "3570003a-e0f6-41e1-bdc6-06a3855785aa",
                             Email = "esedovaf4@gmail.com",
                             EmailConfirmed = true,
                             Gender = 2,
@@ -133,9 +133,9 @@ namespace Repository.Migrations
                             Name = "Fatima",
                             NormalizedEmail = "ESEDOVAF4@GMAIL.COM",
                             NormalizedUserName = "_FATIMA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJOWKVfg4GaqGPbvFBhGfyKy0+nqGnz8l/bZm+Gi0u86KO9FbGiGxGgp/i5hhPyhDA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEN3EZdkrU3axUWwcJCFu6RHA4yqihnoeuH/yKZyazYStb0G0F9R/HoCaxshE814dqA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "160e19e4-9a64-4722-9248-1767e9eef0e5",
+                            SecurityStamp = "6a5360c9-1acd-48f6-afc4-c0750929d097",
                             Surname = "Asadova",
                             TwoFactorEnabled = false,
                             UserName = "_fatima"
@@ -306,6 +306,10 @@ namespace Repository.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()

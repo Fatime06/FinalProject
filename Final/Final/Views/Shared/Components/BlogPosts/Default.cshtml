@@ -1,273 +1,54 @@
-﻿<div class="blog-left">
-    <div class="blog-post">
-        <div class="blog-main-img-box">
-            <img src="./assets/img/Blog1.jpg" alt="" class="blog-main-img">
+﻿@using Domain.Entities
+@using Service.ViewModels.Blog
+@model PaginatedList<BlogVM>
+
+<div class="blog-left">
+
+    @foreach (var blog in Model)
+    {
+        <div class="blog-post">
+            <div class="blog-main-img-box">
+                <img src="~/admin/uploads/blogs/@blog.Image" class="blog-main-img" />
+            </div>
+
+            <div class="blog-meta">
+                <span class="category">BLOG</span> 
+            </div>
+
+            <h2 class="blog-title">@blog.Title</h2>
+
+            <div class="blog-info">
+                <span>@blog.CreatedAt.ToString("MMMM dd, yyyy")</span> /
+                <span>@blog.CommentCount Comments</span> /
+                <span>By Admin</span>
+            </div>
+
+            <p class="blog-text">
+                Read more to see details...
+            </p>
+
+            <a asp-controller="Blog"
+               asp-action="Detail"
+               asp-route-id="@blog.Id"
+                class="read-more">
+                Read More <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
-        <div class="blog-meta">
-            <span class="category">COCKTAIL , TIPS & TRICK</span>
-        </div>
+    }
+</div>
 
-        <h2 class="blog-title">Summer Is Twice As Nice With Peachy Sangria Wine</h2>
+<div class="pagination">
+    @for (int i = 1; i <= Model.TotalPages; i++)
+    {
+        <a href="/blog/index?page=@i" class="page @(Model.PageIndex == i ? "active" : "")">
+            @i
+        </a>
+    }
 
-        <div class="blog-info">
-            <span>July 4, 2022</span> /
-            <span>3 Comments</span> /
-            <span>By Admin</span>
-        </div>
-
-        <p class="blog-text">
-            Peachy Sangria wine is a light and fresh blend of award-winning St. James Winery Peach,
-            Raspberry,
-            and Moscato wines, and it has returned just in time for summertime sipping.
-            In each bottle of Peachy Sangria, you’ll enjoy aromas and flavors of freshly sliced
-            peaches and juicy Moscato with a touch of raspberry on the finish.
-        </p>
-
-        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="blog-post">
-        <div class="blog-main-img-box">
-            <img src="./assets/img/Blog3.jpg" alt="" class="blog-main-img">
-        </div>
-        <div class="blog-meta">
-            <span class="category">Social Media,Spirits</span>
-        </div>
-
-        <h2 class="blog-title">Cranberry Wine – A Tradion Worth Sharing</h2>
-
-        <div class="blog-info">
-            <span>July 4, 2022</span> /
-            <span>3 Comments</span> /
-            <span>By Admin</span>
-        </div>
-
-        <p class="blog-text">
-            Peachy Sangria wine is a light and fresh blend of award-winning St. James Winery Peach,
-            Raspberry,
-            and Moscato wines, and it has returned just in time for summertime sipping.
-            In each bottle of Peachy Sangria, you’ll enjoy aromas and flavors of freshly sliced
-            peaches and juicy Moscato with a touch of raspberry on the finish.
-        </p>
-
-        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="blog-post">
-        <div class="blog-main-img-box">
-            <img src="./assets/img/Blog4.jpg" alt="" class="blog-main-img">
-        </div>
-        <div class="blog-meta">
-            <span class="category">Lifestyle,Spirits</span>
-        </div>
-
-        <h2 class="blog-title">Discussion about the latest trends</h2>
-
-        <div class="blog-info">
-            <span>July 4, 2022</span> /
-            <span>3 Comments</span> /
-            <span>By Admin</span>
-        </div>
-
-        <p class="blog-text">
-            Peachy Sangria wine is a light and fresh blend of award-winning St. James Winery Peach,
-            Raspberry,
-            and Moscato wines, and it has returned just in time for summertime sipping.
-            In each bottle of Peachy Sangria, you’ll enjoy aromas and flavors of freshly sliced
-            peaches and juicy Moscato with a touch of raspberry on the finish.
-        </p>
-
-        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="blog-post">
-        <div class="blog-main-img-box">
-            <img src="./assets/img/Blog5.jpg" alt="" class="blog-main-img">
-        </div>
-        <div class="blog-meta">
-            <span class="category">Spirits,Vineyards</span>
-        </div>
-
-        <h2 class="blog-title">Common Problems You Might Encounter When Remodeling</h2>
-
-        <div class="blog-info">
-            <span>July 4, 2022</span> /
-            <span>3 Comments</span> /
-            <span>By Admin</span>
-        </div>
-
-        <p class="blog-text">
-            Peachy Sangria wine is a light and fresh blend of award-winning St. James Winery Peach,
-            Raspberry,
-            and Moscato wines, and it has returned just in time for summertime sipping.
-            In each bottle of Peachy Sangria, you’ll enjoy aromas and flavors of freshly sliced
-            peaches and juicy Moscato with a touch of raspberry on the finish.
-        </p>
-
-        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="blog-post">
-        <div class="blog-main-img-box">
-            <img src="./assets/img/Blog6.jpg" alt="" class="blog-main-img">
-        </div>
-        <div class="blog-meta">
-            <span class="category">Uncategorized,Vineyards</span>
-        </div>
-
-        <h2 class="blog-title">Make A Statement With Cabinet Hardware</h2>
-
-        <div class="blog-info">
-            <span>July 4, 2022</span> /
-            <span>3 Comments</span> /
-            <span>By Admin</span>
-        </div>
-
-        <p class="blog-text">
-            Peachy Sangria wine is a light and fresh blend of award-winning St. James Winery Peach,
-            Raspberry,
-            and Moscato wines, and it has returned just in time for summertime sipping.
-            In each bottle of Peachy Sangria, you’ll enjoy aromas and flavors of freshly sliced
-            peaches and juicy Moscato with a touch of raspberry on the finish.
-        </p>
-
-        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="blog-post">
-        <div class="blog-main-img-box">
-            <img src="./assets/img/Blog7.jpg" alt="" class="blog-main-img">
-        </div>
-        <div class="blog-meta">
-            <span class="category">Lifestyle,Tips & Trick</span>
-        </div>
-
-        <h2 class="blog-title">Before and After Traditional Mixed Metal Kitchen Remodel</h2>
-
-        <div class="blog-info">
-            <span>July 4, 2022</span> /
-            <span>3 Comments</span> /
-            <span>By Admin</span>
-        </div>
-
-        <p class="blog-text">
-            Peachy Sangria wine is a light and fresh blend of award-winning St. James Winery Peach,
-            Raspberry,
-            and Moscato wines, and it has returned just in time for summertime sipping.
-            In each bottle of Peachy Sangria, you’ll enjoy aromas and flavors of freshly sliced
-            peaches and juicy Moscato with a touch of raspberry on the finish.
-        </p>
-
-        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="blog-post">
-        <div class="blog-main-img-box">
-            <img src="./assets/img/Blog8.jpg" alt="" class="blog-main-img">
-        </div>
-        <div class="blog-meta">
-            <span class="category">Cocktail,Tips & Trick</span>
-        </div>
-
-        <h2 class="blog-title">How To Choose A Paint Color For Your Walls When Remodeling</h2>
-
-        <div class="blog-info">
-            <span>July 4, 2022</span> /
-            <span>3 Comments</span> /
-            <span>By Admin</span>
-        </div>
-
-        <p class="blog-text">
-            Peachy Sangria wine is a light and fresh blend of award-winning St. James Winery Peach,
-            Raspberry,
-            and Moscato wines, and it has returned just in time for summertime sipping.
-            In each bottle of Peachy Sangria, you’ll enjoy aromas and flavors of freshly sliced
-            peaches and juicy Moscato with a touch of raspberry on the finish.
-        </p>
-
-        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="blog-post">
-        <div class="blog-main-img-box">
-            <img src="./assets/img/Blog9.jpg" alt="" class="blog-main-img">
-        </div>
-        <div class="blog-meta">
-            <span class="category">Social Media,Vineyards</span>
-        </div>
-
-        <h2 class="blog-title">The Hesitant Homeowner – What Makes Us Delay Remodeling?</h2>
-
-        <div class="blog-info">
-            <span>July 4, 2022</span> /
-            <span>3 Comments</span> /
-            <span>By Admin</span>
-        </div>
-
-        <p class="blog-text">
-            Peachy Sangria wine is a light and fresh blend of award-winning St. James Winery Peach,
-            Raspberry,
-            and Moscato wines, and it has returned just in time for summertime sipping.
-            In each bottle of Peachy Sangria, you’ll enjoy aromas and flavors of freshly sliced
-            peaches and juicy Moscato with a touch of raspberry on the finish.
-        </p>
-
-        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="blog-post">
-        <div class="blog-main-img-box">
-            <img src="./assets/img/Blog10.jpg" alt="" class="blog-main-img">
-        </div>
-        <div class="blog-meta">
-            <span class="category">Tequila,Tips & Trick</span>
-        </div>
-
-        <h2 class="blog-title">The Pros and Cons of Large Format Porcelain</h2>
-
-        <div class="blog-info">
-            <span>July 4, 2022</span> /
-            <span>3 Comments</span> /
-            <span>By Admin</span>
-        </div>
-
-        <p class="blog-text">
-            Peachy Sangria wine is a light and fresh blend of award-winning St. James Winery Peach,
-            Raspberry,
-            and Moscato wines, and it has returned just in time for summertime sipping.
-            In each bottle of Peachy Sangria, you’ll enjoy aromas and flavors of freshly sliced
-            peaches and juicy Moscato with a touch of raspberry on the finish.
-        </p>
-
-        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="blog-post">
-        <div class="blog-main-img-box">
-            <img src="./assets/img/Blog11.jpg" alt="" class="blog-main-img">
-        </div>
-        <div class="blog-meta">
-            <span class="category">Social Media,Vineyards</span>
-        </div>
-
-        <h2 class="blog-title">Hundreds of professionals across the world</h2>
-
-        <div class="blog-info">
-            <span>July 4, 2022</span> /
-            <span>3 Comments</span> /
-            <span>By Admin</span>
-        </div>
-
-        <p class="blog-text">
-            Peachy Sangria wine is a light and fresh blend of award-winning St. James Winery Peach,
-            Raspberry,
-            and Moscato wines, and it has returned just in time for summertime sipping.
-            In each bottle of Peachy Sangria, you’ll enjoy aromas and flavors of freshly sliced
-            peaches and juicy Moscato with a touch of raspberry on the finish.
-        </p>
-
-        <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-
-
-
-    <div class="pagination">
-        <a href="Shop1.html" class="page active">1</a>
-        <a href="Shop2.html" class="page">2</a>
-        <a href=" Shop2.html" class="page next">
+    @if (Model.PageIndex < Model.TotalPages)
+    {
+        <a href="/blog/index?page=@(Model.PageIndex + 1)" class="page next">
             <i class="fa-solid fa-chevron-right"></i>
         </a>
-    </div>
-
+    }
 </div>

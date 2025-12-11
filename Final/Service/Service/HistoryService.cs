@@ -42,7 +42,7 @@ namespace Service.Service
 
         public async Task<IEnumerable<HistoryVM>> GetAllAsync()
         {
-            var histories = await _historyRepo.GetAll().ToListAsync();
+            var histories = await _historyRepo.GetAll().OrderBy(h => h.Year).ToListAsync();
             var historyDtos = _mapper.Map<IEnumerable<HistoryVM>>(histories);
             return historyDtos;
         }

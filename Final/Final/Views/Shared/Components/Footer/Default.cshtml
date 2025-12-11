@@ -1,21 +1,15 @@
-﻿<footer id="footer">
+﻿@using Service.ViewModels.Service
+@model IEnumerable<ServiceVM>
+
+<footer id="footer">
     <div class="footer-top">
-        <div class="footer-info">
-            <i class="fa-solid fa-truck"></i>
-            <p>Same-day local delivery</p>
-        </div>
-        <div class="footer-info">
-            <i class="fa-solid fa-paper-plane"></i>
-            <p>Ground shipping directly to you</p>
-        </div>
-        <div class="footer-info">
-            <i class="fa-solid fa-store"></i>
-            <p>Free in-store pickup</p>
-        </div>
-        <div class="footer-info">
-            <i class="fa-solid fa-phone"></i>
-            <p>24/7 customer support</p>
-        </div>
+        @foreach(var service in Model)
+        {
+            <div class="footer-info">
+                <i class="@service.Icon"></i>
+                <p>@service.Text</p>
+            </div>
+        }
     </div>
 
     <div class="footer-main">

@@ -21,7 +21,6 @@ namespace Final.Controllers
                 vm.Timestamp = DateTime.Now;
                 return View(vm);
             }
-
             return View(new ErrorVM
             {
                 StatusCode = 500,

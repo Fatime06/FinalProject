@@ -8,8 +8,10 @@ namespace Service.AutoMappers
     {
         public CategoryAutoMapper()
         {
-            CreateMap<CategoryCreateVM, Category>();
-            CreateMap<CategoryUpdateVM, Category>().ReverseMap();
+            CreateMap<CategoryCreateVM, Category>()
+                .ForMember(dest => dest.Image, opt => opt.Ignore());
+            CreateMap<CategoryUpdateVM, Category>().ReverseMap()
+                .ForMember(dest => dest.Image, opt => opt.Ignore());
             CreateMap<Category, CategoryVM>()
                 .ForMember(dest => dest.Products, opt => opt.MapFrom(src => src.Products));
         }

@@ -55,6 +55,10 @@ wwwroot\admin\uploads\blogs\c1e43038-bd28-49d9-a0b1-a73ff33bf32d.jpg
 wwwroot\admin\uploads\blogs\e2193b7d-657e-492b-b8e6-2a75fff4182f.jpg
 wwwroot\admin\uploads\blogs\fc1d3022-f872-43fb-8d65-8bfe3c4c39e5.jpg
 wwwroot\admin\uploads\brands\87533c76-3fe7-46af-8cc1-c75b68476224.webp
+wwwroot\admin\uploads\categories\6cc695ef-939e-4d47-a107-681ed645dd61.jpg
+wwwroot\admin\uploads\categories\b49468d8-9861-4586-aa21-9458414dbf09.png
+wwwroot\admin\uploads\categories\b4b2f9d3-cf13-4b5b-b6a7-d046947cdcb8.jpg
+wwwroot\admin\uploads\categories\d284d1bd-5886-45a3-98ef-7a8f519a2f2f.png
 wwwroot\admin\uploads\products\6b236d16-34fa-4bc2-9103-fe9dae1b63b0.webp
 wwwroot\admin\uploads\products\8c951f55-b34f-4b06-b38b-c523d147b90e.jpeg
 wwwroot\admin\uploads\products\cd620c03-6ffa-4dfc-a960-441958e05185.jpg

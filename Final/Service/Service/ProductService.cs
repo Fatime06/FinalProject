@@ -14,12 +14,14 @@ namespace Service.Service
         private readonly IProductRepository _proRepo;
         private readonly IMapper _mapper;
         private readonly IFileService _fileService;
+        private readonly ICategoryService _categoryService;
 
-        public ProductService(IProductRepository proRepo, IMapper mapper, IFileService fileService)
+        public ProductService(IProductRepository proRepo, IMapper mapper, IFileService fileService, ICategoryService categoryService)
         {
             _proRepo = proRepo;
             _mapper = mapper;
             _fileService = fileService;
+            _categoryService = categoryService;
         }
 
         public async Task<bool> CreateAsync(ProductCreateVM vm, ModelStateDictionary modelState)
@@ -149,6 +151,59 @@ namespace Service.Service
             }
 
             var products = await query.Take(6).ToListAsync();
+            return _mapper.Map<IEnumerable<ProductVM>>(products);
+        }
+        public async Task<IEnumerable<ProductVM>> GetWeeklyDealsAsync()
+        {
+            var deals = await _proRepo
+                .GetAll()
+                .Include(p => p.Ratings)
+                .Include(p => p.Category)
+                .Where(p => p.DiscountPrice != null)       
+                .OrderByDescending(p => p.CreatedDate)       
+                .Take(3)                                    
+                .ToListAsync();
+
+            return _mapper.Map<IEnumerable<ProductVM>>(deals);
+        }
+        public async Task<IEnumerable<ProductVM>> GetBestSellersAsync()
+        {
+            var best = await _proRepo
+                .GetAll()
+                .Include(p => p.Ratings)
+                .Include(p => p.Category)
+                .OrderByDescending(p => p.Ratings.Any()
+                        ? p.Ratings.Average(r => r.Value)
+                        : 0)
+                .Take(3)
+                .ToListAsync();
+
+            return _mapper.Map<IEnumerable<ProductVM>>(best);
+        }
+        public async Task<IEnumerable<ProductVM>> GetWineRowProductsAsync()
+        {
+            var category = await _categoryService.GetCategoryByName("wine");
+            if (category == null) throw new CustomException(404, "Category not found");
+
+            var wineProducts = await _proRepo
+                .GetAll()
+                .Include(p => p.Ratings)
+                .Where(p => p.CategoryId == category.Id)
+                .OrderByDescending(p => p.CreatedDate)
+                .Take(6)
+                .ToListAsync();
+
+            return _mapper.Map<IEnumerable<ProductVM>>(wineProducts);
+        }
+        public async Task<IEnumerable<ProductVM>> GetCollectionProductsAsync()
+        {
+            var products = await _proRepo
+                .GetAll()
+                .Include(p => p.Ratings)
+                .OrderByDescending(p => p.CreatedDate)
+                .Take(6)
+                .ToListAsync();
+
             return _mapper.Map<IEnumerable<ProductVM>>(products);
         }
     }
