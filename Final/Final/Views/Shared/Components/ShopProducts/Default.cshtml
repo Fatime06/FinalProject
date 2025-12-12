@@ -22,7 +22,9 @@
         </div>
     </div>
 
-    @await Html.PartialAsync("_ProductGridPartial", Model)
+    <div class="products-area-wrapper">
+        @await Html.PartialAsync("_ProductGridPartial", Model)
+    </div>
 
     <div class="pagination">
         @for (int i = 1; i <= Model.TotalPages; i++)

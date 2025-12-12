@@ -413,6 +413,11 @@ section:nth-child(even) {
             font-weight: 600;
         }
 
+    .brand-list .filter-brand.active {
+        color: #b02a37;
+        font-weight: 600;
+    }
+
 .tag-box {
     display: flex;
     flex-wrap: wrap;
@@ -979,3 +984,8 @@ section:nth-child(even) {
         color: #b40000;
         font-weight: 700;
     }
+
+a {
+    text-decoration: none;
+    color: black;
+}

@@ -2,11 +2,19 @@
     <h3 class="filter-title">Filter By Price</h3>
 
     <div class="price-filter">
-        <input type="range" id="priceRange" min="50" max="1000">
+        <input type="range"
+               id="priceRange"
+               min="50"
+               max="1000"
+               step="10"
+               value="1000">
 
         <div class="filter-footer">
-            <p class="price-range">Price: $70 — $960</p>
-            <a href="#" class="filter-link">Filter →</a>
+            <p class="price-range">
+                Price: $<span id="priceValue">1000</span>
+            </p>
         </div>
     </div>
 </section>
+
+

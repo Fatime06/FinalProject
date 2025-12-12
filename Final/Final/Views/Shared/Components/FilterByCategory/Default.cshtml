@@ -44,36 +44,5 @@
 </style>
 
 @section Scripts {
-    <script>
-               let filter = {
-            page: 1
-        };
 
-        function loadProducts() {
-            fetch('/Shop/Filter?' + new URLSearchParams(filter))
-                .then(res => res.text())
-                .then(html => {
-                    document.querySelector('.products-area-wrapper').innerHTML = html;
-                });
-        }
-
-        document.addEventListener('click', function (e) {
-
-            const category = e.target.closest('.filter-category');
-            if (category) {
-                filter.categoryId = category.dataset.category;
-                filter.page = 1;
-                loadProducts();
-            }
-
-            const pageBtn = e.target.closest('.page-btn');
-            if (pageBtn) {
-                filter.page = pageBtn.dataset.page;
-                loadProducts();
-            }
-
-        });
-
-
-    </script>
 }

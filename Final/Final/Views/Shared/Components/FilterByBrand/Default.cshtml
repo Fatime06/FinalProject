@@ -8,23 +8,26 @@
     <ul class="brand-list">
         @foreach (var brand in Model)
         {
-            <li data-brand="2" class="filter-brand">
-                <a asp-controller="Shop"
-                   asp-action="Index"
-                   asp-route-brandId="@brand.Id">
-                    @brand.Name
-                </a>
+            <li class="filter-brand"
+                data-brand="@brand.Id">
+                @brand.Name
                 <span>(@brand.Products.Count())</span>
             </li>
         }
     </ul>
+   
 </section>
 
 <style>
     .brand-list li span {
         color: inherit;
     }
-    .brand-list li a {
+
+    .brand-list .filter-brand.active {
+        color: #b02a37;
+        font-weight: 600;
+    }
+/*     .brand-list li a {
         color: inherit;
         text-decoration: none;
         display: inline-block;
@@ -33,6 +36,9 @@
         .brand-list li a:hover {
             color: #b02a37;
         }
+        .brand-list li a .active{
+            color: #b02a37;
+        } */
 
     .brand-list li {
         display: flex;

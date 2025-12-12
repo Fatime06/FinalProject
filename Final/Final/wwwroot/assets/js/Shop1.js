@@ -1,6 +1,4 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-
     const dropdown = document.getElementById("sidebar-dropdown");
     const toggleBtn = document.querySelector(".sidebar-icon");
 
@@ -41,3 +39,8 @@ cartOverlay.addEventListener("click", () => {
     cartSidebar.classList.remove("active");
     cartOverlay.classList.remove("active");
 });
+
+
+
+
+

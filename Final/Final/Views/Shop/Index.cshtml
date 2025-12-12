@@ -22,47 +22,111 @@
 
         </aside>
 
-        @await Component.InvokeAsync("ShopProducts")  
+        @await Component.InvokeAsync("ShopProducts")
 
     </div>
 </section>
 
-@section scripts {
+@section Scripts {
     <script src="~/assets/js/Shop1.js"></script>
     <script>
-                let filter = {
-            page: 1
-        };
+                (function () {
 
-        function loadProducts() {
-            fetch('/Shop/Filter?' + new URLSearchParams(filter))
-                .then(res => res.text())
-                .then(html => {
-                    document.querySelector('.products-area').innerHTML = html;
-                });
-        }
+            window.productFilter = {
+                categoryId: null,
+                brandId: null,
+                minPrice: null,
+                maxPrice: 1000,
+                page: 1
+            };
 
-        document.querySelectorAll('.filter-category').forEach(item => {
-            item.addEventListener('click', () => {
-                filter.categoryId = item.dataset.category;
-                filter.page = 1;
+            function loadProducts() {
+                const params = new URLSearchParams(window.productFilter).toString();
+
+                fetch(`/Shop/Filter?${params}`)
+                    .then(res => res.text())
+                    .then(html => {
+                        const wrapper = document.querySelector(".products-area-wrapper");
+                        if (wrapper) {
+                            wrapper.innerHTML = html;
+                        }
+                    });
+            }
+
+            document.addEventListener("input", function (e) {
+
+                if (e.target && e.target.id === "priceRange") {
+
+                    const value = e.target.value;
+
+                    const priceSpan = document.getElementById("priceValue");
+                    if (priceSpan) {
+                        priceSpan.textContent = value;
+                    }
+
+                    window.productFilter.maxPrice = value;
+                    window.productFilter.page = 1;
+
+                    loadProducts();
+                }
+            });
+
+            document.addEventListener("click", function (e) {
+
+                const categoryItem = e.target.closest(".filter-category");
+                if (!categoryItem) return;
+
+                window.productFilter.categoryId = categoryItem.dataset.category;
+                window.productFilter.page = 1;
+
                 loadProducts();
             });
-        });
 
-        document.querySelectorAll('.filter-brand').forEach(item => {
-            item.addEventListener('click', () => {
-                filter.brandId = item.dataset.brand;
-                filter.page = 1;
+            document.addEventListener("click", function (e) {
+
+                const brandItem = e.target.closest(".filter-brand");
+                if (!brandItem) return;
+
+                window.productFilter.brandId = brandItem.dataset.brand;
+                window.productFilter.page = 1;
+
                 loadProducts();
             });
-        });
 
-        document.getElementById('priceRange').addEventListener('change', e => {
-            filter.maxPrice = e.target.value;
-            filter.page = 1;
+            document.addEventListener("click", function (e) {
+
+                const pageLink = e.target.closest(".pagination .page");
+                if (!pageLink) return;
+
+                e.preventDefault();
+
+                const page = pageLink.dataset.page;
+                if (!page) return;
+
+                window.productFilter.page = page;
+                loadProducts();
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                loadProducts();
+            });
+                    document.addEventListener("click", function (e) {
+
+            const brandItem = e.target.closest(".filter-brand");
+            if (!brandItem) return;
+
+            document.querySelectorAll(".filter-brand")
+                .forEach(x => x.classList.remove("active"));
+
+            brandItem.classList.add("active");
+
+            window.productFilter.brandId = brandItem.dataset.brand;
+            window.productFilter.page = 1;
+
             loadProducts();
         });
+
+        })();
 
     </script>
 }
