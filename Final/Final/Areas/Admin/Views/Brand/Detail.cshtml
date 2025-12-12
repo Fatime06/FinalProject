@@ -5,6 +5,7 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <p><strong>Image:</strong> <img src="~/admin/uploads/brands/@Model.Image" class="img-responsive img-thumbnail" /></p>
+            <p><strong>Name:</strong> @Model.Name</p>
             <p><strong>Created at:</strong> @Model.CreatedDate.ToString("dd.MM.yyyy HH:mm")</p>
 
             <a asp-controller="Brand" asp-action="Index" class="btn btn-secondary">Return to brands</a>

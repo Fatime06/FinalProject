@@ -14,7 +14,7 @@ namespace Final.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var products = await _productService.GetBestSellersAsync();
+            var products = await _productService.GetBestSellersAsync(3);
             return View(products);
         }
     }

@@ -12,7 +12,11 @@
         @foreach(var product in Model)
         {
             <div class="deal-card">
-                <div class="discount">-6%</div>
+                @if (product.DiscountPrice != null)
+                {
+                    var percent = (int)((product.Price - product.DiscountPrice.Value) / product.Price * 100);
+                    <div class="discount">-@percent%</div>
+                }
                 <div class="deal-img">
                     <img src="~/admin/uploads/products/@product.Image" alt="">
                     <div class="icons">

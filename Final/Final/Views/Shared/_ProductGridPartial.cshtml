@@ -1,0 +1,69 @@
+﻿<div class="products-grid">
+    @foreach (var product in Model)
+    {
+        <div class="product-card" data-category="@product.Category.Id">
+
+            <div class="product-img">
+                <a asp-controller="Shop"
+                   asp-action="Detail"
+                   asp-route-id="@product.Id">
+                    <img src="~/admin/uploads/products/@product.Image" alt="@product.Name">
+                </a>
+
+                <div class="product-icons">
+                    <a asp-controller="Shop"
+                       asp-action="Detail"
+                       asp-route-id="@product.Id">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div>
+
+            <h4>@product.Name</h4>
+
+            <div class="stars">
+                @{
+                    int fullStars = (int)product.AverageRating;
+                    for (int i = 0; i < fullStars; i++)
+                    {
+                        <span>★</span>
+                    }
+                    for (int i = fullStars; i < 5; i++)
+                    {
+                        <span>☆</span>
+                    }
+                }
+            </div>
+
+            <p class="price">
+                @if (product.DiscountPrice != null)
+                {
+                    <span class="new">$@product.DiscountPrice</span>
+                    <span class="old">$@product.Price</span>
+                }
+                else
+                {
+                    <span>$@product.Price</span>
+                }
+            </p>
+
+            <p class="stock @(product.InStock ? "" : "out")">
+                <i class="fa-solid fa-circle"></i>
+                @(product.InStock ? "In Stock" : "Out of Stock")
+            </p>
+
+            <div class="cart">
+                <input type="number"
+                       value="1"
+                       min="1"
+                       max="@product.Quantity"
+                       @(product.InStock ? "" : "disabled")>
+
+                <button @(product.InStock ? "" : "disabled")>
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+    }
+</div>

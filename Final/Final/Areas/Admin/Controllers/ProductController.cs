@@ -9,11 +9,13 @@ namespace Final.Areas.Admin.Controllers
     {
         private readonly IProductService _productService;
         private readonly ICategoryService _categoryService;
+        private readonly IBrandService _brandService;
 
-        public ProductController(IProductService productService, ICategoryService categoryService)
+        public ProductController(IProductService productService, ICategoryService categoryService, IBrandService brandService)
         {
             _productService = productService;
             _categoryService = categoryService;
+            _brandService = brandService;
         }
 
         public async Task<IActionResult> Index()
@@ -25,6 +27,7 @@ namespace Final.Areas.Admin.Controllers
         public async Task<IActionResult> Create()
         {
             ViewBag.Categories = await _categoryService.GetAllAsync();
+            ViewBag.Brands = await _brandService.GetAllAsync();
             return View();
         }
         [HttpPost]
@@ -34,6 +37,7 @@ namespace Final.Areas.Admin.Controllers
             if (!result)
             {
                 ViewBag.Categories = await _categoryService.GetAllAsync();
+                ViewBag.Brands = await _brandService.GetAllAsync();
                 return View(vm);
             }
             TempData["SuccessMessage"] = "Product successfully added!";
@@ -44,6 +48,7 @@ namespace Final.Areas.Admin.Controllers
             var productVm = await _productService.GetUpdatedVmAsync(id);
 
             ViewBag.Categories = await _categoryService.GetAllAsync();
+            ViewBag.Brands = await _brandService.GetAllAsync();
             return View(productVm);
         }
         [HttpPost]
@@ -53,6 +58,7 @@ namespace Final.Areas.Admin.Controllers
             if (!result)
             {
                 ViewBag.Categories = await _categoryService.GetAllAsync();
+                ViewBag.Brands = await _brandService.GetAllAsync();
                 return View(vm);
             }
 

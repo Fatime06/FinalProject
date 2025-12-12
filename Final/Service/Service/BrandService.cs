@@ -51,14 +51,14 @@ namespace Service.Service
 
         public async Task<IEnumerable<BrandVM>> GetAllAsync()
         {
-            var brands = await _brandRepository.GetAll().ToListAsync();
+            var brands = await _brandRepository.GetAll().Include(b=>b.Products).ToListAsync();
             var brandVMs = _mapper.Map<IEnumerable<BrandVM>>(brands);
             return brandVMs;
         }
 
         public async Task<BrandVM> GetAsync(int id)
         {
-            var brand = await _brandRepository.Find(id).FirstOrDefaultAsync();
+            var brand = await _brandRepository.Find(id).Include(b => b.Products).FirstOrDefaultAsync();
             if (brand is null)
                 throw new CustomException(404, "Brand not found");
             var brandVm = _mapper.Map<BrandVM>(brand);
@@ -67,7 +67,7 @@ namespace Service.Service
 
         public async Task<BrandUpdateVM> GetUpdatedVmAsync(int id)
         {
-            var brand = await _brandRepository.Find(id).FirstOrDefaultAsync();
+            var brand = await _brandRepository.Find(id).Include(b => b.Products).FirstOrDefaultAsync();
             if (brand is null)
                 throw new CustomException(404, "Brand not found");
 

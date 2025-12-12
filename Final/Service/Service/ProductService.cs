@@ -61,14 +61,14 @@ namespace Service.Service
 
         public async Task<IEnumerable<ProductVM>> GetAllAsync()
         {
-            var products = await _proRepo.GetAll().Include(p=>p.Ratings).Include(p=>p.Category).ToListAsync();
+            var products = await _proRepo.GetAll().Include(p=>p.Ratings).Include(p=>p.Brand).Include(p=>p.Category).ToListAsync();
             var productsVMs = _mapper.Map<IEnumerable<ProductVM>>(products);
             return productsVMs;
         }
 
         public async Task<ProductVM> GetAsync(int id)
         {
-            var product = await _proRepo.Find(id).Include(p => p.Ratings).Include(c => c.Category).FirstOrDefaultAsync();
+            var product = await _proRepo.Find(id).Include(p => p.Ratings).Include(p => p.Brand).Include(c => c.Category).FirstOrDefaultAsync();
             if (product is null)
                 throw new CustomException(404, "Product not found");
             var productVm = _mapper.Map<ProductVM>(product);
@@ -77,7 +77,7 @@ namespace Service.Service
 
         public async Task<ProductUpdateVM> GetUpdatedVmAsync(int id)
         {
-            var product = await _proRepo.Find(id).Include(p => p.Ratings).Include(c => c.Category).FirstOrDefaultAsync();
+            var product = await _proRepo.Find(id).Include(p => p.Ratings).Include(p=>p.Brand).Include(c => c.Category).FirstOrDefaultAsync();
             if (product is null)
                 throw new CustomException(404, "Product not found");
 
@@ -129,6 +129,7 @@ namespace Service.Service
             var query = _proRepo
                 .GetAll()
                 .Include(p => p.Category)
+                .Include(p=>p.Brand)
                 .Include(p => p.Ratings).AsQueryable();
 
             switch (tab)
@@ -166,7 +167,7 @@ namespace Service.Service
 
             return _mapper.Map<IEnumerable<ProductVM>>(deals);
         }
-        public async Task<IEnumerable<ProductVM>> GetBestSellersAsync()
+        public async Task<IEnumerable<ProductVM>> GetBestSellersAsync(int take = 10)
         {
             var best = await _proRepo
                 .GetAll()
@@ -175,7 +176,7 @@ namespace Service.Service
                 .OrderByDescending(p => p.Ratings.Any()
                         ? p.Ratings.Average(r => r.Value)
                         : 0)
-                .Take(3)
+                .Take(take)
                 .ToListAsync();
 
             return _mapper.Map<IEnumerable<ProductVM>>(best);
@@ -206,5 +207,98 @@ namespace Service.Service
 
             return _mapper.Map<IEnumerable<ProductVM>>(products);
         }
+        public async Task<PaginatedList<ProductVM>> GetPaginatedAsync(int page, int pageSize)
+        {
+            var query = _proRepo
+                .GetAll()
+                .Include(p => p.Category)
+                .Include(p => p.Brand)
+                .Include(p => p.Ratings);
+
+            var count = await query.CountAsync();
+
+            var items = await query
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            var mapped = _mapper.Map<List<ProductVM>>(items);
+
+            return new PaginatedList<ProductVM>(mapped, count, page, pageSize);
+        }
+        public async Task<PaginatedList<ProductVM>> GetFilteredAsync(ProductFilterVM filter)
+        {
+            int pageSize = 9;
+
+            var query = _proRepo.GetAll()
+                .Include(p => p.Category)
+                .Include(p => p.Brand)
+                .Include(p => p.Ratings)
+                .AsQueryable();
+
+            if (filter.CategoryId.HasValue)
+                query = query.Where(p => p.CategoryId == filter.CategoryId);
+
+            if (filter.BrandId.HasValue)
+                query = query.Where(p => p.BrandId == filter.BrandId);
+
+            if (filter.MinPrice.HasValue)
+                query = query.Where(p => p.Price >= filter.MinPrice);
+
+            if (filter.MaxPrice.HasValue)
+                query = query.Where(p => p.Price <= filter.MaxPrice);
+
+            var vmQuery = query.Select(p => new ProductVM
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Image = p.Image,
+                Price = p.Price,
+                DiscountPrice = p.DiscountPrice,
+                InStock = p.InStock,
+                Quantity = p.Quantity,
+                AverageRating = p.Ratings.Any()
+                    ? p.Ratings.Average(r => r.Value)
+                    : 0,
+                Category = new CategoryInProductVM
+                {
+                    Id = p.Category.Id,
+                    Name = p.Category.Name
+                }
+            });
+
+            return await PaginatedList<ProductVM>
+                .CreateAsync(vmQuery, filter.Page, pageSize);
+        }
+
+        public IQueryable<ProductVM> GetProductsAsQueryabe()
+        {
+            return _proRepo.GetAll()
+                .Include(p => p.Category)
+                .Include(p => p.Brand)
+                .Include(p => p.Ratings)
+                .Select(p => new ProductVM
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    Image = p.Image,
+                    Price = p.Price,
+                    DiscountPrice = p.DiscountPrice,
+                    InStock = p.InStock,
+                    Quantity = p.Quantity,
+
+                    Category = new CategoryInProductVM
+                    {
+                        Id = p.Category.Id,
+                        Name = p.Category.Name
+                    },
+
+                    AverageRating = p.Ratings.Any()
+                        ? p.Ratings.Average(r => r.Value)
+                        : 0
+                });
+        }
+
+
     }
 }

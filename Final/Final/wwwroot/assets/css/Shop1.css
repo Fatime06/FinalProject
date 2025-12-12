@@ -257,30 +257,31 @@ section:nth-child(even) {
     flex-direction: column !important;
     align-items: center !important;
 }
-.page-header-content h1 {
-    font-size: 60px;
-    font-weight: 800;
-    margin-bottom: 15px;
-}
 
-.page-header-content .breadcrumb {
-    font-size: 16px;
-    color: #666;
-}
+    .page-header-content h1 {
+        font-size: 60px;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
 
-    .page-header-content .breadcrumb a {
+    .page-header-content .breadcrumb {
+        font-size: 16px;
         color: #666;
-        text-decoration: none;
-        font-weight: 500;
     }
 
-    .page-header-content .breadcrumb span {
-        margin: 0 5px;
-    }
+        .page-header-content .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-    .page-header-content .breadcrumb a:hover {
-        color: #000;
-    }
+        .page-header-content .breadcrumb span {
+            margin: 0 5px;
+        }
+
+        .page-header-content .breadcrumb a:hover {
+            color: #000;
+        }
 
 
 
@@ -330,6 +331,7 @@ section:nth-child(even) {
         cursor: pointer;
         color: #333;
         transition: 0.2s ease;
+        text-decoration: none !important;
     }
 
         .category-list li:hover,

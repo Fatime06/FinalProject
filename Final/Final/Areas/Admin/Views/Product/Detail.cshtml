@@ -42,6 +42,18 @@
             </p>
 
             <p>
+                <strong>Featured:</strong>
+                @if (Model.IsFeatured)
+                {
+                    <span class="text-success">Yes</span>
+                }
+                else
+                {
+                    <span class="text-danger">No</span>
+                }
+            </p>
+
+            <p>
                 <strong>Average Rating:</strong>
                 @Model.AverageRating ⭐
             </p>

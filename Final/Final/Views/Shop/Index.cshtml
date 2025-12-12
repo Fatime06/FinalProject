@@ -3,7 +3,7 @@
 <section id="shop-page">
     <div class="shop-layout">
         <aside class="sidebar">
-            @await Component.InvokeAsync("FilterByCategory")
+            @await Component.InvokeAsync("FilterByCategory", new { activeCategoryId = ViewBag.ActiveCategory })
 
 
             @await Component.InvokeAsync("FilterByPrice")
@@ -12,7 +12,7 @@
             @await Component.InvokeAsync("FilterByBrand")
 
 
-            @await Component.InvokeAsync("FilterByTag")
+            @* @await Component.InvokeAsync("FilterByTag") *@
 
 
             @await Component.InvokeAsync("ShopBestSellers")
@@ -22,11 +22,47 @@
 
         </aside>
 
-        @await Component.InvokeAsync("ShopProducts")
+        @await Component.InvokeAsync("ShopProducts")  
 
     </div>
 </section>
 
 @section scripts {
     <script src="~/assets/js/Shop1.js"></script>
+    <script>
+                let filter = {
+            page: 1
+        };
+
+        function loadProducts() {
+            fetch('/Shop/Filter?' + new URLSearchParams(filter))
+                .then(res => res.text())
+                .then(html => {
+                    document.querySelector('.products-area').innerHTML = html;
+                });
+        }
+
+        document.querySelectorAll('.filter-category').forEach(item => {
+            item.addEventListener('click', () => {
+                filter.categoryId = item.dataset.category;
+                filter.page = 1;
+                loadProducts();
+            });
+        });
+
+        document.querySelectorAll('.filter-brand').forEach(item => {
+            item.addEventListener('click', () => {
+                filter.brandId = item.dataset.brand;
+                filter.page = 1;
+                loadProducts();
+            });
+        });
+
+        document.getElementById('priceRange').addEventListener('change', e => {
+            filter.maxPrice = e.target.value;
+            filter.page = 1;
+            loadProducts();
+        });
+
+    </script>
 }

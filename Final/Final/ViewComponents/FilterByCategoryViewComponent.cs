@@ -1,12 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Service.Service.Interfaces;
 
 namespace Final.ViewComponents
 {
     public class FilterByCategoryViewComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync()
+        private readonly ICategoryService _categoryService;
+
+        public FilterByCategoryViewComponent(ICategoryService categoryService)
         {
-            return View();
+            _categoryService = categoryService;
+        }
+
+        public async Task<IViewComponentResult> InvokeAsync(int? activeCategoryId)
+        {
+            var categories = await _categoryService.GetAllAsync();
+            ViewBag.ActiveCategory = activeCategoryId;
+            return View(categories);
         }
     }
 }
