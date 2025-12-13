@@ -1,0 +1,40 @@
+﻿@using Service.ViewModels.Basket
+@model BasketUIVM
+
+<div id="basketMeta" data-count="@Model.TotalCount"></div>
+
+@if (!Model.Items.Any())
+{
+    <p>No products in the cart.</p>
+}
+else
+{
+    foreach (var item in Model.Items)
+    {
+        <div class="cart-item">
+            <img src="~/admin/uploads/products/@item.ProductImage" width="60">
+
+            <div class="cart-info">
+                <h5>@item.ProductName</h5>
+                <span>@item.ProductCount x @item.ProductPrice ₼</span>
+            </div>
+
+            <button class="remove-item"
+                    data-id="@item.ProductId">
+                ✕
+            </button>
+
+        </div>
+    }
+
+    <div class="cart-footer">
+        <strong>Total: @Model.TotalPrice ₼</strong>
+    </div>
+}
+
+
+@section Scripts {
+    <script>
+              
+    </script>
+}

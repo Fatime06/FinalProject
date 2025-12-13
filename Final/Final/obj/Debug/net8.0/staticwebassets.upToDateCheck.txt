@@ -182,6 +182,7 @@ wwwroot\assets\img\Whiskey2.jpg
 wwwroot\assets\img\Wine.png
 wwwroot\assets\img\WineClubLogo.webp
 wwwroot\assets\img\WineLogo.jpg
+wwwroot\assets\js\Basket.js
 wwwroot\assets\js\Beer.js
 wwwroot\assets\js\Blog.js
 wwwroot\assets\js\Cocktail.js
@@ -189,6 +190,7 @@ wwwroot\assets\js\Cogac.js
 wwwroot\assets\js\Contact.js
 wwwroot\assets\js\Index.js
 wwwroot\assets\js\Login.js
+wwwroot\assets\js\main.js
 wwwroot\assets\js\Shop1.js
 wwwroot\assets\js\Shop2.js
 wwwroot\assets\js\Shop3.js

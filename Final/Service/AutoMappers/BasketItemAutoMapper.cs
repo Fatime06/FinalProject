@@ -10,7 +10,7 @@ namespace Service.AutoMappers
         {
             CreateMap<BasketItem, BasketItemVM>()
                   .ForMember(d => d.ProductName, o => o.MapFrom(s => s.Product.Name))
-                  .ForMember(d => d.Image, o => o.MapFrom(s => s.Product.Image));
+                  .ForMember(d => d.ProductImage, o => o.MapFrom(s => s.Product.Image));
         }
     }
 }

@@ -55,14 +55,13 @@
 
             <div class="cart">
                 <input type="number"
+                       class="add-qty"
                        value="1"
                        min="1"
-                       max="@product.Quantity"
-                       @(product.InStock ? "" : "disabled")>
-
-                <button @(product.InStock ? "" : "disabled")>
-                    ADD TO CART
-                </button>
+                       max="@product.Quantity">
+                    <button class="add-to-cart" @(product.InStock ? "" : "disabled") data-id="@product.Id">
+                        ADD TO CART
+                    </button>
             </div>
         </div>
     }

@@ -60,8 +60,14 @@
                     </p>
 
                     <div class="cart">
-                        <input type="number" min="1" max="@product.Quantity" value="1">
-                        <button @(product.InStock ? "" : "disabled")>ADD TO CART</button>
+                        <input type="number"
+                               class="add-qty"
+                               value="1"
+                               min="1"
+                               max="@product.Quantity">
+                        <button class="add-to-cart" @(product.InStock ? "" : "disabled") data-id="@product.Id">
+                            ADD TO CART
+                        </button>
                     </div>
                 </div>
 

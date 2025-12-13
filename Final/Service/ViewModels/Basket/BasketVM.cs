@@ -1,10 +1,8 @@
-﻿using Service.ViewModels.BasketItem;
-
-namespace Service.ViewModels.Basket
+﻿namespace Service.ViewModels.Basket
 {
     public class BasketVM
     {
-        public List<BasketItemVM> Items { get; set; }
-        public double TotalPrice { get; set; }
+        public int ProductId { get; set; }
+        public int ProductCount { get; set; }
     }
 }

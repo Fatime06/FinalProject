@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Azure;
 using Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -22,9 +23,10 @@ namespace Service.Service
         private readonly HttpContext _httpContext;
         private readonly IEmailService _emailService;
         private readonly IFileService _fileService;
+        private readonly IBasketService _basketService;
 
         public AccountService(IAccountRepository accountRepo, IMapper mapper, IUrlHelperFactory urlHelperFactory,
-            IActionContextAccessor actionContextAccessor, IHttpContextAccessor httpContextAccessor, IEmailService emailService, IFileService fileService)
+            IActionContextAccessor actionContextAccessor, IHttpContextAccessor httpContextAccessor, IEmailService emailService, IFileService fileService, IBasketService basketService)
         {
             _accountRepo = accountRepo;
             _mapper = mapper;
@@ -32,6 +34,7 @@ namespace Service.Service
             _httpContext = httpContextAccessor.HttpContext;
             _emailService = emailService;
             _fileService = fileService;
+            _basketService = basketService;
         }
 
         public async Task LogoutAsync()
@@ -143,6 +146,7 @@ namespace Service.Service
                 modelState.AddModelError("", "Incorrect email/username or password!");
                 return false;
             }
+            await _basketService.MergeCookieBasketToDbAsync(user.Id);
             return true;
         }
         public async Task<AppUser> GetUserAsync(string username)
