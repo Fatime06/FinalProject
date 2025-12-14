@@ -41,5 +41,12 @@ namespace Final.Controllers
             var result = await _productService.GetFilteredAsync(filter);
             return PartialView("_ProductGridPartial", result);
         }
+        [HttpGet]
+        public async Task<IActionResult> Detail(int id)
+        {
+            var product = await _productService.GetAsync(id);
+
+            return View(product);
+        }
     }
 }

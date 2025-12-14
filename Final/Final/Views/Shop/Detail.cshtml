@@ -1,0 +1,292 @@
+﻿@using Service.ViewModels.Product
+@model ProductVM
+
+<section id="product-detail" class="pd-section">
+
+    <div class="pd-container">
+
+        <div class="pd-gallery">
+            <div class="pd-main-image">
+                <img src="~/admin/uploads/products/@Model.Image"
+                     alt="@Model.Name" />
+            </div>
+        </div>
+
+        <div class="pd-content">
+
+            <div class="pd-meta">
+                <span class="pd-category">@Model.Category.Name</span>
+                <span class="pd-brand">@Model.Brand.Name</span>
+            </div>
+
+            <h1 class="pd-title">@Model.Name</h1>
+
+            <div class="pd-rating">
+                @{
+                    int fullStars = (int)Model.AverageRating;
+                }
+
+                <div class="stars">
+                    @for (int i = 0; i < fullStars; i++)
+                    {
+                        <i class="fa-solid fa-star"></i>
+                    }
+                    @for (int i = fullStars; i < 5; i++)
+                    {
+                        <i class="fa-regular fa-star"></i>
+                    }
+                </div>
+
+                <span class="review-count">
+                    @((Model.Ratings?.Count() ?? 0)) Reviews
+                </span>
+            </div>
+
+            <div class="pd-price">
+                @if (Model.DiscountPrice != null)
+                {
+                    <span class="price-new">$@Model.DiscountPrice</span>
+                    <span class="price-old">$@Model.Price</span>
+                }
+                else
+                {
+                    <span class="price-new">$@Model.Price</span>
+                }
+            </div>
+
+            <div class="pd-stock @(Model.InStock ? "in-stock" : "out-stock")">
+                <span class="dot"></span>
+                @(Model.InStock ? "In Stock" : "Out of Stock")
+            </div>
+
+            <div class="pd-divider"></div>
+
+            <div class="pd-cart">
+
+                <div class="cart">
+                    <input type="number"
+                           class="add-qty"
+                           min="1"
+                           max="@Model.Quantity"
+                           value="1"
+                           @(Model.InStock ? "" : "disabled") />
+                    <button type="button"
+                            class="btn-add-to-cart add-to-cart"
+                            data-id="@Model.Id"
+                            @(Model.InStock ? "" : "disabled")>
+                        ADD TO CART
+                    </button>
+                </div>
+
+            </div>
+
+            <ul class="pd-info-list">
+                <li><strong>Brand:</strong> @Model.Brand.Name</li>
+                <li><strong>Category:</strong> @Model.Category.Name</li>
+                <li><strong>Available:</strong> @Model.Quantity pcs</li>
+                @if (Model.DiscountPrice != null)
+                {
+                    var percent = (int)((Model.Price - Model.DiscountPrice.Value) / Model.Price * 100);
+                    <li><strong>Discount percentage:</strong> @percent%</li>
+                }
+                <li><strong>Added:</strong> @Model.CreatedDate.ToString("dd MMM yyyy")</li>
+            </ul>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+<style>
+    .pd-section {
+        padding: 100px 140px;
+        background: #fff;
+        font-family: "Inter", sans-serif;
+    }
+
+    .pd-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 90px;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+
+
+    .pd-gallery {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .pd-main-image {
+        width: 100%;
+        max-width: 420px;
+    }
+
+        .pd-main-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+
+    .pd-content {
+        max-width: 520px;
+    }
+
+    .pd-meta {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .pd-category,
+    .pd-brand {
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #999;
+    }
+
+    .pd-title {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 18px;
+        line-height: 1.2;
+    }
+
+    .pd-rating {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+        .pd-rating .stars {
+            display: flex;
+            gap: 4px;
+            color: #f5b301;
+            font-size: 16px;
+        }
+
+    .review-count {
+        font-size: 14px;
+        color: #777;
+    }
+
+    .pd-price {
+        margin-bottom: 22px;
+    }
+
+    .price-new {
+        font-size: 34px;
+        font-weight: 700;
+        color: #d10000;
+    }
+
+    .price-old {
+        font-size: 18px;
+        color: #999;
+        text-decoration: line-through;
+        margin-left: 14px;
+    }
+
+    .pd-stock {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        margin-bottom: 28px;
+    }
+
+        .pd-stock .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+    .in-stock {
+        color: #0a8f08;
+    }
+
+        .in-stock .dot {
+            background: #0a8f08;
+        }
+
+    .out-stock {
+        color: #c40000;
+    }
+
+        .out-stock .dot {
+            background: #c40000;
+        }
+
+    .pd-divider {
+        height: 1px;
+        background: #eee;
+        margin: 28px 0;
+    }
+
+
+    .pd-cart {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 30px;
+    }
+
+    .cart input {
+        width: 80px;
+        height: 46px;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+
+    .btn-add-to-cart {
+        height: 46px;
+        padding: 0 36px;
+        background: #000;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .btn-add-to-cart:hover {
+            background: #222;
+        }
+
+        .btn-add-to-cart:disabled {
+            background: #aaa;
+            cursor: not-allowed;
+        }
+
+
+    .pd-info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .pd-info-list li {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .pd-info-list strong {
+            color: #000;
+        }
+
+
+</style>
+

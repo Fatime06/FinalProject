@@ -32,6 +32,13 @@ namespace Service.Service
             var userId = _httpContextAccessor.HttpContext.User
                 .FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
+            if (userId == null)
+                throw new CustomException(401, "User not authenticated");
+
+            var product = await _productRepo.Find(productId).FirstOrDefaultAsync();
+            if (product == null)
+                throw new CustomException(404, "Product not found");
+
             var basket = await _basketRepo.GetAll()
                 .Include(b => b.BasketItems)
                 .FirstOrDefaultAsync(b => b.AppUserId == userId);
@@ -45,12 +52,18 @@ namespace Service.Service
             var item = basket.BasketItems
                 .FirstOrDefault(x => x.ProductId == productId);
 
+            int currentCount = item?.Count ?? 0;
+
+            if (currentCount + quantity > product.Quantity)
+                throw new CustomException( 400,$"{product.Name} stock not enough");
+
             if (item == null)
             {
                 basket.BasketItems.Add(new BasketItem
                 {
                     ProductId = productId,
-                    Count = quantity
+                    Count = quantity,
+                    Price = product.DiscountPrice ?? product.Price
                 });
             }
             else
@@ -58,6 +71,22 @@ namespace Service.Service
                 item.Count += quantity;
             }
 
+            await _basketRepo.SaveChangesAsync();
+        }
+        public async Task ClearDbBasketAsync()
+        {
+            var userId = _httpContextAccessor.HttpContext?
+                .User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null) return;
+
+            var basket = await _basketRepo.GetAll()
+                .Include(b => b.BasketItems)
+                .FirstOrDefaultAsync(b => b.AppUserId == userId);
+
+            if (basket == null) return;
+
+            basket.BasketItems.Clear(); 
             await _basketRepo.SaveChangesAsync();
         }
 

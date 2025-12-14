@@ -178,3 +178,6 @@ document.addEventListener("click", function (e) {
             if (badge) badge.textContent = totalCount;
         });
 });
+
+
+

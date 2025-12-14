@@ -10,6 +10,7 @@ namespace Service.Service.Interfaces
         Task<bool> UpdateAsync(ProductUpdateVM vm, ModelStateDictionary modelState);
         Task DeleteAsync(int id);
         Task<ProductVM> GetAsync(int id);
+        Task<Product> GetAsyncWithoutMapping(int id);
         Task<IEnumerable<ProductVM>> GetAllAsync();
         Task<ProductUpdateVM> GetUpdatedVmAsync(int id);
         IQueryable<ProductVM> GetProductsAsQueryabe();

@@ -42,6 +42,7 @@ namespace Service
             services.AddScoped<IContactMessageService, ContactMessageService>();
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IReviewService, ReviewService>();
+            services.AddScoped<IOrderService, OrderService>();
             return services;
         }
     }

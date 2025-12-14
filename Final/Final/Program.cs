@@ -1,4 +1,5 @@
 using Final;
+using Final.Middlewares;
 using Microsoft.AspNetCore.StaticFiles;
 using Repository;
 using Service;
@@ -52,5 +53,5 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-//app.UseMiddleware<ExceptionMiddleware>();
+app.UseMiddleware<ExceptionMiddleware>();
 app.Run();

@@ -30,11 +30,33 @@ else
     <div class="cart-footer">
         <strong>Total: @Model.TotalPrice ₼</strong>
     </div>
+    <div class="checkout-area">
+        <a asp-controller="Order"
+           asp-action="Checkout"
+           class="checkout-btn">
+            Checkout
+        </a>
+    </div>
 }
 
+<style>
+    .checkout-area {
+        margin-top: 15px;
+    }
 
-@section Scripts {
-    <script>
-              
-    </script>
-}
+    .checkout-btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 6px;
+    }
+
+        .checkout-btn:hover {
+            background: #333;
+        }
+</style>

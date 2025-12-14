@@ -14,6 +14,6 @@ namespace Service.Service.Interfaces
         Task<BasketUIVM> GetBasketFromDbAsync();
         Task<BasketUIVM> GetBasketAsync();
         Task RemoveFromDbAsync(int productId);
-
+        Task ClearDbBasketAsync();
     }
 }

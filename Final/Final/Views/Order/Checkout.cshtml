@@ -1,0 +1,62 @@
+﻿@using Service.ViewModels.Order
+@model CheckoutVM
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<link rel="stylesheet" href="~/assets/css/Checkout.css" />
+
+<section id="checkout-page">
+    <div class="checkout-container">
+
+        <div class="checkout-form">
+            <h2>Checkout</h2>
+
+            <form asp-action="Checkout" method="post">
+
+                <label>Name</label>
+                <input asp-for="Name" placeholder="Your name"  />
+                <span class="text-danger" asp-validation-for="Name"></span>
+
+                <label>Surname</label>
+                <input asp-for="Surname" placeholder="Your surname" />
+                <span class="text-danger" asp-validation-for="Surname"></span>
+
+                <label>Phone</label>
+                <input asp-for="Phone" placeholder="Phone number"  />
+                <span class="text-danger" asp-validation-for="Phone"></span>
+
+                <label>Address</label>
+                <textarea style="margin:0" asp-for="Address" placeholder="Shipping address" ></textarea>
+                <span class="text-danger" asp-validation-for="Address"></span>
+
+                <button type="submit" class="place-order-btn">
+                    Place Order
+                </button>
+            </form>
+        </div>
+
+        <div class="order-summary">
+            <h3>Your Order</h3>
+
+            @foreach (var item in Model.Items)
+            {
+                <div class="summary-item">
+                    <div>
+                        <strong>@item.ProductName</strong>
+                        <small>@item.ProductCount x @item.ProductPrice ₼</small>
+                    </div>
+                    <span>@(item.ProductCount* item.ProductPrice) ₼</span>
+                </div>
+            }
+
+            <div class="summary-divider"></div>
+
+            <div class="summary-total">
+                <span>Total</span>
+                <span>@Model.TotalPrice ₼</span>
+            </div>
+        </div>
+
+    </div>
+</section>

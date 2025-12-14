@@ -50,21 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("userDropdownBtn");
-    const menu = document.getElementById("userDropdownMenu");
 
-    btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        menu.classList.toggle("show");
-    });
-
-    document.addEventListener("click", (e) => {
-        if (!menu.contains(e.target) && !btn.contains(e.target)) {
-            menu.classList.remove("show");
-        }
-    });
-});
 
 
 

@@ -21,6 +21,7 @@ namespace Repository
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IContactMessageRepository, ContactMessageRepository>();
             services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
             return services;
         }
     }

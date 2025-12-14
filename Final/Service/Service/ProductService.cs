@@ -75,6 +75,14 @@ namespace Service.Service
             return productVm;
         }
 
+        public async Task<Product> GetAsyncWithoutMapping(int id)
+        {
+            var product = await _proRepo.Find(id).Include(p => p.Ratings).Include(p => p.Brand).Include(c => c.Category).FirstOrDefaultAsync();
+            if (product is null)
+                throw new CustomException(404, "Product not found");
+            return product;
+        }
+
         public async Task<ProductUpdateVM> GetUpdatedVmAsync(int id)
         {
             var product = await _proRepo.Find(id).Include(p => p.Ratings).Include(p=>p.Brand).Include(c => c.Category).FirstOrDefaultAsync();

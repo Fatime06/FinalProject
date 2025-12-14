@@ -124,7 +124,7 @@ namespace Repository.Migrations
                             AccessFailedCount = 0,
                             Address = "Bakı",
                             Birthday = new DateTime(2006, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "a614df0b-3adf-40ca-9fce-8ccf01dc507e",
+                            ConcurrencyStamp = "8bfe17d9-08bb-4ae5-bfad-0691a7f20108",
                             Email = "esedovaf4@gmail.com",
                             EmailConfirmed = true,
                             Gender = 2,
@@ -133,9 +133,9 @@ namespace Repository.Migrations
                             Name = "Fatima",
                             NormalizedEmail = "ESEDOVAF4@GMAIL.COM",
                             NormalizedUserName = "_FATIMA",
-                            PasswordHash = "AQAAAAIAAYagAAAAENkHgrezHpEGbjDB9UsYiMF3wVclu28IxnMCcpk/w8YTggUQHwblyU6JC2jEbZ61Ig==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJKaDeidDFDRNMFeSesOag4x5gdhncRDQJJ5KObPoTIT29F3xpGLEsUiR5hgtvp1AA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e0289e71-ecb8-4807-90af-1d1b5f279ed3",
+                            SecurityStamp = "bb451d0e-a4b3-4112-bdcb-3fb1f513be96",
                             Surname = "Asadova",
                             TwoFactorEnabled = false,
                             UserName = "_fatima"
@@ -427,6 +427,83 @@ namespace Repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Histories");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("Domain.Entities.OrderItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("Domain.Entities.Product", b =>
@@ -900,6 +977,25 @@ namespace Repository.Migrations
                     b.Navigation("Blog");
                 });
 
+            modelBuilder.Entity("Domain.Entities.OrderItem", b =>
+                {
+                    b.HasOne("Domain.Entities.Order", "Order")
+                        .WithMany("OrderItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Domain.Entities.Product", b =>
                 {
                     b.HasOne("Domain.Entities.Brand", "Brand")
@@ -1034,6 +1130,11 @@ namespace Repository.Migrations
                     b.Navigation("BlogCategories");
 
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Order", b =>
+                {
+                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("Domain.Entities.Product", b =>
