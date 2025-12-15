@@ -16,5 +16,6 @@ namespace Service.Service.Interfaces
         Task<PaginatedList<BlogVM>> GetPaginatedAsync(int page, int pageSize);
         Task<IEnumerable<BlogCategoryVM>> GetBlogCategoriesAsync();
         Task<IEnumerable<BlogVM>> GetLatestPostsAsync();
+        IQueryable<Blog> GetBlogsQuery();
     }
 }

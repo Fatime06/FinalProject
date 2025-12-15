@@ -37,20 +37,39 @@
             </a>
         </div>
     }
+    <div class="pagination">
+
+        @if (Model.HasPreviousPage)
+        {
+            <a asp-controller="Blog"
+               asp-action="Index"
+               asp-route-page="@(Model.PageIndex - 1)"
+               class="page prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+        }
+
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <a asp-controller="Blog"
+               asp-action="Index"
+               asp-route-page="@i"
+               class="page @(Model.PageIndex == i ? "active" : "")">
+                @i
+            </a>
+        }
+
+        @if (Model.HasNextPage)
+        {
+            <a asp-controller="Blog"
+               asp-action="Index"
+               asp-route-page="@(Model.PageIndex + 1)"
+               class="page next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        }
+
+    </div>
 </div>
 
-<div class="pagination">
-    @for (int i = 1; i <= Model.TotalPages; i++)
-    {
-        <a href="/blog/index?page=@i" class="page @(Model.PageIndex == i ? "active" : "")">
-            @i
-        </a>
-    }
 
-    @if (Model.PageIndex < Model.TotalPages)
-    {
-        <a href="/blog/index?page=@(Model.PageIndex + 1)" class="page next">
-            <i class="fa-solid fa-chevron-right"></i>
-        </a>
-    }
-</div>

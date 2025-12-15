@@ -12,5 +12,6 @@ namespace Service.Service.Interfaces
         Task<TagVM> GetAsync(int id);
         Task<IEnumerable<TagVM>> GetAllAsync();
         Task<TagUpdateVM> GetUpdatedVmAsync(int id);
+        IQueryable<TagVM> GetTagsQuery();
     }
 }

@@ -1,5 +1,6 @@
-﻿@using Service.DTOs.Category
-@model IEnumerable<CategoryVM>
+﻿@using Domain.Entities
+@using Service.DTOs.Category
+@model PaginatedList<CategoryVM>
 
 
 @{
@@ -37,10 +38,91 @@
                 }
             </tbody>
         </table>
+        <div class="pagination">
+
+            @if (Model.HasPreviousPage)
+            {
+                <a asp-controller="Category"
+                   asp-action="Index"
+                   asp-route-page="@(Model.PageIndex - 1)"
+                   class="page prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            }
+
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <a asp-controller="Category"
+                   asp-action="Index"
+                   asp-route-page="@i"
+                   class="page @(Model.PageIndex == i ? "active" : "")">
+                    @i
+                </a>
+            }
+
+            @if (Model.HasNextPage)
+            {
+                <a asp-controller="Category"
+                   asp-action="Index"
+                   asp-route-page="@(Model.PageIndex + 1)"
+                   class="page next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            }
+        </div>
     </div>
 </div>
 
 <style>
+    .pagination {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+        .pagination .page {
+            display: inline-block;
+            min-width: 36px;
+            height: 36px;
+            line-height: 34px;
+            margin: 0 3px;
+            padding: 0 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #fff;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+            .pagination .page:hover {
+                background: #f5f5f5;
+                border-color: #ccc;
+                text-decoration: none;
+            }
+
+            .pagination .page.active {
+                background: #337ab7;
+                border-color: #2e6da4;
+                color: #fff;
+                cursor: default;
+            }
+
+            .pagination .page.prev,
+            .pagination .page.next {
+                padding: 0 14px;
+                font-size: 13px;
+            }
+
+            .pagination .page.disabled {
+                pointer-events: none;
+                opacity: 0.5;
+            }
+
+            .pagination .page i {
+                vertical-align: middle;
+            }
     .toast-success {
         background-color: #28a745 !important;
         color: white !important;

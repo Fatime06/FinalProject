@@ -3,11 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using Service.Service.Interfaces;
 using Service.ViewModels.Order;
 using Service.ViewModels.ProductRating;
-using System.Security.Claims;
 
 namespace Final.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Member")]
     public class OrderController : Controller
     {
         private readonly IOrderService _orderService;
@@ -53,12 +52,10 @@ namespace Final.Controllers
 
             return RedirectToAction("Success","Order");
         }
-        [Authorize]
         public IActionResult Success()
         {
             return View();
         }
-        [Authorize]
         public async Task<IActionResult> MyOrders()
         {
             var orders = await _orderService.GetUserOrdersAsync();

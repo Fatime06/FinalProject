@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Service.Interfaces;
+using Service.ViewModels.Blog;
 using Service.ViewModels.Comment;
 
 namespace Final.Controllers
@@ -18,9 +20,33 @@ namespace Final.Controllers
 
         public async Task<IActionResult> Index(int page = 1)
         {
-            var blogs = await _blogService.GetPaginatedAsync(page, 6);
-            return View(blogs);
+            if (page < 1) page = 1;
+
+            int pageSize = 3;
+
+            var query = _blogService.GetBlogsQuery();
+
+            var vmQuery = query
+                .OrderByDescending(b => b.CreatedDate)
+                .Select(b => new BlogVM
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    Image = b.MainImage,
+                    CreatedAt = b.CreatedDate,
+                    CommentCount = b.Comments.Count()
+                });
+
+            var model = await PaginatedList<BlogVM>.CreateAsync(
+                vmQuery,
+                page,
+                pageSize
+            );
+
+            return View(model);
         }
+
+
         [HttpGet]
         public async Task<IActionResult> Detail(int id)
         {

@@ -56,6 +56,7 @@ namespace Service.Service
             var blogs = await _blogRepo.GetAll()
             .Include(b => b.BlogTags).ThenInclude(bt => bt.Tag)
             .Include(b => b.BlogCategories).ThenInclude(bc => bc.Category)
+            .Include(b => b.Comments).ThenInclude(c => c.AppUser)
             .ToListAsync();
 
             return _mapper.Map<IEnumerable<BlogVM>>(blogs);
@@ -162,6 +163,16 @@ namespace Service.Service
                 .ToListAsync();
 
             return _mapper.Map<IEnumerable<BlogVM>>(blogs);
+        }
+
+        public IQueryable<Blog> GetBlogsQuery()
+        {
+            return _blogRepo.GetAll()
+            .AsNoTracking()
+            .Include(b => b.Comments)
+            .ThenInclude(c => c.AppUser)
+            .Include(b => b.BlogCategories).ThenInclude(bc => bc.Category)
+            .Include(b => b.BlogTags).ThenInclude(bt => bt.Tag);
         }
     }
 }

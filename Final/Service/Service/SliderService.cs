@@ -94,5 +94,9 @@ namespace Service.Service
             await _sliderRepo.SaveChangesAsync();
             return true;
         }
+        public IQueryable<SliderVM> GetSlidersQuery()
+        {
+            return _sliderRepo.GetAll().Select(s => _mapper.Map<SliderVM>(s));   
+        }   
     }
 }

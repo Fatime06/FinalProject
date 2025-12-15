@@ -1,11 +1,19 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Service.DTOs.Category;
+using Service.Service;
 using Service.Service.Interfaces;
+using Service.ViewModels.Product;
 using Service.ViewModels.Service;
 
 namespace Final.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "Admin,SuperAdmin"
+)]
     public class ServiceController : Controller
     {
         private readonly IServiceService _serviceService;
@@ -15,11 +23,21 @@ namespace Final.Areas.Admin.Controllers
             _serviceService = serviceService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var services = await _serviceService.GetAllAsync();
-            return View(services);
+            if (page < 1) page = 1;
+
+            int pageSize = 5;
+
+            var query = _serviceService.GetServicesQuery();
+
+            var model = await PaginatedList<ServiceVM>.CreateAsync(
+                query,
+                page,
+                pageSize
+            );
+
+            return View(model);
         }
         public IActionResult Create()
         {
@@ -55,6 +73,10 @@ namespace Final.Areas.Admin.Controllers
             var service = await _serviceService.GetAsync(id);
             return View(service);
         }
+        [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "SuperAdmin"
+)]
         public async Task<IActionResult> Delete(int id)
         {
             await _serviceService.DeleteAsync(id);

@@ -12,5 +12,6 @@ namespace Service.Service.Interfaces
         Task<BrandVM> GetAsync(int id);
         Task<IEnumerable<BrandVM>> GetAllAsync();
         Task<BrandUpdateVM> GetUpdatedVmAsync(int id);
+        IQueryable<BrandVM> GetBrandsQuery();
     }
 }

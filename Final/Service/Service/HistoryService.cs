@@ -77,5 +77,9 @@ namespace Service.Service
             await _historyRepo.SaveChangesAsync();
             return true;
         }
+        public IQueryable<HistoryVM> GetHistoriesQuery()
+        {
+            return _historyRepo.GetAll().OrderBy(h => h.Year).Select(h => _mapper.Map<HistoryVM>(h));
+        }
     }
 }

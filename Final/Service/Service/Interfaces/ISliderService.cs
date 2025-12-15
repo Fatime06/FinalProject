@@ -12,5 +12,6 @@ namespace Service.Service.Interfaces
         Task<SliderVM> GetAsync(int id);
         Task<IEnumerable<SliderVM>> GetAllAsync();
         Task<SliderUpdateVM> GetUpdatedVmAsync(int id);
+        IQueryable<SliderVM> GetSlidersQuery();
     }
 }

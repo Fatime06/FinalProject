@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Service.Service;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Service.Service.Interfaces;
-using Service.ViewModels.Slider;
 using Service.ViewModels.Tag;
-using System.Threading.Tasks;
 
 namespace Final.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "Admin,SuperAdmin"
+)]
     public class TagController : Controller
     {
         private readonly ITagService _tagService;
@@ -17,10 +20,21 @@ namespace Final.Areas.Admin.Controllers
             _tagService = tagService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var tags = await _tagService.GetAllAsync();
-            return View(tags);
+            if (page < 1) page = 1;
+
+            int pageSize = 5;
+
+            var query = _tagService.GetTagsQuery();
+
+            var model = await PaginatedList<TagVM>.CreateAsync(
+                query,
+                page,
+                pageSize
+            );
+
+            return View(model);
         }
         [HttpGet]
         public IActionResult Create()
@@ -56,6 +70,10 @@ namespace Final.Areas.Admin.Controllers
 
             return View(slider);
         }
+        [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "SuperAdmin"
+)]
         public async Task<IActionResult> Delete(int id)
         {
             await _tagService.DeleteAsync(id);

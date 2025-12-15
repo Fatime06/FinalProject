@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Service.Interfaces;
 using Service.ViewModels.Account.Admin;
-using static System.Net.WebRequestMethods;
 
 namespace Final.Areas.Admin.Controllers
 {
@@ -16,6 +15,7 @@ namespace Final.Areas.Admin.Controllers
         {
             _accountService = accountService;
         }
+
         [AllowAnonymous]
         public IActionResult Login()
         {
@@ -24,6 +24,7 @@ namespace Final.Areas.Admin.Controllers
 
         [HttpPost]
         [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(AdminLoginVM vm)
         {
             var result = await _accountService.AdminLoginAsync(vm, ModelState);
@@ -32,11 +33,18 @@ namespace Final.Areas.Admin.Controllers
 
             return RedirectToAction("Index", "Dashboard");
         }
+
+        [Area("Admin")]
+        [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "Admin,SuperAdmin"
+)]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync("AdminScheme");
             return RedirectToAction("Login");
         }
     }
+
 
 }

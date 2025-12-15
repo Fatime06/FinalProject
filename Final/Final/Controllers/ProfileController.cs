@@ -7,6 +7,7 @@ using Service.ViewModels.Account.User;
 
 namespace Final.Controllers
 {
+    [Authorize(Roles = "Member")]
     public class ProfileController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -54,6 +55,7 @@ namespace Final.Controllers
             });
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Settings(UserSettingsVM vm)
         {
             if (!ModelState.IsValid) return View(vm);
@@ -86,13 +88,12 @@ namespace Final.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-        [Authorize]
         public IActionResult ChangePassword()
         {
             return View();
         }
         [HttpPost]
-        [Authorize]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> ChangePassword(ChangePasswordVM vm)
         {
             if (!ModelState.IsValid)

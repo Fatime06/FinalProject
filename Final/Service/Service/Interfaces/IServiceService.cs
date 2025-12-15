@@ -12,5 +12,6 @@ namespace Service.Service.Interfaces
         Task<ServiceVM> GetAsync(int id);
         Task<IEnumerable<ServiceVM>> GetAllAsync();
         Task<ServiceUpdateVM> GetUpdatedVmAsync(int id);
+        IQueryable<ServiceVM> GetServicesQuery();
     }
 }

@@ -107,5 +107,9 @@ namespace Service.Service
             if (category == null) throw new CustomException(404, "Category not found");
             return _mapper.Map<CategoryVM>(category);
         }
+        public IQueryable<CategoryVM> GetCategoriesQuery()
+        {
+            return _catRepo.GetAll().Select(c => _mapper.Map<CategoryVM>(c));
+        }
     }
 }

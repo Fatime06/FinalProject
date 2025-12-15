@@ -1,4 +1,4 @@
-﻿using Domain.Enums;
+﻿using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Service.Interfaces;
@@ -7,6 +7,10 @@ using Service.ViewModels.Order;
 namespace Final.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "Admin,SuperAdmin"
+)]
     public class OrderController : Controller
     {
         private readonly IOrderService _orderService;
@@ -16,10 +20,21 @@ namespace Final.Areas.Admin.Controllers
             _orderService = orderService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var orders = await _orderService.GetAllAsync();
-            return View(orders);
+            if (page < 1) page = 1;
+
+            int pageSize = 5;
+
+            var query = _orderService.GetOrdersQuery();
+
+            var model = await PaginatedList<OrderVM>.CreateAsync(
+                query,
+                page,
+                pageSize
+            );
+
+            return View(model);
         }
 
         [HttpPost]
@@ -50,7 +65,10 @@ namespace Final.Areas.Admin.Controllers
             var order = await _orderService.GetAsync(id);
             return View(order);
         }
-
+        [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "SuperAdmin"
+)]
         [HttpPost]
         public async Task<IActionResult> Delete(OrderVM vm)
         {

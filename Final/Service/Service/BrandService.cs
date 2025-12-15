@@ -104,5 +104,24 @@ namespace Service.Service
             await _brandRepository.SaveChangesAsync();
             return true;
         }
+        public IQueryable<BrandVM> GetBrandsQuery()
+        {
+            var query = _brandRepository.GetAll()
+                .Include(b => b.Products)
+                .Select(b => new BrandVM
+                {
+                    Id = b.Id,
+                    Name = b.Name,
+                    Image = b.Image,
+                    CreatedDate = b.CreatedDate,
+                    Products = b.Products.Select(p => new ProductInBrandVM
+                    {
+                        Id = p.Id,
+                        Name = p.Name,
+                        Price = p.Price
+                    })
+                });
+            return query;
+        }
     }
 }

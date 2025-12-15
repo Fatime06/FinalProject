@@ -73,7 +73,7 @@ namespace Service.Service
 
             var vm = _mapper.Map<TagUpdateVM>(tag);
 
-            return vm; 
+            return vm;
         }
 
         public async Task<bool> UpdateAsync(TagUpdateVM vm, ModelStateDictionary modelState)
@@ -92,7 +92,10 @@ namespace Service.Service
 
             await _tagRepo.SaveChangesAsync();
             return true;
-
+        }
+        public IQueryable<TagVM> GetTagsQuery()
+        {
+            return _tagRepo.GetAll().Select(t => _mapper.Map<TagVM>(t));
         }
     }
 }

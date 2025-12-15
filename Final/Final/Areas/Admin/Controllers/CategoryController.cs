@@ -1,10 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Service.DTOs.Category;
 using Service.Service.Interfaces;
 
 namespace Final.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "Admin,SuperAdmin"
+)]
     public class CategoryController : Controller
     {
         private readonly ICategoryService _catService;
@@ -13,11 +19,21 @@ namespace Final.Areas.Admin.Controllers
         {
             _catService = catService;
         }
-        [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var categories = await _catService.GetAllAsync();
-            return View(categories);
+            if (page < 1) page = 1;
+
+            int pageSize = 5;
+
+            var query = _catService.GetCategoriesQuery();
+
+            var model = await PaginatedList<CategoryVM>.CreateAsync(
+                query,
+                page,
+                pageSize
+            );
+
+            return View(model);
         }
         public IActionResult Create()
         {
@@ -53,6 +69,10 @@ namespace Final.Areas.Admin.Controllers
             var category = await _catService.GetAsync(id);
             return View(category);
         }
+        [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "SuperAdmin"
+)]
         public async Task<IActionResult> Delete(int id)
         {
             await _catService.DeleteAsync(id);

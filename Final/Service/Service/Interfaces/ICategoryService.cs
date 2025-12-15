@@ -12,5 +12,6 @@ namespace Service.Service.Interfaces
         Task<IEnumerable<CategoryVM>> GetAllAsync();
         Task<CategoryVM> GetCategoryByName(string categoryName);
         Task<CategoryUpdateVM> GetUpdatedVmAsync(int id);
+        IQueryable<CategoryVM> GetCategoriesQuery();
     }
 }

@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Service.Service;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Service.Service.Interfaces;
-using Service.ViewModels.Product;
 using Service.ViewModels.Slider;
-using System.Threading.Tasks;
 
 namespace Final.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "Admin,SuperAdmin"
+)]
     public class SliderController : Controller
     {
         private readonly ISliderService _sliderService;
@@ -17,10 +20,21 @@ namespace Final.Areas.Admin.Controllers
             _sliderService = sliderService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var sliders = await _sliderService.GetAllAsync();
-            return View(sliders);
+            if (page < 1) page = 1;
+
+            int pageSize = 5;
+
+            var query = _sliderService.GetSlidersQuery();
+
+            var model = await PaginatedList<SliderVM>.CreateAsync(
+                query,
+                page,
+                pageSize
+            );
+
+            return View(model);
         }
         [HttpGet]
         public IActionResult Create()
@@ -56,6 +70,10 @@ namespace Final.Areas.Admin.Controllers
 
             return View(slider);
         }
+        [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "SuperAdmin"
+)]
         public async Task<IActionResult> Delete(int id)
         {
             await _sliderService.DeleteAsync(id);

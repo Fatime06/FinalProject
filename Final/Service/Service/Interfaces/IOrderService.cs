@@ -14,5 +14,6 @@ namespace Service.Service.Interfaces
         Task DeleteAsync(int id);
         Task<List<OrderVM>> GetUserOrdersAsync();
         Task<OrderVM> GetUserOrderDetailAsync(int orderId);
+        IQueryable<OrderVM> GetOrdersQuery();
     }
 }

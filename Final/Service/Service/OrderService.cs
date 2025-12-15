@@ -291,6 +291,30 @@ namespace Service.Service
                 }).ToList()
             };
         }
+        public IQueryable<OrderVM> GetOrdersQuery()
+        {
+            return _orderRepo.GetAll()
+                .Include(o => o.AppUser)
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+                .Select(o=> new OrderVM
+                {
+                    Id = o.Id,
+                    Name = o.Name,
+                    Surname = o.Surname,
+                    TotalPrice = o.TotalPrice,
+                    Status = o.Status,
+                    CustomerNumber = o.AppUser.CustomerNumber,
+                    CreatedDate = o.CreatedDate,
+                    Items = o.OrderItems.Select(i => new OrderItemVM
+                    {
+                        ProductId = i.ProductId,
+                        ProductName = i.Product.Name,
+                        Quantity = i.Quantity,
+                        Price = i.Price
+                    }).ToList()
+                });
+        }
 
     }
 }

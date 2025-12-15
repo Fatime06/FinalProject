@@ -1,10 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Service.Service.Interfaces;
 using Service.ViewModels.History;
 
 namespace Final.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "Admin,SuperAdmin"
+)]
     public class HistoryController : Controller
     {
         private readonly IHistoryService _historyService;
@@ -14,11 +20,21 @@ namespace Final.Areas.Admin.Controllers
             _historyService = historyService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var histories = await _historyService.GetAllAsync();
-            return View(histories);
+            if (page < 1) page = 1;
+
+            int pageSize = 5;
+
+            var query = _historyService.GetHistoriesQuery();
+
+            var model = await PaginatedList<HistoryVM>.CreateAsync(
+                query,
+                page,
+                pageSize
+            );
+
+            return View(model);
         }
         public IActionResult Create()
         {
@@ -54,6 +70,10 @@ namespace Final.Areas.Admin.Controllers
             var history = await _historyService.GetAsync(id);
             return View(history);
         }
+        [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "SuperAdmin"
+)]
         public async Task<IActionResult> Delete(int id)
         {
             await _historyService.DeleteAsync(id);

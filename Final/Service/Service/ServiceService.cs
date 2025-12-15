@@ -78,5 +78,9 @@ namespace Service.Service
             await _serviceRepo.SaveChangesAsync();
             return true;
         }
+        public IQueryable<ServiceVM> GetServicesQuery()
+        {
+            return _serviceRepo.GetAll().Select(s => _mapper.Map<ServiceVM>(s));
+        }
     }
 }

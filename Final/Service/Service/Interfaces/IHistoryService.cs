@@ -11,5 +11,6 @@ namespace Service.Service.Interfaces
         Task<HistoryVM> GetAsync(int id);
         Task<IEnumerable<HistoryVM>> GetAllAsync();
         Task<HistoryUpdateVM> GetUpdatedVmAsync(int id);
+        IQueryable<HistoryVM> GetHistoriesQuery();
     }
 }

@@ -1,10 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Service.Service;
 using Service.Service.Interfaces;
 using Service.ViewModels.Brand;
+using Service.ViewModels.Product;
 
 namespace Final.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "Admin,SuperAdmin"
+)]
     public class BrandController : Controller
     {
         private readonly IBrandService _brandService;
@@ -14,10 +22,21 @@ namespace Final.Areas.Admin.Controllers
             _brandService = brandService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var brands = await _brandService.GetAllAsync();
-            return View(brands);
+            if (page < 1) page = 1;
+
+            int pageSize = 5;
+
+            var query = _brandService.GetBrandsQuery();
+
+            var model = await PaginatedList<BrandVM>.CreateAsync(
+                query,
+                page,
+                pageSize
+            );
+
+            return View(model);
         }
         [HttpGet]
         public IActionResult Create()
@@ -53,6 +72,10 @@ namespace Final.Areas.Admin.Controllers
 
             return View(brand);
         }
+        [Authorize(
+    AuthenticationSchemes = "AdminScheme",
+    Roles = "SuperAdmin"
+)]
         public async Task<IActionResult> Delete(int id)
         {
             await _brandService.DeleteAsync(id);
