@@ -7,8 +7,6 @@ namespace Service.ViewModels.Order
         public List<BasketItemVM> Items { get; set; } = new();
 
         public decimal TotalPrice { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
     }

@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Service.Service.Interfaces;
 using Service.ViewModels.Order;
+using Service.ViewModels.ProductRating;
+using System.Security.Claims;
 
 namespace Final.Controllers
 {
@@ -10,11 +12,13 @@ namespace Final.Controllers
     {
         private readonly IOrderService _orderService;
         private readonly IBasketService _basketService;
+        private readonly IProductRatingService _ratingService;
 
-        public OrderController(IOrderService orderService, IBasketService basketService)
+        public OrderController(IOrderService orderService, IBasketService basketService, IProductRatingService ratingService)
         {
             _orderService = orderService;
             _basketService = basketService;
+            _ratingService = ratingService;
         }
 
         public async Task<IActionResult> Checkout()
@@ -43,7 +47,7 @@ namespace Final.Controllers
                 return View(new CheckoutVM
                 {
                     Items = basket.Items,
-                    TotalPrice = basket.TotalPrice
+                    TotalPrice = basket.TotalPrice,
                 });
             } 
 
@@ -53,6 +57,24 @@ namespace Final.Controllers
         public IActionResult Success()
         {
             return View();
+        }
+        [Authorize]
+        public async Task<IActionResult> MyOrders()
+        {
+            var orders = await _orderService.GetUserOrdersAsync();
+            return View(orders);
+        }
+        public async Task<IActionResult> Detail(int id)
+        {
+            var order = await _orderService.GetUserOrderDetailAsync(id);
+            return View(order);
+        }
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Create(ProductRatingCreateVM vm)
+        {
+            await _ratingService.CreateAsync(vm,ModelState);
+            return RedirectToAction("MyOrders", "Order");
         }
     }
 

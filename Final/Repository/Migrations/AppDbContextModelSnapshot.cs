@@ -124,7 +124,7 @@ namespace Repository.Migrations
                             AccessFailedCount = 0,
                             Address = "Bakı",
                             Birthday = new DateTime(2006, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "8bfe17d9-08bb-4ae5-bfad-0691a7f20108",
+                            ConcurrencyStamp = "a054c896-b053-4699-9d3a-835a58f42616",
                             Email = "esedovaf4@gmail.com",
                             EmailConfirmed = true,
                             Gender = 2,
@@ -133,9 +133,9 @@ namespace Repository.Migrations
                             Name = "Fatima",
                             NormalizedEmail = "ESEDOVAF4@GMAIL.COM",
                             NormalizedUserName = "_FATIMA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJKaDeidDFDRNMFeSesOag4x5gdhncRDQJJ5KObPoTIT29F3xpGLEsUiR5hgtvp1AA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEKlsSbMyFmiM9hhJrH1rXjLSEsSmxmPTa3a97kF7YlbYIaAqhZ/4nZQKtl2Il82yGQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "bb451d0e-a4b3-4112-bdcb-3fb1f513be96",
+                            SecurityStamp = "a3363b9a-7e7e-43a8-9162-e1655fe1d512",
                             Surname = "Asadova",
                             TwoFactorEnabled = false,
                             UserName = "_fatima"
@@ -443,7 +443,7 @@ namespace Repository.Migrations
 
                     b.Property<string>("AppUserId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
@@ -456,6 +456,9 @@ namespace Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<string>("Surname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -467,6 +470,8 @@ namespace Repository.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("Orders");
                 });
@@ -975,6 +980,17 @@ namespace Repository.Migrations
                     b.Navigation("AppUser");
 
                     b.Navigation("Blog");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Order", b =>
+                {
+                    b.HasOne("Domain.Entities.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("Domain.Entities.OrderItem", b =>

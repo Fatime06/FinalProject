@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Azure;
 using Domain.Entities;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -10,8 +10,10 @@ using Repository.Repositories.Interfaces;
 using Service.Exceptions;
 using Service.Helpers;
 using Service.Service.Interfaces;
+using Service.ViewModels.Account.Admin;
 using Service.ViewModels.Account.User;
 using Service.ViewModels.Email;
+using System.Security.Claims;
 
 namespace Service.Service
 {
@@ -20,7 +22,7 @@ namespace Service.Service
         private readonly IAccountRepository _accountRepo;
         private readonly IMapper _mapper;
         private readonly IUrlHelper _urlHelper;
-        private readonly HttpContext _httpContext;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IEmailService _emailService;
         private readonly IFileService _fileService;
         private readonly IBasketService _basketService;
@@ -31,7 +33,7 @@ namespace Service.Service
             _accountRepo = accountRepo;
             _mapper = mapper;
             _urlHelper = urlHelperFactory.GetUrlHelper(actionContextAccessor.ActionContext ?? new());
-            _httpContext = httpContextAccessor.HttpContext;
+            _httpContextAccessor = httpContextAccessor;
             _emailService = emailService;
             _fileService = fileService;
             _basketService = basketService;
@@ -77,7 +79,7 @@ namespace Service.Service
             await _accountRepo.AddRoleToUserAsync(user, "Member");
 
             var token = await _accountRepo.GenerateEmailConfirmationTokenAsync(user);
-            var url = _urlHelper.Action("VerifyEmail", "Account", new { email = user.Email, token = token }, _httpContext.Request.Scheme);
+            var url = _urlHelper.Action("VerifyEmail", "Account", new { email = user.Email, token = token }, _httpContextAccessor.HttpContext.Request.Scheme);
             using StreamReader reader = new StreamReader("wwwroot/templates/emailConfirm.html");
             var body = reader.ReadToEnd();
             body = body.Replace("{{url}}", url);
@@ -163,7 +165,7 @@ namespace Service.Service
                 return false;
             }
             var token = await _accountRepo.GeneratePasswordResetTokenAsync(user);
-            var url = _urlHelper.Action("VerifyPassword", "Account", new { email = user.Email, token = token }, _httpContext.Request.Scheme);
+            var url = _urlHelper.Action("VerifyPassword", "Account", new { email = user.Email, token = token }, _httpContextAccessor.HttpContext.Request.Scheme);
 
 
             using StreamReader reader = new StreamReader("wwwroot/templates/resetpassword.html");
@@ -186,8 +188,50 @@ namespace Service.Service
         {
             var user = await _accountRepo.FindByEmailAsync(email);
             if (user == null || !await _accountRepo.IsInRoleAsync(user, "Member")) throw new CustomException(404, "User not found");
-            if (!await _accountRepo.VerifyUserTokenAsync(user,"ResetPassword", token))
+            if (!await _accountRepo.VerifyUserTokenAsync(user, "ResetPassword", token))
                 throw new CustomException(404, "An unexpected error occurred!");
+        }
+
+        public async Task<bool> AdminLoginAsync(AdminLoginVM vm, ModelStateDictionary modelState)
+        {
+            if (!modelState.IsValid)
+                return false;
+
+            var user = await _accountRepo.FindByEmailAsync(vm.Email);
+            if (user == null)
+            {
+                modelState.AddModelError("", "Username or password is incorrect!");
+                return false;
+            }
+
+            if (!await _accountRepo.IsInRoleAsync(user, "admin"))
+            {
+                if (!await _accountRepo.IsInRoleAsync(user, "superadmin"))
+                {
+                    modelState.AddModelError("", "You do not have permission to access this section!");
+                    return false;
+                }
+            }
+
+            if (!await _accountRepo.CheckPasswordAsync(user, vm.Password))
+            {
+                modelState.AddModelError("", "Username or password is incorrect!");
+                return false;
+            }
+
+            var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.NameIdentifier, user.Id),
+            new Claim(ClaimTypes.Name, user.UserName),
+            new Claim(ClaimTypes.Role, "Admin")
+        };
+
+            var identity = new ClaimsIdentity(claims, "AdminScheme");
+            var principal = new ClaimsPrincipal(identity);
+
+            await _httpContextAccessor.HttpContext.SignInAsync("AdminScheme", principal);
+
+            return true;
         }
     }
 }

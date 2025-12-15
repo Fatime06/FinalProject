@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
+using Service.ViewModels.Service;
 
 namespace Final
 {
@@ -9,7 +10,13 @@ namespace Final
     {
         public static IServiceCollection RegisterServiceForFinal(this IServiceCollection services, IConfiguration config)
         {
-            services.AddAuthentication();
+            services.AddAuthentication().AddCookie("AdminScheme", options =>
+            {
+                options.LoginPath = "/Admin/Account/Login";
+                options.AccessDeniedPath = "/Admin/Account/Login";
+                options.Cookie.Name = "Liquory.Admin.Auth";
+                options.ExpireTimeSpan = TimeSpan.FromHours(2);
+            });
             services.AddAuthorization();
             services.AddDbContext<AppDbContext>(opt =>
             {
@@ -21,7 +28,6 @@ namespace Final
             });
             services.AddIdentity<AppUser, IdentityRole>()
      .AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
-
             services.Configure<IdentityOptions>(options =>
             {
                 options.Password.RequireDigit = true;

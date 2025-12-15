@@ -11,5 +11,6 @@ namespace Service.Service.Interfaces
         Task<ProductRatingVM> GetAsync(int id);
         Task<IEnumerable<ProductRatingVM>> GetAllAsync();
         Task<ProductRatingUpdateVM> GetUpdatedVmAsync(int id);
+        Task<bool> CanUserRateAsync(string userId, int productId);
     }
 }

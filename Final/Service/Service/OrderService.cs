@@ -1,10 +1,14 @@
 ﻿using AutoMapper;
 using Domain.Entities;
+using Domain.Enums;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore;
 using Repository.Repositories.Interfaces;
 using Service.Exceptions;
 using Service.Service.Interfaces;
+using Service.ViewModels.Email;
 using Service.ViewModels.Order;
 using System.Security.Claims;
 
@@ -17,22 +21,31 @@ namespace Service.Service
         private readonly IOrderRepository _orderRepo;
         private readonly IHttpContextAccessor _http;
         private readonly IMapper _mapper;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly IProductRatingRepository _ratingRepo;
+        private readonly IEmailService _emailService;
 
         public OrderService(
             IBasketService basketService,
             IProductService productService,
             IOrderRepository orderRepo,
             IHttpContextAccessor http,
-            IMapper mapper)
+            IMapper mapper,
+            UserManager<AppUser> userManager,
+            IProductRatingRepository ratingRepo,
+            IEmailService emailService)
         {
             _basketService = basketService;
             _productService = productService;
             _orderRepo = orderRepo;
             _http = http;
             _mapper = mapper;
+            _userManager = userManager;
+            _ratingRepo = ratingRepo;
+            _emailService = emailService;
         }
 
-        public async Task<bool> CreateOrderAsync(CheckoutVM vm,ModelStateDictionary modelState)
+        public async Task<bool> CreateOrderAsync(CheckoutVM vm, ModelStateDictionary modelState)
         {
             if (!modelState.IsValid)
                 return false;
@@ -47,6 +60,8 @@ namespace Service.Service
             if (userId == null)
                 throw new CustomException(401, "User not authenticated");
 
+            var user = await _userManager.FindByIdAsync(userId);
+
             var products = new Dictionary<int, Product>();
 
             foreach (var item in basket.Items)
@@ -58,7 +73,7 @@ namespace Service.Service
                     if (product == null)
                         throw new CustomException(404, "Product not found");
 
-                    products.Add(item.ProductId, product); 
+                    products.Add(item.ProductId, product);
                 }
             }
 
@@ -75,8 +90,8 @@ namespace Service.Service
             var order = new Order
             {
                 AppUserId = userId,
-                Name = vm.Name,
-                Surname = vm.Surname,
+                Name = user.Name,
+                Surname = user.Surname,
                 Phone = vm.Phone,
                 Address = vm.Address,
                 TotalPrice = basket.TotalPrice,
@@ -85,7 +100,8 @@ namespace Service.Service
                     ProductId = i.ProductId,
                     Quantity = i.ProductCount,
                     Price = i.ProductPrice
-                }).ToList()
+                }).ToList(),
+                CreatedDate = DateTime.Now
             };
 
             await _orderRepo.AddAsync(order);
@@ -102,6 +118,178 @@ namespace Service.Service
             await _orderRepo.SaveChangesAsync();
 
             return true;
+        }
+        public async Task<List<OrderVM>> GetAllAsync()
+        {
+            var userId = _http.HttpContext.User
+               .FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null)
+                throw new CustomException(401, "User not authenticated");
+            var user = await _userManager.FindByIdAsync(userId);
+
+            var orders = await _orderRepo.GetAll()
+                .Include(o => o.AppUser)
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+                .ToListAsync();
+
+            return orders.Select(o => new OrderVM
+            {
+                Id = o.Id,
+                Name = o.Name,
+                Surname = o.Surname,
+                TotalPrice = o.TotalPrice,
+                Status = o.Status,
+                CustomerNumber = user.CustomerNumber,
+                CreatedDate = o.CreatedDate,
+                Items = o.OrderItems.Select(i => new OrderItemVM
+                {
+                    ProductId = i.ProductId,
+                    ProductName = i.Product.Name,
+                    Quantity = i.Quantity,
+                    Price = i.Price
+                }).ToList()
+            }).ToList();
+        }
+
+        public async Task MarkDeliveredAsync(int orderId)
+        {
+            var order = await _orderRepo.Find(orderId)
+                .FirstOrDefaultAsync();
+
+            if (order == null)
+                throw new CustomException(404, "Order not found");
+
+            order.Status = OrderStatus.Delivered;
+            await _orderRepo.SaveChangesAsync();
+        }
+        public async Task<OrderVM> GetAsync(int orderId)
+        {
+            var order = await _orderRepo.Find(orderId)
+                .Include(o => o.AppUser)
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+                .FirstOrDefaultAsync();
+            if (order == null)
+                throw new CustomException(404, "Order not found");
+            return new OrderVM
+            {
+                Id = order.Id,
+                Name = order.Name,
+                Surname = order.Surname,
+                TotalPrice = order.TotalPrice,
+                Status = order.Status,
+                CreatedDate = order.CreatedDate,
+                Items = order.OrderItems.Select(i => new OrderItemVM
+                {
+                    ProductId = i.ProductId,
+                    ProductName = i.Product.Name,
+                    Quantity = i.Quantity,
+                    Price = i.Price
+                }).ToList()
+            };
+        }
+        public async Task UpdateStatusAsync(int id, OrderStatus status)
+        {
+            var userId = _http.HttpContext.User
+               .FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null)
+                throw new CustomException(401, "User not authenticated");
+            var user = await _userManager.FindByIdAsync(userId);
+
+            var order = await _orderRepo.GetAll()
+                .Include(o => o.OrderItems)
+                .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (order == null)
+                throw new CustomException(404, "Order not found");
+
+            order.Status = status;
+
+            await _orderRepo.SaveChangesAsync();
+
+            var body = $"Your order status is now: {status}";
+            EmailSendVM emailVm = new()
+            {
+                Subject = "Confirm Email",
+                Body = body,
+                To = user.Email
+            };
+            _emailService.SendEmailAsync(emailVm);
+        }
+        public async Task DeleteAsync(int id)
+        {
+            var order = await _orderRepo.GetAll()
+                .Include(o => o.OrderItems)
+                .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (order == null)
+                throw new CustomException(404, "Order not found");
+
+            _orderRepo.Delete(order);
+            await _orderRepo.SaveChangesAsync();
+        }
+        public async Task<List<OrderVM>> GetUserOrdersAsync()
+        {
+            var userId = _http.HttpContext.User
+                .FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null)
+                throw new CustomException(401, "User not authenticated");
+
+            return await _orderRepo.GetAll()
+                .Where(o => o.AppUserId == userId)
+                .OrderByDescending(o => o.CreatedDate)
+                .Select(o => new OrderVM
+                {
+                    Id = o.Id,
+                    Name = o.Name,
+                    Surname = o.Surname,
+                    TotalPrice = o.TotalPrice,
+                    Status = o.Status,
+                    CreatedDate = o.CreatedDate
+                }).ToListAsync();
+        }
+        public async Task<OrderVM> GetUserOrderDetailAsync(int orderId)
+        {
+            var userId = _http.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (userId == null)
+                throw new CustomException(401, "User not authenticated");
+
+            var order = await _orderRepo.GetAll()
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+                .FirstOrDefaultAsync(o => o.Id == orderId && o.AppUserId == userId);
+
+            if (order == null)
+                throw new CustomException(404, "Order not found");
+
+            var ratedProductIds = await _ratingRepo.GetAll()
+                .Where(r => r.AppUserId == userId)
+                .Select(r => r.ProductId)
+                .ToListAsync();
+
+            return new OrderVM
+            {
+                Id = order.Id,
+                Name = order.Name,
+                Surname = order.Surname,
+                TotalPrice = order.TotalPrice,
+                Status = order.Status,
+                CreatedDate = order.CreatedDate,
+                Items = order.OrderItems.Select(i => new OrderItemVM
+                {
+                    ProductId = i.ProductId,
+                    ProductName = i.Product.Name,
+                    Quantity = i.Quantity,
+                    Price = i.Price,
+                    CanRate =
+                        order.Status == OrderStatus.Delivered &&
+                        !ratedProductIds.Contains(i.ProductId)
+                }).ToList()
+            };
         }
 
     }

@@ -1,0 +1,37 @@
+﻿@using Service.ViewModels.Order
+@model OrderVM
+
+<h3>Order Detail</h3>
+
+<p><strong>Customer:</strong> @Model.Name @Model.Surname</p>
+<p><strong>Status:</strong> @Model.Status</p>
+<p><strong>Total:</strong> @Model.TotalPrice ₼</p>
+<p><strong>Date:</strong> @Model.CreatedDate</p>
+
+<hr />
+
+<h4>Products</h4>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Count</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.Items)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.Quantity</td>
+                <td>@item.Price ₼</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-default">Back to orders</a>
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Change status</a>

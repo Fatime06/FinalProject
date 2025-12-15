@@ -1,0 +1,72 @@
+﻿@using Domain.Enums
+@using Service.ViewModels.Order
+@model IEnumerable<OrderVM>
+
+<h3>Orders</h3>
+@{
+    int count = 0;
+}
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer number</th>
+            <th>Customer</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th style="width:285px;">Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.CustomerNumber</td>
+
+                <td>@order.Name @order.Surname</td>
+
+                <td><strong>@order.TotalPrice ₼</strong></td>
+
+                <td>
+                    @if (order.Status == OrderStatus.Pending)
+                    {
+                        <span class="label label-warning">Pending</span>
+                    }
+                    else if (order.Status == OrderStatus.Delivered)
+                    {
+                        <span class="label label-success">Delivered</span>
+                    }
+                    else
+                    {
+                        <span class="label label-danger">Cancelled</span>
+                    }
+                </td>
+
+                <td>
+                    <a class="btn btn-xs btn-info orderBtn"
+                       asp-action="Detail"
+                       asp-route-id="@order.Id">Detail</a>
+
+                    <a class="btn btn-xs btn-primary orderBtn"
+                       asp-action="Edit"
+                       asp-route-id="@order.Id">Edit</a>
+
+                    <a class="btn btn-xs btn-danger orderBtn"
+                       asp-action="Delete"
+                       asp-route-id="@order.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .orderBtn {
+        width: 80px;
+        height: 38px;
+        font-size: 16px;
+        padding-top: 5px;
+    }
+</style>

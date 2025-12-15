@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Service.ViewModels.Account.Admin;
 using Service.ViewModels.Account.User;
 
 namespace Service.Service.Interfaces
@@ -16,5 +17,6 @@ namespace Service.Service.Interfaces
         Task<AppUser> GetUserAsync(string userName);
         Task<bool> ForgotPasswordAsync(ForgotPasswordVM vm, ModelStateDictionary modelState);
         Task VerifyPasswordAsync(string token, string email);
+        Task<bool> AdminLoginAsync(AdminLoginVM vm, ModelStateDictionary modelState);
     }
 }
