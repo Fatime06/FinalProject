@@ -112,7 +112,7 @@ namespace Service.Service
                 product.Quantity -= item.ProductCount;
                 product.InStock = product.Quantity > 0;
             }
-
+            user.IsVerifiedPurchase = true;
             await _basketService.ClearDbBasketAsync();
 
             await _orderRepo.SaveChangesAsync();

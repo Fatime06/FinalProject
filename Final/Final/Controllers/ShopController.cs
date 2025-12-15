@@ -15,24 +15,46 @@ namespace Final.Controllers
             _productService = productService;
         }
 
-        public async Task<IActionResult> Index(int? categoryId, int page = 1)
+        public async Task<IActionResult> Index(
+    int page = 1,
+    int? categoryId = null,
+    int? brandId = null,
+    decimal? maxPrice = null)
         {
+            if (page < 1) page = 1;
+
             int pageSize = 9;
 
             var query = _productService.GetProductsAsQueryabe();
 
-            if (categoryId.HasValue)
+            ViewData["MaxPrice"] = await query.MaxAsync(p => p.Price);
+
+            if (categoryId != null)
             {
                 query = query.Where(p => p.Category.Id == categoryId);
+                ViewData["ActiveCategory"] = categoryId;
             }
 
-            var products = await PaginatedList<ProductVM>
-                .CreateAsync(query, page, pageSize);
+            if (brandId != null)
+            {
+                query = query.Where(p => p.Brand.Id == brandId);
+                ViewBag.ActiveBrand = brandId;
+            }
 
-            ViewBag.ActiveCategory = categoryId;
 
-            return View(products);
+            if (maxPrice != null)
+                query = query.Where(p => p.Price <= maxPrice);
+
+            var model = await PaginatedList<ProductVM>.CreateAsync(
+                query,
+                page,
+                pageSize
+            );
+
+            return View(model);
         }
+
+
 
 
         [HttpGet]

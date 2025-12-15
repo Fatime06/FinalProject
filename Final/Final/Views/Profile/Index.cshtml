@@ -1,0 +1,42 @@
+﻿@using Service.ViewModels.Account.User
+@model UserProfileVM
+
+@if (TempData["Success"] != null)
+{
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            Swal.fire({
+                title: "Success",
+                text: "@TempData["Success"]",
+                icon: "success",
+                confirmButtonText: "OK"
+            });
+        });
+    </script>
+}
+
+<div class="profile-wrapper">
+
+    <div class="profile-card">
+
+        <div class="profile-avatar">
+            <img src="~/client/uploads/users/@(Model.Image ?? "default-user.png")" />
+        </div>
+
+        <h3 class="profile-name">@Model.Name @Model.Surname</h3>
+        <p class="profile-email">@Model.Email</p>
+
+        <div class="profile-info">
+            <div><span>Birthday:</span> @Model.Birthday.ToString("dd MMM yyyy")</div>
+            <div><span>Gender:</span> @Model.Gender</div>
+            <div><span>Address:</span> @Model.Address</div>
+        </div>
+
+        <div class="profile-actions">
+            <a asp-action="Settings" class="btn-outline">Edit Profile</a>
+            <a asp-action="ChangePassword" asp-controller="Profile" class="btn-dark">Change Password</a>
+        </div>
+
+    </div>
+
+</div>

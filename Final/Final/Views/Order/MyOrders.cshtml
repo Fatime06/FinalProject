@@ -2,10 +2,6 @@
 @using Service.ViewModels.Order
 @model List<OrderVM>
 
-@{
-    int count = 0;
-}
-
 <div class="container py-5">
 
     <h2 class="mb-4">My Orders</h2>
@@ -21,7 +17,6 @@
                     <div class="card-body">
 
                         <div class="d-flex justify-content-between mb-2">
-                            <h5 class="mb-0">@(++count)</h5>
 
                             <span class="badge
                                     @(order.Status == OrderStatus.Delivered ? "bg-success" :

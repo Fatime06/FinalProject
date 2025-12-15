@@ -22,7 +22,7 @@ namespace Service.AutoMappers
                  .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category));
             CreateMap<Category, CategoryInProductVM>();
             CreateMap<Product, ProductInCategoryVM>();
-            CreateMap<Brand, BrandInProduct>();
+            CreateMap<Brand, BrandInProductVM>();
         }
     }
 }

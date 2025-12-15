@@ -1,20 +1,95 @@
-﻿<section class="filter-section">
+﻿@{
+    decimal minPrice = ViewData["MinPrice"] != null
+        ? (decimal)ViewData["MinPrice"]
+        : 0;
+
+    decimal maxPrice = ViewData["MaxPrice"] != null
+        ? (decimal)ViewData["MaxPrice"]
+        : 1000;
+
+    decimal currentMax = Context.Request.Query["maxPrice"].Any()
+        ? decimal.Parse(Context.Request.Query["maxPrice"])
+        : maxPrice;
+}
+
+
+
+<section class="filter-section">
     <h3 class="filter-title">Filter By Price</h3>
 
     <div class="price-filter">
-        <input type="range"
-               id="priceRange"
-               min="50"
-               max="1000"
-               step="10"
-               value="1000">
+        <form method="get"
+              asp-controller="Shop"
+              asp-action="Index"
+              class="price-filter-form">
 
-        <div class="filter-footer">
+            <input type="range"
+                   id="priceRange"
+                   name="maxPrice"
+                   min="0"
+                   max="@maxPrice"
+                   value="@currentMax"
+                   step="1" />
+
             <p class="price-range">
-                Price: $<span id="priceValue">1000</span>
+                Price: $@minPrice – $
+                <span id="priceValue">@currentMax</span>
             </p>
-        </div>
+
+            <button type="submit" class="apply-btn">Apply</button>
+        </form>
     </div>
 </section>
 
 
+<script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+        const range = document.getElementById("priceRange");
+        const valueSpan = document.getElementById("priceValue");
+
+        if (!range || !valueSpan) return;
+
+        valueSpan.textContent = range.value;
+
+        range.addEventListener("input", function () {
+            console.log("test");
+            valueSpan.textContent = this.value;
+        });
+    });
+
+</script>
+
+
+
+
+<style>
+    .apply-btn {
+        width: 100%;
+        margin-top: 15px;
+        padding: 12px 0;
+        background-color: #111;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+        .apply-btn:hover {
+            background-color: #b02a37;
+            transform: translateY(-1px);
+        }
+
+        .apply-btn:active {
+            transform: scale(0.97);
+        }
+
+        .apply-btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(176, 42, 55, 0.25);
+        }
+</style>

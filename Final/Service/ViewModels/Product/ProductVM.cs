@@ -13,7 +13,7 @@ namespace Service.ViewModels.Product
         public bool InStock { get; set; }
         public bool IsFeatured { get; set; }
         public CategoryInProductVM Category { get; set; }
-        public BrandInProduct Brand { get; set; }
+        public BrandInProductVM Brand { get; set; }
         public double AverageRating { get; set; }
         public IEnumerable<ProductRatingVM> Ratings { get; set; }
         public DateTime CreatedDate { get; set; }

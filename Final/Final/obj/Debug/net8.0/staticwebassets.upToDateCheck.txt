@@ -74,6 +74,9 @@ wwwroot\admin\uploads\categories\d284d1bd-5886-45a3-98ef-7a8f519a2f2f.png
 wwwroot\admin\uploads\categories\ecadfacd-eb84-41fa-a188-145713997d63.png
 wwwroot\admin\uploads\products\0b75cb55-46a2-4146-adfb-59947f30eddf.jpg
 wwwroot\admin\uploads\products\27fba15d-2918-43e5-80c0-857d44370ee9.jpg
+wwwroot\admin\uploads\products\3bbdfcec-beab-4aa7-bd94-1de01993a40a.jpg
+wwwroot\admin\uploads\products\3ccb7514-5b72-4e6a-bc81-4b52ba329612.jpg
+wwwroot\admin\uploads\products\3da67256-b171-4d7b-a67c-34e1771a4182.jpg
 wwwroot\admin\uploads\products\4e32f7bb-7d70-4d7d-b52e-91015d1500bf.jpg
 wwwroot\admin\uploads\products\5bc37491-b385-4669-8ee2-de99a02b0327.jpg
 wwwroot\admin\uploads\products\670c0881-4fd7-4ff5-b344-ede0bff247f0.jpg
@@ -82,6 +85,8 @@ wwwroot\admin\uploads\products\7768c6ac-fcb7-44f5-a09f-0f125101c0a7.jpg
 wwwroot\admin\uploads\products\8c951f55-b34f-4b06-b38b-c523d147b90e.jpeg
 wwwroot\admin\uploads\products\cd620c03-6ffa-4dfc-a960-441958e05185.jpg
 wwwroot\admin\uploads\products\d117fe55-80d9-45bc-b763-a45a3f58b7dc.jpg
+wwwroot\admin\uploads\products\f2720830-4e80-4bea-a450-3cd9fd691d10.jpg
+wwwroot\admin\uploads\products\f5a22e6f-9048-4745-99d5-5b428136bb4c.jpg
 wwwroot\admin\uploads\sliders\3eaeee4b-9122-4713-a057-ffa86508f9c5.jpg
 wwwroot\admin\uploads\sliders\6fe921b8-fda8-4cb2-bc31-56da6d0b7906.webp
 wwwroot\assets\css\Basket.css
@@ -95,6 +100,7 @@ wwwroot\assets\css\Header.css
 wwwroot\assets\css\Index.css
 wwwroot\assets\css\Login.css
 wwwroot\assets\css\order-success.css
+wwwroot\assets\css\profile.css
 wwwroot\assets\css\Shop1.css
 wwwroot\assets\css\Shop2.css
 wwwroot\assets\css\Shop3.css
@@ -209,10 +215,14 @@ wwwroot\assets\js\Whiskey.js
 wwwroot\assets\js\Wine.js
 wwwroot\assets\js\Wishlist.js
 wwwroot\client\uploads\users\09f39fce-43ce-4193-9ebe-6b1237345afa.jpg
+wwwroot\client\uploads\users\456aa922-a8f6-4ab3-8235-7c4f3131efeb.jpg
 wwwroot\client\uploads\users\563ece91-a85d-4b69-babf-64f472eb6ca5.jpg
+wwwroot\client\uploads\users\6853e7ff-3e8f-40ba-a9d6-72b61e3fdb30.jpg
 wwwroot\client\uploads\users\6fb59525-ad12-483b-90e4-8a94a607af49.jpg
 wwwroot\client\uploads\users\923ef758-eacd-4e46-9279-18639bb60282.jpg
 wwwroot\client\uploads\users\93bb3875-bd74-48c8-ad45-8b410cd508ba.jpg
+wwwroot\client\uploads\users\afe641c6-3103-4f2f-aac3-adff9c9bcc9b.jpg
 wwwroot\client\uploads\users\c1a91ccf-eddb-44ae-9088-2c2c774c9544.jpg
+wwwroot\client\uploads\users\ecd59f3d-4c26-496e-88c1-953bc39c8545.jpg
 wwwroot\templates\emailConfirm.html
 wwwroot\templates\resetPassword.html

@@ -7,6 +7,8 @@ namespace Service.Validators.Account
     {
         public UserRegisterVMValidator()
         {
+            RuleFor(u=>u.Image)
+                .NotNull().WithMessage("Profile image is required.");
             RuleFor(u => u.Name)
                 .Cascade(CascadeMode.Stop)
                 .NotEmpty().WithMessage("Name is required.")

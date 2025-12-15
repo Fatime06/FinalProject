@@ -27,6 +27,18 @@
     </div>
 
     <div class="pagination">
+
+        @if (Model.HasPreviousPage)
+        {
+            <a asp-controller="Shop"
+               asp-action="Index"
+               asp-route-page="@(Model.PageIndex - 1)"
+               asp-route-categoryId="@ViewBag.ActiveCategory"
+               class="page prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+        }
+
         @for (int i = 1; i <= Model.TotalPages; i++)
         {
             <a asp-controller="Shop"
@@ -38,15 +50,18 @@
             </a>
         }
 
-        @if (Model.PageIndex < Model.TotalPages)
+        @if (Model.HasNextPage)
         {
             <a asp-controller="Shop"
                asp-action="Index"
                asp-route-page="@(Model.PageIndex + 1)"
+               asp-route-categoryId="@ViewBag.ActiveCategory"
                class="page next">
                 <i class="fa-solid fa-chevron-right"></i>
             </a>
         }
+
     </div>
+
 
 </div>

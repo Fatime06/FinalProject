@@ -2,7 +2,7 @@
 @model IEnumerable<CategoryVM>
 
 @{
-    int? activeCategory = ViewBag.ActiveCategory as int?;
+    int? activeCategory = ViewData["ActiveCategory"] as int?;
 }
 
 
@@ -12,13 +12,15 @@
     <ul class="category-list">
         @foreach (var category in Model)
         {
-            <li class="filter-category @(activeCategory == category.Id ? "active" : "")"
-                data-category="@category.Id">
-                <a href="javascript:void(0)">
-                    @category.Name
-                </a>
+            <a asp-controller="Shop"
+               asp-action="Index"
+               asp-route-categoryId="@category.Id">
+            <li class="filter-category @(activeCategory == category.Id ? "active" : "")">
+                @category.Name
                 <span>(@category.Products.Count())</span>
             </li>
+            </a>
+
         }
     </ul>
 </section>

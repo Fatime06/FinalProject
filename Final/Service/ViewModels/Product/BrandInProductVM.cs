@@ -1,6 +1,6 @@
 ﻿namespace Service.ViewModels.Product
 {
-    public class BrandInProduct
+    public class BrandInProductVM
     {
         public int Id { get; set; }
         public string Name { get; set; }

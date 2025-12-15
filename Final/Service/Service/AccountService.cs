@@ -63,6 +63,12 @@ namespace Service.Service
                 modelState.AddModelError("Email", "This email already exists");
                 return false;
             }
+            var existUser = await _accountRepo.GetUserAsync(vm.UserName);
+            if (existUser != null)
+            {
+                modelState.AddModelError("UserName", "This username already exists");
+                return false;
+            }
             user = _mapper.Map<AppUser>(vm);
             user.CustomerNumber = UserHelper.GenerateCustomerNumber();
             user.Image = await _fileService.UploadAsync(vm.Image, "client/uploads/users");

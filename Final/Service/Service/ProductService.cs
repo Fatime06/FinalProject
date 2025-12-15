@@ -61,7 +61,7 @@ namespace Service.Service
 
         public async Task<IEnumerable<ProductVM>> GetAllAsync()
         {
-            var products = await _proRepo.GetAll().Include(p=>p.Ratings).Include(p=>p.Brand).Include(p=>p.Category).ToListAsync();
+            var products = await _proRepo.GetAll().Include(p => p.Ratings).Include(p => p.Brand).Include(p => p.Category).ToListAsync();
             var productsVMs = _mapper.Map<IEnumerable<ProductVM>>(products);
             return productsVMs;
         }
@@ -85,7 +85,7 @@ namespace Service.Service
 
         public async Task<ProductUpdateVM> GetUpdatedVmAsync(int id)
         {
-            var product = await _proRepo.Find(id).Include(p => p.Ratings).Include(p=>p.Brand).Include(c => c.Category).FirstOrDefaultAsync();
+            var product = await _proRepo.Find(id).Include(p => p.Ratings).Include(p => p.Brand).Include(c => c.Category).FirstOrDefaultAsync();
             if (product is null)
                 throw new CustomException(404, "Product not found");
 
@@ -96,8 +96,8 @@ namespace Service.Service
 
         public async Task<bool> UpdateAsync(ProductUpdateVM vm, ModelStateDictionary modelState)
         {
-            if(!modelState.IsValid) return false;
-            var product = await _proRepo.Find(vm.Id).Include(p => p.Ratings).Include(p=>p.Category).FirstOrDefaultAsync();
+            if (!modelState.IsValid) return false;
+            var product = await _proRepo.Find(vm.Id).Include(p => p.Ratings).Include(p => p.Category).FirstOrDefaultAsync();
             if (product == null) throw new CustomException(404, "Product not found");
             if (await _proRepo.IsExistAsync(vm.Name.Trim()) && _proRepo.GetProductByNameAsync(vm.Name).Result.Id != vm.Id)
             {
@@ -118,7 +118,7 @@ namespace Service.Service
                 product.InStock = false;
             }
 
-            if (vm.Image != null) 
+            if (vm.Image != null)
             {
                 _fileService.Delete(product.Image, "admin/uploads/products");
 
@@ -137,7 +137,7 @@ namespace Service.Service
             var query = _proRepo
                 .GetAll()
                 .Include(p => p.Category)
-                .Include(p=>p.Brand)
+                .Include(p => p.Brand)
                 .Include(p => p.Ratings).AsQueryable();
 
             switch (tab)
@@ -168,9 +168,9 @@ namespace Service.Service
                 .GetAll()
                 .Include(p => p.Ratings)
                 .Include(p => p.Category)
-                .Where(p => p.DiscountPrice != null)       
-                .OrderByDescending(p => p.CreatedDate)       
-                .Take(3)                                    
+                .Where(p => p.DiscountPrice != null)
+                .OrderByDescending(p => p.CreatedDate)
+                .Take(3)
                 .ToListAsync();
 
             return _mapper.Map<IEnumerable<ProductVM>>(deals);
@@ -294,6 +294,11 @@ namespace Service.Service
                     DiscountPrice = p.DiscountPrice,
                     InStock = p.InStock,
                     Quantity = p.Quantity,
+                    Brand = new BrandInProductVM
+                    {
+                        Id = p.Brand.Id,
+                        Name = p.Brand.Name
+                    },
 
                     Category = new CategoryInProductVM
                     {

@@ -1,0 +1,45 @@
+﻿@using Domain.Enums
+@using Service.ViewModels.Account.User
+@model UserSettingsVM
+
+<div class="profile-wrapper">
+
+    <div class="profile-card wide">
+
+        <h3 class="section-title">Edit Profile</h3>
+
+        <form method="post" enctype="multipart/form-data" class="profile-form">
+
+            <div class="form-row">
+                <input asp-for="Name" placeholder="Name" />
+                <input asp-for="Surname" placeholder="Surname" />
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+
+            <div class="form-row">
+                <input asp-for="Birthday" type="date" />
+                <select asp-for="Gender"
+                        asp-items="Html.GetEnumSelectList<Gender>()">
+                </select>
+                <span class="text-danger" asp-validation-for="Gender"></span>
+            </div>
+
+            <textarea asp-for="Address" placeholder="Address"></textarea>
+            <span class="text-danger" asp-validation-for="Address"></span>
+
+            <div class="file-input">
+                <label>Profile Image</label>
+                <input asp-for="Image" type="file" />
+                <span class="text-danger" asp-validation-for="Image"></span>
+            </div>
+
+            <div class="profile-actions">
+                <button type="submit" class="btn-dark">Save Changes</button>
+                <a asp-action="Index" class="btn-outline">Cancel</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
