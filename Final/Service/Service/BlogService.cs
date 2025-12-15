@@ -66,6 +66,8 @@ namespace Service.Service
             var blog = await _blogRepo.Find(id)
             .Include(b => b.BlogTags).ThenInclude(bt => bt.Tag)
             .Include(b => b.BlogCategories).ThenInclude(bc => bc.Category)
+            .Include(b => b.Comments)
+            .ThenInclude(c=>c.AppUser)
             .FirstOrDefaultAsync();
 
             if (blog == null) throw new CustomException(404, "Blog not found");
@@ -78,8 +80,8 @@ namespace Service.Service
         public async Task<BlogUpdateVM> GetUpdatedVmAsync(int id)
         {
             var blog = await _blogRepo.Find(id)
-                .Include(b=>b.BlogTags).ThenInclude(bt=>bt.Tag)
-                .Include(b=>b.BlogCategories).ThenInclude(bc=>bc.Category)
+                .Include(b => b.BlogTags).ThenInclude(bt => bt.Tag)
+                .Include(b => b.BlogCategories).ThenInclude(bc => bc.Category)
                 .FirstOrDefaultAsync();
             if (blog is null)
                 throw new CustomException(404, "Blog not found");
@@ -91,7 +93,7 @@ namespace Service.Service
 
         public async Task<bool> UpdateAsync(BlogUpdateVM vm, ModelStateDictionary modelstate)
         {
-            if(!modelstate.IsValid) return false;
+            if (!modelstate.IsValid) return false;
             var blog = await _blogRepo.Find(vm.Id)
            .Include(b => b.BlogCategories)
            .Include(b => b.BlogTags).FirstOrDefaultAsync();
@@ -139,7 +141,7 @@ namespace Service.Service
                 .GetAll()
                 .Include(b => b.BlogCategories)
                     .ThenInclude(bc => bc.Category)
-                .SelectMany(b => b.BlogCategories)  
+                .SelectMany(b => b.BlogCategories)
                 .GroupBy(bc => bc.Category.Name)
                 .Select(g => new BlogCategoryVM
                 {

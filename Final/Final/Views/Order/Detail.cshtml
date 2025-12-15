@@ -9,8 +9,8 @@
 
         <span class="badge
             @(Model.Status == OrderStatus.Delivered ? "bg-success" :
-                                          Model.Status == OrderStatus.Pending ? "bg-warning text-dark" :
-                                          "bg-danger")">
+                                                                                    Model.Status == OrderStatus.Pending ? "bg-warning text-dark" :
+                                                                                    "bg-danger")">
             @Model.Status
         </span>
     </div>
@@ -63,7 +63,8 @@
                                             <button class="btn btn-sm btn-outline-warning"
                                                     data-bs-toggle="modal"
                                                     data-bs-target="#ratingModal"
-                                                    data-product-id="@item.ProductId">
+                                                    data-product-id="@item.ProductId"
+                                                    data-order-id="@Model.Id">
                                                 Rate
                                             </button>
                                         }
@@ -97,16 +98,17 @@
 @section Scripts {
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-
             const modal = document.getElementById("ratingModal");
-            if (!modal) return;
 
             modal.addEventListener("show.bs.modal", function (event) {
                 const btn = event.relatedTarget;
-                const productId = btn.getAttribute("data-product-id");
-                document.getElementById("ratingProductId").value = productId;
-            });
 
+                document.getElementById("ratingProductId").value =
+                    btn.getAttribute("data-product-id");
+
+                document.getElementById("ratingOrderId").value =
+                    btn.getAttribute("data-order-id");
+            });
         });
     </script>
 }
@@ -130,9 +132,9 @@
 
                 <div class="modal-body">
 
-                    <input type="hidden"
-                           name="ProductId"
-                           id="ratingProductId" />
+                    <input type="hidden" name="ProductId" id="ratingProductId" />
+                    <input type="hidden" name="OrderId" id="ratingOrderId" />
+
 
                     <div class="mb-3">
                         <label class="form-label">Rating</label>

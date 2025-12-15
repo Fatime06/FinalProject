@@ -66,31 +66,6 @@
 
     <hr />
 
-    <!-- Ratings Section -->
-    <div class="row">
-        <div class="col-md-12">
-            <h3>Ratings & Comments</h3>
-
-            @if (Model.Ratings != null && Model.Ratings.Any())
-            {
-                foreach (var rating in Model.Ratings)
-                {
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <strong>@rating.AppUser.UserName</strong> – ⭐ @rating.Value
-                        </div>
-                        <div class="panel-body">
-                            @rating.Comment
-                        </div>
-                    </div>
-                }
-            }
-            else
-            {
-                <p class="text-muted">No ratings yet.</p>
-            }
-        </div>
-    </div>
 
 </div>
 

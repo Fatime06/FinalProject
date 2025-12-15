@@ -51,9 +51,10 @@ namespace Service.Service
                 return false;
             }
             bool alreadyRated = await _ratingRepo.GetAll()
-           .AnyAsync(r =>
-               r.ProductId == vm.ProductId &&
-               r.AppUserId == userId);
+       .AnyAsync(r =>
+           r.ProductId == vm.ProductId &&
+           r.OrderId == vm.OrderId &&
+           r.AppUserId == userId);
 
             if (alreadyRated)
                 throw new CustomException(400, "You already rated this product");

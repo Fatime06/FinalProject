@@ -1,0 +1,67 @@
+﻿@using Service.ViewModels.Comment
+@model IEnumerable<CommentVM>
+
+
+<h3>Comments (@Model.Count())</h3>
+
+@foreach (var c in Model)
+{
+    <div class="comment-item" data-id="@c.Id">
+
+        <div class="comment-header">
+            <strong>@c.AppUser.UserName</strong>
+            <span>@c.CreatedDate.ToString("dd MMM yyyy")</span>
+        </div>
+
+        <p class="comment-text">@c.Text</p>
+
+        <div class="comment-actions">
+            <button class="edit-btn" data-id="@c.Id">Edit</button>
+            <button class="delete-btn"
+                    data-id="@c.Id"
+                    data-blog="@c.BlogId">
+                Delete
+            </button>
+        </div>
+    </div>
+}
+
+<style>
+    .comment-actions {
+        margin-top: 8px;
+        display: flex;
+        gap: 10px;
+    }
+
+        .comment-actions button {
+            font-size: 13px;
+            padding: 5px 14px;
+            border-radius: 20px;
+            border: 1px solid transparent;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .comment-actions .edit-btn {
+            color: #555;
+            border-color: #ccc;
+        }
+
+            .comment-actions .edit-btn:hover {
+                background: #f5f5f5;
+                border-color: #999;
+                color: #111;
+            }
+
+        .comment-actions .delete-btn {
+            color: #c40000;
+            border-color: #f0caca;
+        }
+
+            .comment-actions .delete-btn:hover {
+                background: #ffecec;
+                border-color: #c40000;
+            }
+</style>

@@ -212,7 +212,7 @@ namespace Service.Service
             var body = $"Your order status is now: {status}";
             EmailSendVM emailVm = new()
             {
-                Subject = "Confirm Email",
+                Subject = "Order Status",
                 Body = body,
                 To = user.Email
             };
@@ -266,9 +266,9 @@ namespace Service.Service
             if (order == null)
                 throw new CustomException(404, "Order not found");
 
-            var ratedProductIds = await _ratingRepo.GetAll()
+            var ratedPairs = await _ratingRepo.GetAll()
                 .Where(r => r.AppUserId == userId)
-                .Select(r => r.ProductId)
+                .Select(r => new { r.ProductId, r.OrderId })
                 .ToListAsync();
 
             return new OrderVM
@@ -285,9 +285,9 @@ namespace Service.Service
                     ProductName = i.Product.Name,
                     Quantity = i.Quantity,
                     Price = i.Price,
-                    CanRate =
-                        order.Status == OrderStatus.Delivered &&
-                        !ratedProductIds.Contains(i.ProductId)
+                    CanRate = order.Status == OrderStatus.Delivered && !ratedPairs.Any(x =>
+                    x.ProductId == i.ProductId &&
+                    x.OrderId == order.Id)
                 }).ToList()
             };
         }

@@ -43,6 +43,7 @@ namespace Service
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IReviewService, ReviewService>();
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<ICommentService, CommentService>();
             return services;
         }
     }

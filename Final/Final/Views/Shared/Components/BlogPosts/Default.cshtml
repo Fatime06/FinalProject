@@ -8,11 +8,13 @@
     {
         <div class="blog-post">
             <div class="blog-main-img-box">
-                <img src="~/admin/uploads/blogs/@blog.Image" class="blog-main-img" />
+                <a asp-action="detail" asp-controller="blog" asp-route-id="@blog.Id">
+                    <img src="~/admin/uploads/blogs/@blog.Image" class="blog-main-img" />
+                </a>
             </div>
 
             <div class="blog-meta">
-                <span class="category">BLOG</span> 
+                <span class="category">BLOG</span>
             </div>
 
             <h2 class="blog-title">@blog.Title</h2>
@@ -30,7 +32,7 @@
             <a asp-controller="Blog"
                asp-action="Detail"
                asp-route-id="@blog.Id"
-                class="read-more">
+               class="read-more">
                 Read More <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>

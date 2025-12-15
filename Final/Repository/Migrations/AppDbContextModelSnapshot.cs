@@ -124,7 +124,7 @@ namespace Repository.Migrations
                             AccessFailedCount = 0,
                             Address = "Bakı",
                             Birthday = new DateTime(2006, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "a054c896-b053-4699-9d3a-835a58f42616",
+                            ConcurrencyStamp = "3fef9309-8a69-40ab-94e2-6931861e2326",
                             Email = "esedovaf4@gmail.com",
                             EmailConfirmed = true,
                             Gender = 2,
@@ -133,9 +133,9 @@ namespace Repository.Migrations
                             Name = "Fatima",
                             NormalizedEmail = "ESEDOVAF4@GMAIL.COM",
                             NormalizedUserName = "_FATIMA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKlsSbMyFmiM9hhJrH1rXjLSEsSmxmPTa3a97kF7YlbYIaAqhZ/4nZQKtl2Il82yGQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEBwd2RiZF2/cOBCc4y9hw0cSt1Yv3zJ2vm2jz9iDXuKqEYxsdf1zKHPnB/zluuNF1g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a3363b9a-7e7e-43a8-9162-e1655fe1d512",
+                            SecurityStamp = "bba2c89a-e8a6-4f70-8640-032fb3566714",
                             Surname = "Asadova",
                             TwoFactorEnabled = false,
                             UserName = "_fatima"
@@ -583,6 +583,9 @@ namespace Repository.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
@@ -595,6 +598,8 @@ namespace Repository.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AppUserId");
+
+                    b.HasIndex("OrderId");
 
                     b.HasIndex("ProductId");
 
@@ -1039,13 +1044,21 @@ namespace Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Domain.Entities.Order", "Order")
+                        .WithMany()
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.HasOne("Domain.Entities.Product", "Product")
                         .WithMany("Ratings")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("AppUser");
+
+                    b.Navigation("Order");
 
                     b.Navigation("Product");
                 });
