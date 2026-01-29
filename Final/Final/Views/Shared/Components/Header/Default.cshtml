@@ -1,6 +1,7 @@
 ﻿@using Service.Service.Interfaces
 @using Service.ViewModels.Basket
 @inject IAccountService _accountService
+@inject ICategoryService _categoryService
 @model BasketUIVM
 
 
@@ -16,41 +17,14 @@
             </div>
             <div id="sidebar-dropdown" class="sidebar-dropdown">
                 <ul>
-                    <li>
-                        <a href="Wine.html">
-                            <i class="fa-solid fa-wine-glass"></i> Wine
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="Beer.html">
-                            <i class="fa-solid fa-beer-mug-empty"></i> Beer
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="Whiskey.html">
-                            <i class="fa-solid fa-whiskey-glass"></i> Whiskey
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="Cogac.html">
-                            <i class="fa-solid fa-whiskey-glass"></i> Cognac
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="Cocktail.html">
-                            <i class="fa-solid fa-martini-glass"></i> Cocktail
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="Tequila.html">
-                            <i class="fa-solid fa-bottle-droplet"></i> Tequila
-                        </a>
-                    </li>
+                    @foreach(var category in await _categoryService.GetAllAsync())
+                    {
+                        <li>
+                            <a asp-controller="shop" asp-action="index" asp-route-categoryId="@category.Id">
+                                <i class="@category.Icon"></i> @category.Name
+                            </a>
+                        </li>
+                    }
                 </ul>
             </div>
 
@@ -62,10 +36,11 @@
                 <a asp-controller="contact" asp-action="index">Contact</a>
             </div>
         </div>
-
         <div class="nav-right">
-            <div class="search-icon">
-                <i class="fas fa-search"></i>
+            <div class="search-box">
+                <i class="fas fa-search" id="searchToggle"></i>
+                <input type="text" id="searchInput" placeholder="Search products..." />
+                <div id="searchResult"></div>
             </div>
             @if (User.Identity.IsAuthenticated)
             {
@@ -126,4 +101,103 @@
     </nav>
 </header>
 
+<script>
+    const searchToggle = document.getElementById("searchToggle");
+    const searchInput = document.getElementById("searchInput");
+    const searchResult = document.getElementById("searchResult");
+
+    searchToggle.addEventListener("click", () => {
+        searchInput.classList.toggle("active");
+        searchInput.focus();
+    });
+
+    searchInput.addEventListener("keyup", async function () {
+        const query = this.value;
+
+        const res = await fetch(`/Shop/Search?search=${query}`);
+        const data = await res.json();
+        console.log(data);
+        let html = "";
+
+        data.forEach(p => {
+            html += `
+            <div class="search-item" onclick="location.href='/Shop/Detail/${p.id}'">
+                <img src="/admin/uploads/products/${p.image}" />
+                <div>
+                    <strong>${p.name}</strong><br/>
+                    <span>$${p.price}</span>
+                </div>
+            </div>
+            `;
+        });
+
+        searchResult.innerHTML = html;
+        searchResult.style.display = "block";
+    });
+
+</script>
+<style>
+    #searchToggle{
+        padding-bottom: 6px;
+        padding-top: 10px;
+    }
+
+    .search-box {
+        position: relative;
+        cursor: pointer;
+        padding-bottom: 12px;
+    }
+
+    #searchInput {
+        width: 0;
+        opacity: 0;
+        padding: 8px 12px 0 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.4s;
+        position: absolute;
+        right: 35px;
+        top: -4px;
+        background: white;
+    }
+
+        #searchInput.active {
+            width: 250px;
+            opacity: 1;
+        }
+
+    #searchResult {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 300px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        display: none;
+        max-height: 350px;
+        overflow-y: auto;
+        z-index: 3000;
+    }
+
+    .search-item {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+        .search-item:hover {
+            background: #f2f2f2;
+        }
+
+        .search-item img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+</style>
 

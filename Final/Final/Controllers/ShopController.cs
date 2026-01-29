@@ -9,10 +9,12 @@ namespace Final.Controllers
     public class ShopController : Controller
     {
         private readonly IProductService _productService;
+        private readonly ICategoryService _catService;
 
-        public ShopController(IProductService productService)
+        public ShopController(IProductService productService, ICategoryService catService)
         {
             _productService = productService;
+            _catService = catService;
         }
 
         public async Task<IActionResult> Index(
@@ -33,6 +35,8 @@ namespace Final.Controllers
             {
                 query = query.Where(p => p.Category.Id == categoryId);
                 ViewData["ActiveCategory"] = categoryId;
+                var category = await _catService.GetAsync((int)categoryId);
+                ViewData["Category"] = category.Name;
             }
 
             if (brandId != null)
@@ -69,6 +73,24 @@ namespace Final.Controllers
             var product = await _productService.GetAsync(id);
 
             return View(product);
+        }
+        [HttpGet]
+        public async Task<IActionResult> Search(string search)
+        {
+            var products = await _productService
+                .GetProductsAsQueryabe()
+                .Where(p => p.Name.Contains(search))
+                .Select(p => new
+                {
+                    id = p.Id,
+                    name = p.Name,
+                    price = p.DiscountPrice ?? p.Price,
+                    image = p.Image
+                })
+                .Take(8)
+                .ToListAsync();
+
+            return Json(products);
         }
     }
 }

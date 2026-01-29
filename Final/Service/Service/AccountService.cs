@@ -206,31 +206,41 @@ namespace Service.Service
             var user = await _accountRepo.FindByEmailAsync(vm.Email);
             if (user == null)
             {
-                modelState.AddModelError("", "Username or password is incorrect!");
+                modelState.AddModelError("", "Email or password is incorrect!");
                 return false;
             }
 
-            if (!await _accountRepo.IsInRoleAsync(user, "admin"))
+            // ✅ Rol adlarını seed-dəki kimi yaz
+            var isAdmin = await _accountRepo.IsInRoleAsync(user, "Admin");
+            var isSuperAdmin = await _accountRepo.IsInRoleAsync(user, "SuperAdmin");
+
+            if (!isAdmin && !isSuperAdmin)
             {
-                if (!await _accountRepo.IsInRoleAsync(user, "superadmin"))
-                {
-                    modelState.AddModelError("", "You do not have permission to access this section!");
-                    return false;
-                }
+                modelState.AddModelError("", "You do not have permission to access this section!");
+                return false;
             }
 
             if (!await _accountRepo.CheckPasswordAsync(user, vm.Password))
             {
-                modelState.AddModelError("", "Username or password is incorrect!");
+                modelState.AddModelError("", "Email or password is incorrect!");
                 return false;
             }
 
+            // ✅ Köhnə cookie/claim qalmasın
+            await _httpContextAccessor.HttpContext!.SignOutAsync("AdminScheme");
+
+            // ✅ DB-dən real rolları götür və claim kimi əlavə et
+            var roles = await _accountRepo.GetRolesAsync(user);
+
             var claims = new List<Claim>
-        {
-            new Claim(ClaimTypes.NameIdentifier, user.Id),
-            new Claim(ClaimTypes.Name, user.UserName),
-            new Claim(ClaimTypes.Role, "Admin")
-        };
+    {
+        new Claim(ClaimTypes.NameIdentifier, user.Id),
+        new Claim(ClaimTypes.Name, user.UserName ?? user.Email ?? ""),
+        new Claim(ClaimTypes.Email, user.Email ?? "")
+    };
+
+            foreach (var role in roles)
+                claims.Add(new Claim(ClaimTypes.Role, role));
 
             var identity = new ClaimsIdentity(claims, "AdminScheme");
             var principal = new ClaimsPrincipal(identity);

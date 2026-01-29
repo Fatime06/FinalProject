@@ -27,7 +27,14 @@
                         <td>@(++count)</td>
                         <td>@slider.Year</td>
                         <td>@slider.Title</td>
-                        <td>@slider.Text</td>
+                        @if(slider.Text.Length > 10)
+                        {
+                            <td>@slider.Text.Substring(0,10)...</td>
+                        }
+                        else
+                        {
+                            <td>@slider.Text</td>
+                        }
                         <td>
                             <a class="btn btn-warning" asp-action="edit" asp-route-id="@slider.Id">Edit</a>
                             <a class="btn btn-info" asp-action="detail" asp-route-id="@slider.Id">Detail</a>

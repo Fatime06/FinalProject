@@ -20,5 +20,6 @@ namespace Repository.Repositories.Interfaces
         Task<IdentityResult> ResetPasswordAsync(AppUser user, string token, string password);
         Task<SignInResult> PasswordSignInAsync(AppUser user, string password, bool isPersistent, bool lockoutOnFailure);
         Task<AppUser> GetUserAsync(string userName);
+        Task<IEnumerable<string>> GetRolesAsync(AppUser user);
     }
 }

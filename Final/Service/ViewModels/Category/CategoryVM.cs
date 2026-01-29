@@ -7,6 +7,7 @@ namespace Service.DTOs.Category
         public int Id { get; set; }
         public string Name { get; set; }
         public string Image { get; set; }
+        public string Icon { get; set; }
         public IEnumerable<ProductInCategoryVM> Products { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }

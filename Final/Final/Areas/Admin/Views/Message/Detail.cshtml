@@ -1,0 +1,15 @@
+﻿@using Service.ViewModels.ContactMessage
+@model ContactMessageVM
+
+<div class="container" style="margin-top:40px;">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p><strong>Name:</strong> @Model.Name</p>
+            <p><strong>Email:</strong> @Model.Email</p>
+            <p><strong>Message:</strong> @Model.Message</p>
+            <p><strong>Created at:</strong> @Model.CreatedDate.ToString("dd.MM.yyyy HH:mm")</p>
+
+            <a asp-controller="Message" asp-action="Index" class="btn btn-secondary">Return to messages</a>
+        </div>
+    </div>
+</div>

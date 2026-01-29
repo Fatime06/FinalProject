@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Repository.Migrations;
 using System.Globalization;
 
 namespace Repository.Data
@@ -30,8 +31,8 @@ namespace Repository.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
-
             var userId = "A23A7A9F-11DD-48F0-B999-3D5AA6E5AB0E";
+            var adminUserId = "7A9FJSKE-11DD-EB38-JS88-3D5AA6E5AB0E";
             var memberRoleId = "9A17F51D-AED3-4C8C-BE55-EE3D6E8A0C01";
             var adminRoleId = "F8A43D91-1E74-4F8A-BC55-5D27A3F9989A";
             var superAdminRoleId = "25D6D5B2-DC97-4042-B56E-EB3F8123BB99";
@@ -73,6 +74,23 @@ namespace Repository.Data
                     PasswordHash = hasher.HashPassword(null, "Fatima123!")
                 }
                 );
+            builder.Entity<AppUser>().HasData(
+             new AppUser
+             {
+                 Id = adminUserId,
+                 Name = "Fatya",
+                 Surname = "Esedova",
+                 Address = "Bakı",
+                 Gender = Domain.Enums.Gender.Woman,
+                 UserName = "_fatya",
+                 Birthday = DateTime.ParseExact("14-02-2006", "dd-MM-yyyy", CultureInfo.InvariantCulture),
+                 NormalizedUserName = "_FATYA",
+                 EmailConfirmed = true,
+                 Email = "esedovaf6@gmail.com",
+                 NormalizedEmail = "ESEDOVAF6@GMAIL.COM",
+                 PasswordHash = hasher.HashPassword(null, "Fatima123!")
+             }
+             );
             builder.Entity<IdentityUserRole<string>>().HasData(
                 new IdentityUserRole<string>
                 {
@@ -80,7 +98,13 @@ namespace Repository.Data
                     RoleId = superAdminRoleId
                 }
                 );
-
+            builder.Entity<IdentityUserRole<string>>().HasData(
+                new IdentityUserRole<string>
+                {
+                    UserId = adminUserId,
+                    RoleId = adminRoleId
+                }
+                );
             base.OnModelCreating(builder);
         }
     }

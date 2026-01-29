@@ -12,7 +12,7 @@ namespace Repository.Configurations
             builder.Property(s => s.SmallText).IsRequired().HasMaxLength(25);
             builder.Property(s => s.BigText).IsRequired().HasMaxLength(45);
             builder.Property(s => s.ButtonText).IsRequired().HasMaxLength(20);
-            builder.Property(s => s.MediumText).IsRequired().HasMaxLength(35);
+            builder.Property(s => s.MediumText).IsRequired().HasMaxLength(100);
             builder.Property(s => s.SmallNote).HasMaxLength(50);
             builder.Property(c => c.CreatedDate).IsRequired().HasColumnType("datetime2");
             builder.Property(c => c.UpdatedDate).HasColumnType("datetime2");

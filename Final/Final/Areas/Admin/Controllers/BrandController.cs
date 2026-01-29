@@ -1,10 +1,8 @@
 ﻿using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Service.Service;
 using Service.Service.Interfaces;
 using Service.ViewModels.Brand;
-using Service.ViewModels.Product;
 
 namespace Final.Areas.Admin.Controllers
 {

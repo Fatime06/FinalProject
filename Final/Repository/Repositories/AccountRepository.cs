@@ -88,5 +88,9 @@ namespace Repository.Repositories
         {
             return await _userManager.FindByNameAsync(userName);
         }
+        public async Task<IEnumerable<string>> GetRolesAsync(AppUser user)
+        {
+            return await _userManager.GetRolesAsync(user);
+        }
     }
 }

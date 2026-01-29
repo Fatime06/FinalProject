@@ -124,7 +124,7 @@ namespace Repository.Migrations
                             AccessFailedCount = 0,
                             Address = "Bakı",
                             Birthday = new DateTime(2006, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "3fef9309-8a69-40ab-94e2-6931861e2326",
+                            ConcurrencyStamp = "e732c29f-0b78-4d50-9a1b-f287c6e6f72f",
                             Email = "esedovaf4@gmail.com",
                             EmailConfirmed = true,
                             Gender = 2,
@@ -133,12 +133,34 @@ namespace Repository.Migrations
                             Name = "Fatima",
                             NormalizedEmail = "ESEDOVAF4@GMAIL.COM",
                             NormalizedUserName = "_FATIMA",
-                            PasswordHash = "AQAAAAIAAYagAAAAEBwd2RiZF2/cOBCc4y9hw0cSt1Yv3zJ2vm2jz9iDXuKqEYxsdf1zKHPnB/zluuNF1g==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIs6BGeVh6PXJVrWaVWNhpY4ioLcKTsdyTwiO4GyDPxb5WB5kPyJNy+ZXklLPoX8jA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "bba2c89a-e8a6-4f70-8640-032fb3566714",
+                            SecurityStamp = "4490801f-eab8-4aee-a912-a0fc4a968672",
                             Surname = "Asadova",
                             TwoFactorEnabled = false,
                             UserName = "_fatima"
+                        },
+                        new
+                        {
+                            Id = "7A9FJSKE-11DD-EB38-JS88-3D5AA6E5AB0E",
+                            AccessFailedCount = 0,
+                            Address = "Bakı",
+                            Birthday = new DateTime(2006, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "e1a87178-0161-4eff-b854-7f8d91677af2",
+                            Email = "esedovaf6@gmail.com",
+                            EmailConfirmed = true,
+                            Gender = 2,
+                            IsVerifiedPurchase = false,
+                            LockoutEnabled = false,
+                            Name = "Fatya",
+                            NormalizedEmail = "ESEDOVAF6@GMAIL.COM",
+                            NormalizedUserName = "_FATYA",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHFaVFJr1sexSeNBk3GwuXwyTzcibfJoLl7INp42D4xX3OJcIKTacA6oHypiiqkOnw==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "483ee666-5c97-4324-be52-3f6010273959",
+                            Surname = "Esedova",
+                            TwoFactorEnabled = false,
+                            UserName = "_fatya"
                         });
                 });
 
@@ -310,6 +332,11 @@ namespace Repository.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Icon")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Image")
                         .IsRequired()
@@ -696,8 +723,8 @@ namespace Repository.Migrations
 
                     b.Property<string>("MediumText")
                         .IsRequired()
-                        .HasMaxLength(35)
-                        .HasColumnType("nvarchar(35)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("SmallNote")
                         .HasMaxLength(50)
@@ -878,6 +905,11 @@ namespace Repository.Migrations
                         {
                             UserId = "A23A7A9F-11DD-48F0-B999-3D5AA6E5AB0E",
                             RoleId = "25D6D5B2-DC97-4042-B56E-EB3F8123BB99"
+                        },
+                        new
+                        {
+                            UserId = "7A9FJSKE-11DD-EB38-JS88-3D5AA6E5AB0E",
+                            RoleId = "F8A43D91-1E74-4F8A-BC55-5D27A3F9989A"
                         });
                 });
 
@@ -1053,7 +1085,7 @@ namespace Repository.Migrations
                     b.HasOne("Domain.Entities.Product", "Product")
                         .WithMany("Ratings")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("AppUser");

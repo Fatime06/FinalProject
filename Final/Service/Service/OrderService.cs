@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
+using Repository.Data;
 using Repository.Repositories.Interfaces;
 using Service.Exceptions;
 using Service.Service.Interfaces;
@@ -24,7 +25,7 @@ namespace Service.Service
         private readonly UserManager<AppUser> _userManager;
         private readonly IProductRatingRepository _ratingRepo;
         private readonly IEmailService _emailService;
-
+        private readonly AppDbContext _context;
         public OrderService(
             IBasketService basketService,
             IProductService productService,
@@ -33,7 +34,8 @@ namespace Service.Service
             IMapper mapper,
             UserManager<AppUser> userManager,
             IProductRatingRepository ratingRepo,
-            IEmailService emailService)
+            IEmailService emailService,
+            AppDbContext context)
         {
             _basketService = basketService;
             _productService = productService;
@@ -43,6 +45,7 @@ namespace Service.Service
             _userManager = userManager;
             _ratingRepo = ratingRepo;
             _emailService = emailService;
+            _context = context;
         }
 
         public async Task<bool> CreateOrderAsync(CheckoutVM vm, ModelStateDictionary modelState)
@@ -227,9 +230,20 @@ namespace Service.Service
             if (order == null)
                 throw new CustomException(404, "Order not found");
 
+            var ratings = await _context.ProductRatings
+                .Where(r => r.OrderId == id)
+                .ToListAsync();
+
+            if (ratings.Count > 0)
+                _context.ProductRatings.RemoveRange(ratings);
+
+            if (order.OrderItems != null && order.OrderItems.Count > 0)
+                _context.OrderItems.RemoveRange(order.OrderItems);
+
             _orderRepo.Delete(order);
             await _orderRepo.SaveChangesAsync();
         }
+
         public async Task<List<OrderVM>> GetUserOrdersAsync()
         {
             var userId = _http.HttpContext.User

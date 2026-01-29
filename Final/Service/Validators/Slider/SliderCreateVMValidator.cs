@@ -17,7 +17,7 @@ namespace Service.Validators.Slider
                 .MaximumLength(45).WithMessage("BigText length must be less than 45 characters.");
             RuleFor(s => s.MediumText)
                 .NotEmpty().WithMessage("MediumText is required.")
-                .MaximumLength(35).WithMessage("MediumText length must be less than 35 characters.");
+                .MaximumLength(100).WithMessage("MediumText length must be less than 100 characters.");
             RuleFor(s => s.ButtonText)
                 .NotEmpty().WithMessage("ButtonText is required.")
                 .MaximumLength(20).WithMessage("ButtonText length must be less than 20 characters.");

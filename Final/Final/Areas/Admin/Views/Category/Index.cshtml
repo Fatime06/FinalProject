@@ -16,6 +16,7 @@
                 <tr>
                     <th scope="col">No</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Icon</th>
                     <th scope="col">Image</th>
                     <th scope="col">Settings</th>
                 </tr>
@@ -26,6 +27,9 @@
                     <tr>
                         <td>@(++count)</td>
                         <td>@category.Name</td>
+                        <td>
+                            <i class="@category.Icon"></i>
+                        </td>
                         <td>
                             <img width="80" height="80" src="~/admin/uploads/categories/@category.Image">
                         </td>

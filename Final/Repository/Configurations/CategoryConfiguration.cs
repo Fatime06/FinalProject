@@ -11,6 +11,9 @@ namespace Repository.Configurations
             builder.Property(c => c.Name)
                 .IsRequired()
                 .HasMaxLength(25);
+            builder.Property(c=>c.Icon)
+                .IsRequired()
+                .HasMaxLength(50);
             builder.Property(c => c.CreatedDate)
                 .IsRequired()
                 .HasColumnType("datetime2");

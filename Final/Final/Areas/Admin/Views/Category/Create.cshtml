@@ -2,11 +2,16 @@
 @model CategoryCreateVM
 <div class="container">
     <div class="row">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label asp-for="Name"></label>
                 <input asp-for="Name" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter category name">
                 <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Icon"></label>
+                <input asp-for="Icon" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter category icon">
+                <span class="text-danger" asp-validation-for="Icon"></span>
             </div>
             <div class="form-group">
                 <label class="control-label" asp-for="Image"></label>

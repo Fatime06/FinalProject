@@ -7,5 +7,6 @@ namespace Service.DTOs.Category
         public int Id { get; set; }
         public string Name { get; set; }
         public IFormFile? Image { get; set; }
+        public string Icon { get; set; }
     }
 }

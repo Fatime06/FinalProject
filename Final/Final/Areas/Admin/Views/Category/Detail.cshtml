@@ -6,6 +6,7 @@
         <div class="panel-body">
             <p><strong>Image:</strong> <img src="~/admin/uploads/categories/@Model.Image" class="img-responsive img-thumbnail" /></p>
             <p><strong>Name:</strong> @Model.Name</p>
+            <p><strong>Name:</strong> <i class="@Model.Icon"></i></p>
             <p><strong>Created at:</strong> @Model.CreatedDate.ToString("dd.MM.yyyy HH:mm")</p>
 
             <a asp-controller="Category" asp-action="Index" class="btn btn-secondary">Return to categories</a>

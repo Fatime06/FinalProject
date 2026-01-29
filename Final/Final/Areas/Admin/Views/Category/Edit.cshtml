@@ -9,6 +9,11 @@
                 <span class="text-danger" asp-validation-for="Name"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Icon"></label>
+                <input asp-for="Icon" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter category icon">
+                <span class="text-danger" asp-validation-for="Icon"></span>
+            </div>
+            <div class="form-group">
                 <label class="control-label" asp-for="Image"></label>
                 <input asp-for="Image" type="file" class="form-control" placeholder="Enter category image">
                 <span class="text-danger" asp-validation-for="Image"></span>
